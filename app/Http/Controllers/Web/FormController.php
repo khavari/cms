@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Events\ContactUs;
 use App\Contact;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
@@ -14,8 +15,9 @@ class FormController extends Controller
     public function contact(ContactRequest $request)
     {
         $request->merge(['ip' => $request->ip()]);
-        Contact::create($request->all());
+        $contact = Contact::create($request->all());
         session()->flash('success', __('messages.created_success'));
+        event(new ContactUs($contact));
         return back();
     }
 }

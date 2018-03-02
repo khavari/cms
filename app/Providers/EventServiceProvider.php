@@ -13,9 +13,22 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+
+        // UserRegister
+        'App\Events\UserRegister' => [
+            'App\Listeners\UserRegister_TelegramNotify',
         ],
+
+        // UserLogin
+        'App\Events\UserLogin' => [
+            'App\Listeners\UserLogin_TelegramNotify',
+        ],
+
+        // contact us form
+        'App\Events\ContactUs' => [
+            'App\Listeners\ContactUs_TelegramNotify',
+        ],
+
     ];
 
     /**
@@ -26,7 +39,5 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         parent::boot();
-
-        //
     }
 }
