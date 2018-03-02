@@ -503,7 +503,7 @@ class LinkController extends Controller
             return [
                 'title' => $category->title,
                 'slug'  => $category->slug,
-                'url'   => app()->getLocale() . '/content/' . $category->slug,
+                'url'   => app()->getLocale() . '/category/' . $category->slug,
             ];
         });
 
