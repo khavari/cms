@@ -14,7 +14,7 @@
                          data-sub-html="<h4>{{$link->title}}</h4><p>{{$link->summary}}</p>">
                         <div class="gallery-item">
                             <div class="image">
-                                <img src="{{ asset($link->image()) }}?w=450&h=500&fit=crop" alt="{{$link->title}}" class="img-fluid">
+                                <img src="{{ asset($link->image()) }}{{ $link->feature->dimension }}" alt="{{$link->title}}" class="img-fluid">
                             </div>
                             <div class="item-zoom">
                                 <a href="#" class="item-zoom-link"><span class="fa fa-search"></span></a>

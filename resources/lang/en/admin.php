@@ -70,6 +70,7 @@ return [
     'type'             => 'Type',
     'group'            => 'Group',
     'search'           => 'Search',
+    'dimension'        => 'Dimension',
 
     // content
     'content'          => 'Content',
@@ -133,7 +134,6 @@ return [
     'customers'              => 'Customers',
     'footer'                 => 'Footer',
 
-
     //category
     'manage_category'        => 'Manage Category',
     'category'               => 'Category',
@@ -159,6 +159,7 @@ return [
     'action'                 => 'Action',
     'create'                 => 'Create',
     'select_me'              => 'Select me',
+
 
     // color
     'layout'                 => 'Layout',

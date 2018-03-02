@@ -72,9 +72,12 @@ class FeatureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Feature $features)
+    public function update(Request $request, Feature $feature)
     {
-        //
+        $feature->update($request->all());
+
+        session()->flash('success', __('messages.updated_success'));
+        return back();
     }
 
     /**

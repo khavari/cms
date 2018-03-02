@@ -21,9 +21,11 @@
                         <div class="box-tools">
                             @include('admin.partials.search')
                         </div>
-                        <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
-                                data-target="#modal-link">
+                        <button type="button" class="btn btn-flat btn-primary" data-toggle="modal" data-target="#modal-link">
                             @lang('admin.submit_new',['item'=> strtolower(__('admin.image'))])
+                        </button>
+                        <button type="button" class="btn btn-flat btn-default" data-toggle="modal" data-target="#modal-feature">
+                            <i class="fa fa-cogs"></i>
                         </button>
                     </div>
 
@@ -99,6 +101,44 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-flat btn-primary">@lang('admin.submit')</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-feature">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="{{route('admin.features.update',['feature'=>$feature->id])}}" method="post" >
+                    {{ csrf_field() }} {{ method_field('PATCH') }}
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">@lang('dimension')</h4>
+                    </div>
+                    <div class="modal-body">
+                        {{--------------- dimension ---------------}}
+                        <div class="form-group {{ $errors->has('dimension') ? ' has-error' : '' }}">
+                            <label for="dimension">@lang('admin.dimension')</label>
+                            <input type="text" required class="form-control" id="dimension" name="dimension"
+                                   value="{{ $feature->dimension }}">
+                        </div>
+                        {{--------------- title ---------------}}
+                        <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
+                            <label for="title">@lang('admin.title')</label>
+                            <input type="text" required class="form-control" id="title" name="title"
+                                   value="{{ $feature->title }}">
+                        </div>
+                        {{--------------- summary ---------------}}
+                        <div class="form-group {{ $errors->has('summary') ? ' has-error' : '' }}">
+                            <label for="summary">@lang('admin.summary')</label>
+                            <textarea class="form-control" id="summary" name="summary"
+                                      rows="3">{{ $feature->summary }}</textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-flat btn-primary">@lang('admin.update')</button>
                     </div>
                 </form>
             </div>

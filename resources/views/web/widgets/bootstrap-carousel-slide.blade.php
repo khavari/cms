@@ -16,7 +16,7 @@
                 @foreach($feature->slider() as $index => $link)
                     <div class="carousel-item {{ ($index == 0)?'active':'' }}">
                         <span class="overlay"></span>
-                        <img class="img-fluid" src="{{ asset($link->image()) }}" alt="{{ $link->title }}">
+                        <img class="img-fluid" src="{{ asset($link->image()) }}{{ $link->feature->dimension }}" alt="{{ $link->title }}">
                         <div class="carousel-caption d-none d-md-block align-middle pl-5 pr-5">
                             @isset($link->title)
                                 <h3 class="title mb-3 animated flipInX">{{ $link->title }}</h3>

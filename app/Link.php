@@ -64,14 +64,14 @@ class Link extends Model
 
     public function isExternal()
     {
-        if($this->url == null){
+        if ($this->url == null) {
             $full_url = url('/');
-        }else{
-            $full_url = (string) url($this->url);
+        } else {
+            $full_url = (string)url($this->url);
         }
         if (! str_contains($full_url, env('APP_URL'))) {
             return true;
-        }else{
+        } else {
             return false;
         }
 
@@ -79,9 +79,9 @@ class Link extends Model
 
     public function url()
     {
-        if($this->url == null){
+        if ($this->url == null) {
             return '/';
-        }else{
+        } else {
             return $this->url;
         }
     }
@@ -89,7 +89,11 @@ class Link extends Model
 
     public function image()
     {
-        return 'media/' . $this->image;
+        if (! is_null($this->feature->dimension) && file_exists($this->image)) {
+            return 'media/' . $this->image;
+        } else {
+            return $this->image;
+        }
     }
 
     // used in footer

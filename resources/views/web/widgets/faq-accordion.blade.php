@@ -4,11 +4,13 @@
 <?php $links = $feature->faq(); ?>
 <?php $id = rand(1, 1000); ?>
 @if($feature->faq()->count() > 0)
-    <section class="faq-accordion" id="faq-accordion">
+    <section class="faq-accordion pt-5 pb-5" id="faq-accordion">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="title">@lang('lorem.4')</h3>
+                    @if($links->first()->feature->dimension)
+                        <h3 class="title">{{ $links->first()->feature->dimension }}</h3>
+                    @endif
                 </div>
             </div>
             <div id="accordion-{{$id}}" role="tablist">

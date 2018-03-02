@@ -1,10 +1,9 @@
 {{-- contact_form-rtl.scss -contact_form-ltr.scss --}}
-<section id="contact_form" class="contact_form">
+<section id="contact_form" class="contact_form pt-5 pb-5">
     <div class="container">
         <form action="{{route('contact-us')}}#contact_form" name="form" method="post">
             {{ csrf_field() }}
             <div class="form-group row">
-
                 {{--------------- alert ---------------}}
                 @if (Session::has('success'))
                     <div class="col-12 mt-5">
@@ -39,9 +38,7 @@
                     @endif
                 </div>
             </div>
-            <button type="submit"
-                    class="btn bg_dark text_bg_dark bg_dark-hover text_bg_dark_hover mb-2">@lang('web.submit')</button>
+            <button type="submit" class="btn btn-flat btn-primary">@lang('web.submit')</button>
         </form>
-
     </div>
 </section>
