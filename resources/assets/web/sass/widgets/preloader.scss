@@ -1,0 +1,93 @@
+//preloader.blade.php
+
+body.loaded {
+  overflow: auto!important;
+}
+
+#preloader {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+
+
+.preloader_container {
+  z-index: 7000;
+  line-height: 0;
+  width: 80px;
+  height: 100px;
+  margin: 100px auto;
+  margin-top: calc(100vh / 2 - 50px)
+}
+
+.block {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+
+}
+
+.block:nth-child(4n+1) {
+  -webkit-animation: wave 2s ease 0s infinite;
+  animation: wave 2s ease 0s infinite
+}
+
+.block:nth-child(4n+2) {
+  -webkit-animation: wave 2s ease .2s infinite;
+  animation: wave 2s ease .2s infinite
+}
+
+.block:nth-child(4n+3) {
+  -webkit-animation: wave 2s ease .4s infinite;
+  animation: wave 2s ease .4s infinite
+}
+
+.block:nth-child(4n+4) {
+  -webkit-animation: wave 2s ease .6s infinite;
+  animation: wave 2s ease .6s infinite;
+  margin-right: 0
+}
+
+@-webkit-keyframes wave {
+  0% {
+    top: 0;
+    opacity: 1
+  }
+  50% {
+    top: 30px;
+    opacity: .2
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes wave {
+  0% {
+    top: 0;
+    opacity: 1
+  }
+  50% {
+    top: 30px;
+    opacity: .2
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+}
+.loaded #preloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .7s ease-out
+}
+

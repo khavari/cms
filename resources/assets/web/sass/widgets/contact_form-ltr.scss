@@ -1,0 +1,22 @@
+.contact_form{
+  button{
+    border-radius: 0;
+  }
+  .form-group{
+    input,textarea{
+      border-radius: 0;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+  form{
+    width: 70%;
+    margin: auto;
+  }
+ @media (max-width:992px){
+   form{
+     width: 100%;
+   }
+ }
+}

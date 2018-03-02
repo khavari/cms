@@ -1,0 +1,92 @@
+.article{
+  .top-content-article{
+    text-align: center;
+    border: 1px solid #dadada;
+    border-left: none;
+    border-right: none;
+    font-size: 14px;
+    margin-top: 25px;
+    padding:2px 10px;
+    .view-count{
+      float: right;
+    }
+    .comments-qty{
+      float: none;
+    }
+    .created_at{
+      float: left;
+    }
+  }
+  .image{
+    img{
+      width: 100%;
+    }
+  }
+  .title {
+    margin:15px 0;
+    font-weight:bold;
+    font-size: 1.5rem;
+  }
+  .main-content-article{
+    text-align: justify;
+  }
+  .share{
+    padding-top:15px;
+    border-top:1px solid #ddd;
+    width: 100%;
+    display:inline-block;
+    a{
+      font-size: 20px;
+      text-decoration: none !important;
+      color: #080808;
+    }
+    .socials{
+      float: right;
+      display: inline-block;
+      cursor: default;
+      margin-top: 2px;
+      span{
+        display: inline-block;
+        font-weight: bold;
+      }
+      ul{
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      li{
+        position: relative;
+        display:inline-block;
+        line-height:35px;
+        text-align: center;
+        a{
+          transition: all .2s;
+          display: inline-block;
+          text-decoration: none;
+          width:25px;
+          height:25px;
+          line-height: 25px;
+          border-radius: 100%;
+          font-size:14px;
+          color:#fff;
+          opacity: .8;
+          &:hover{opacity: 1}
+        }
+        .facebook{
+          background:#3b5998;
+        }
+        .twitter{
+          background:#0084b4;
+        }
+        .google-plus{
+          background:#d34836;
+        }
+        .linkedin{
+          background:#0077B5;
+        }
+
+      }
+    }
+
+  }
+}

@@ -1,0 +1,50 @@
+// LTR Fonts
+//------------------------------------------------------------
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+//------------------------------------------------------------
+@import "variables";
+// Dependencies sass
+//------------------------------------------------------------
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+// v4.0.0-beta.2
+@import "../../../../node_modules/font-awesome/scss/font-awesome";
+// 4.7.0
+@import "../../../../node_modules/animate-sass/animate";
+// 0.8.2
+@import "../../../../node_modules/owl.carousel/src/scss/owl.carousel";
+// 2.2.0
+@import "../../../../node_modules/lightgallery/src/sass/lightgallery";
+// Component sass ltr or (ltr & rtl)
+//------------------------------------------------------------
+@import "widgets/footer-ltr";
+// footer.blade.php
+@import "widgets/scroll-back-to-top";
+@import "widgets/featured-products-ltr";
+@import "widgets/bootstrap-carousel-slide-ltr";
+@import "widgets/faq-accordion-ltr";
+@import "widgets/parallax-ltr";
+@import "widgets/featured-images-gallery-ltr";
+@import "widgets/featured-gallery-ltr";
+@import "widgets/featured-articles-ltr";
+@import "widgets/introduction-ltr";
+@import "widgets/owl-customers-ltr";
+@import "widgets/bootstrap-navbar-sticky-ltr";
+@import "widgets/product-ltr";
+@import "widgets/products-ltr";
+@import "widgets/article-ltr";
+@import "widgets/articles-ltr";
+@import "widgets/service-ltr";
+@import "widgets/services-ltr";
+@import "widgets/featured-services-ltr";
+@import "widgets/popup-ltr";
+@import "widgets/user-ltr";
+@import "widgets/404-ltr";
+@import "widgets/500-ltr";
+@import "widgets/preloader";
+@import "widgets/page-ltr";
+@import "widgets/googlemap-ltr";
+@import "widgets/contact_form-ltr";
+//------------------------------------
+
+

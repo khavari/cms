@@ -1,0 +1,54 @@
+// bootstrap-carousel-slide
+#bootstrap-carousel-slide {
+  .carousel-item {
+    .overlay {
+      position: absolute;
+      display: inline-block;
+      background: #000;
+      opacity: 0.4;
+      top: 0;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .carousel-caption {
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+    right: 30px;
+    bottom: 0;
+    left: 30px;
+    position: absolute;
+    top: 0;
+    height: max-content;
+    .title {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    .summary {
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+    .more {
+      overflow: hidden;
+      text-decoration: none !important;
+      direction: rtl;
+      padding: 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      label {
+        padding: 3px 10px;
+        border-radius: 0;
+      }
+      .fa {
+        float: left;
+        line-height: 30px;
+      }
+    }
+    .more:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+}

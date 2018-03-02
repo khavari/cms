@@ -1,0 +1,58 @@
+// faq-accordion.blade.php
+.faq-accordion {
+  color: #000;
+  .card {
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 15px 0px;
+    font-weight: bold;
+  }
+  .card {
+    .collapse::after, .collapsed::after {
+      position: absolute;
+      right: 20px;
+      font-size: 30px;
+      line-height: 45px;
+      top: 17px;
+      color: #828d98;
+      font-weight: 100;
+    }
+    .collapse::after {
+      content: "-";
+    }
+    .collapsed::after {
+      content: "+";
+    }
+    .card-header {
+      padding: 10px 20px;
+      background-color: #fcfcfc;
+      .card-title {
+        margin: 0px;
+        a {
+          display: block;
+          text-decoration: none;
+          color: #424141;
+          transition: all .2s;
+          font-size: 16px;
+          padding: 1rem 0;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 1rem;
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+  
+}

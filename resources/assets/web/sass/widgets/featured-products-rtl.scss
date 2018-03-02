@@ -1,0 +1,60 @@
+//style rtl for component featured-products
+.featured-products{
+  .title{
+    text-align: center;
+    font-weight:bold;
+    font-size: 1.5rem;
+    display: block;
+  }
+.entity{
+  background: #fff;
+  direction: rtl;
+  margin-bottom: 15px;
+  display: block;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+  border-radius: 2px;
+  transition:all .2s;
+  &:hover{box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);}
+  a{
+    &:hover{text-decoration: none;}
+  }
+  .image {
+    overflow: hidden;
+  }
+  .image img{
+    transition: all 0.3s;
+  }
+  .image:hover img{
+    transform: scale(1.05);
+  }
+  .caption{
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    padding: 15px;
+    margin: 0px;
+    display: block;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+  .summary{
+    font-weight: 100;
+    line-height:25px;
+    padding: 0px 15px 15px 15px;
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+  }
+} //end entity
+
+
+}//end featured-products
+
+
+
+

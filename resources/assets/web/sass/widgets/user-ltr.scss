@@ -1,0 +1,48 @@
+.user-authenticate {
+  .form-row {
+    .form-control {
+      border-radius: 0;
+    }
+    input {
+      transition: all .5s;
+      &:focus {
+        box-shadow: none;
+        border: 1px solid blue;
+      }
+    }
+  }
+  .form-btn {
+    border-radius: 0;
+    padding: 5px 10px;
+    background: #00BCD4;
+    border: 1px solid #ddd;
+    color: #fff;
+  }
+  .form-link {
+    transition: all .5s;
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    margin-right: 5px;
+    color: #333;
+    text-decoration: none !important;
+    &:hover {
+      background: #eee;
+    }
+  }
+  .login-btn {
+    background: #fff;
+    color: #333;
+    appearance: unset;
+    border-radius: 0;
+    margin-bottom: 5px;
+    &:hover {
+      background: #eee;
+    }
+  }
+  .footer-forget-password {
+    .form-link {
+      float: right;
+      padding: 4px 20px;
+    }
+  }
+}

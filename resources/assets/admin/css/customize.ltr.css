@@ -1,0 +1,94 @@
+/* Content header divider
+================================================== */
+.content-header .breadcrumb {
+    background-color: #ffffff;
+    border-top: 3px solid #3c8dbc;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    margin: 10px 0px;
+}
+
+.content-header .breadcrumb li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+}
+
+.content-header .breadcrumb li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+}
+
+.content-header .breadcrumb > .active {
+    color: #868e96;
+}
+
+.content-header .breadcrumb > .event {
+    float: right;
+}
+
+/* Language menu in navbar.blade.php
+================================================== */
+.language-menu .dropdown-menu {
+    width: 150px !important;
+}
+
+.language-menu .dropdown-menu .menu .lang {
+    text-transform: uppercase;
+    float: right;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* top notification in messages.blade.php
+================================================== */
+#notification {
+    border-radius: 0px;
+    padding: 15px;
+    z-index: 999999;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+#notification p {
+    color: #fff;
+    font-style: 14px;
+    font-weight: 100;
+}
+
+/* highlight table row
+================================================== */
+table tr.updated {
+    background: #cff3fc !important;
+}
+
+/* box-header
+================================================== */
+.box-header > .box-tools {
+    position: relative;
+    right: auto;
+    top: auto;
+    float: right;
+}
+
+/* pagination
+================================================== */
+.pagination {
+    display: block;
+    padding: 0;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+/* login
+================================================== */
+.login-box-body{
+    background: #fff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+

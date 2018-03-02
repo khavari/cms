@@ -1,0 +1,47 @@
+// RTL Fonts
+//------------------------------------------------------------
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+//------------------------------------------------------------
+@import "variables";
+// Dependencies sass
+//------------------------------------------------------------
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+// v4.0.0-beta.2
+@import "../../../../node_modules/font-awesome/scss/font-awesome";
+// 4.7.0
+@import "../../../../node_modules/animate-sass/animate";
+// 0.8.2
+@import "../../../../node_modules/owl.carousel/src/scss/owl.carousel";
+// 2.2.0
+@import "../../../../node_modules/lightgallery/src/sass/lightgallery";
+// Component sass rtl or (rtl & ltr)
+//------------------------------------------------------------
+@import "widgets/footer-rtl";
+// footer.blade.php
+@import "widgets/scroll-back-to-top";
+@import "widgets/featured-products-rtl";
+@import "widgets/bootstrap-carousel-slide-rtl";
+@import "widgets/faq-accordion-rtl";
+@import "widgets/parallax-rtl";
+@import "widgets/featured-gallery-rtl";
+@import "widgets/featured-images-gallery-rtl";
+@import "widgets/featured-articles-rtl";
+@import "widgets/introduction-rtl";
+@import "widgets/owl-customers-rtl";
+@import "widgets/bootstrap-navbar-sticky-rtl";
+@import "widgets/product-rtl";
+@import "widgets/products-rtl";
+@import "widgets/article-rtl";
+@import "widgets/articles-rtl";
+@import "widgets/service-rtl";
+@import "widgets/services-rtl";
+@import "widgets/featured-services-rtl";
+@import "widgets/popup-rtl";
+@import "widgets/404-rtl";
+@import "widgets/500-rtl";
+@import "widgets/preloader";
+@import "widgets/page-rtl";
+@import "widgets/googlemap-rtl";
+@import "widgets/contact_form-rtl";
+//------------------------------------

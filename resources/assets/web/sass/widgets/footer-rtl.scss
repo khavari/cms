@@ -1,0 +1,161 @@
+//style for component footer
+$normal-font: 12px;
+$transition: all .2s;
+#footer {
+  padding: 0px;
+  border-top: 4px solid transparent;
+  text-align: right;
+  direction: rtl;
+  .title {
+    border-bottom: 2px solid transparent;
+    padding: 8px 0 8px 0;
+    margin: 15px 0 15px 0;
+    font-size: 14px;
+    line-height: initial;
+    span {
+      border-bottom: 2px solid transparent;
+      padding: {
+        bottom: 8px;
+      }
+    ;
+    }
+  }
+  a.link {
+    text-decoration: none;
+    font-size: $normal-font;
+    color: inherit;
+    display: block;
+    transition: $transition;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin: 5px 0px;
+    .fa {
+
+    }
+    span {
+      padding-right: 5px;
+    }
+    &:hover {
+      color: inherit;
+
+    }
+    i {
+      transition: all 0.2s;
+      color: inherit;
+    }
+  }
+  a:hover i {
+    margin-left: 5px;
+  }
+  .input-group {
+    background: transparent;
+    height: 30px;
+    border: 2px solid transparent;
+    margin-bottom: 2px;
+    .input-group-btn {
+      position: relative;
+      font-size: 0;
+      white-space: nowrap;
+      box-shadow: none;
+      background: #ff5258;
+      .btn {
+        background: transparent;
+        color: inherit;
+        padding-top: 4px;
+        border-radius: 0;
+        border: none;
+        font-size: 12px;
+        height: 100%;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .email {
+    border: none;
+    background: transparent;
+    height: 100%;
+    direction: ltr;
+    font-size: 12px;
+    padding: 0px 0px 0px 10px;
+    border-radius: 0;
+    color: inherit;
+  }
+
+  .social-area {
+
+    display: flex;
+    .social {
+      border: 1px solid transparent;
+      padding: 3px 8px;
+      margin: 2px;
+      color: inherit;
+      transition: $transition;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      &:hover {
+        border-color: transparent;
+      }
+      .fa {
+        transition: all 0.2s;
+        color: inherit;
+        margin: auto;
+      }
+    }
+    .social:hover .fa {
+      color: inherit;
+    }
+
+    .social:hover .fa-facebook {
+      color: #3b5999;
+    }
+    .social:hover .fa-twitter {
+      color: #55acee;
+    }
+    .social:hover .fa-instagram {
+      color: #e4405f;
+    }
+    .social:hover .fa-google-plus {
+      color: #dd4b39;
+    }
+    .social:hover .fa-linkedin {
+      color: #0077B5;
+    }
+    .social:hover .fa-youtube {
+      color: #cd201f;
+    }
+
+
+
+
+  }
+
+  #footer-bottom {
+    margin-top: 15px;
+
+    .copyright {
+      display: inline-block;
+      padding-top: 6px;
+      margin: 0px;
+      font-size: 12px;
+      font-weight: 100;
+    }
+    .footer-logo img {
+      max-height: 25px;
+      float: left;
+      margin: 5px;
+    }
+  }
+
+}
+
+//endfooter
+
+

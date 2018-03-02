@@ -1,0 +1,26 @@
+#scroll-back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000000;
+  width: 45px;
+  height: 45px;
+  right: 15px;
+  bottom: -60px;
+  font-size: 23px;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  will-change: transform;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+#scroll-back-to-top.show {
+  bottom: 15px;
+right: 15px;
+}
+

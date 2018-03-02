@@ -1,0 +1,44 @@
+#popup {
+  text-align: center;
+  .modal {
+    text-align: right;
+    .image {
+      height: 130px;
+      width: 200px;
+      margin: auto;
+    }
+    .modal-title {
+      text-align: right;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-content {
+      text-align: right;
+      padding: 10px;
+      opacity: .9;
+      background: #fff;
+      border-radius: 0;
+      .summary {
+        padding-top: 10px;
+        margin-bottom: 20px;
+      }
+      a {
+        transition: all .2s;
+        margin-top: 10px;
+        padding: 10px;
+        background: red;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          background: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
