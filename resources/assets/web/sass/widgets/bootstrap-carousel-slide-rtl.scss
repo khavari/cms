@@ -28,7 +28,7 @@
     }
     .summary {
       font-weight: 400;
-      font-size: 1.1rem;
+      font-size: .9rem;
     }
     .more {
       overflow: hidden;
@@ -41,6 +41,7 @@
       label {
         padding: 3px 10px;
         border-radius: 0;
+        font-size: 1.1rem;
       }
       .fa {
         float: left;
