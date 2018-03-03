@@ -12,7 +12,7 @@
         <div class="row">
 
             {{--------------- user ---------------}}
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{ $users_count }}</h3>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             {{--------------- file ---------------}}
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{ $uploads_size }}</h3>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             {{--------------- user ---------------}}
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{ $contacts_count }}</h3>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             {{--------------- user ---------------}}
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{ $widgets_count }}</h3>

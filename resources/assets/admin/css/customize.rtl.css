@@ -1,0 +1,103 @@
+/* dashboard font
+================================================== */
+@font-face {
+    font-family: IranYekan;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/IranYekan.eot');
+    src: url('../fonts/IranYekan.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IranYekan.woff') format('woff'),
+    url('../fonts/IranYekan.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, td, th {
+    font-family: IranYekan;
+}
+
+/* Content header divider
+================================================== */
+.content-header .breadcrumb {
+    background-color: #fff;
+    border-top: 3px solid #3c8dbc;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    margin: 10px 0;
+    float: none;
+    display: block;
+    position: relative;
+    top: inherit;
+    left: auto;
+    right: auto;
+}
+
+.content-header .breadcrumb li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #444;
+}
+
+.content-header .breadcrumb li a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #444;
+}
+
+.content-header .breadcrumb > .active {
+    color: #868e96;
+}
+
+.content-header .breadcrumb > .event {
+    float: right;
+}
+
+/* Language menu in navbar.blade.php
+================================================== */
+.language-menu .dropdown-menu {
+    width: 150px !important;
+}
+.language-menu .dropdown-menu .menu .lang{
+    text-transform: uppercase;
+    float: left;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* top notification in messages.blade.php
+================================================== */
+#notification {
+    border-radius: 0px;
+    padding: 15px;
+    z-index: 999999;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+#notification p {
+    color: #fff;
+    font-style: 14px;
+    font-weight: 100;
+}
+
+/* highlight table row
+================================================== */
+table tr.updated {
+    background: #cff3fc!important;
+}
+
+/* hidden overflow text in sidebar menu
+================================================== */
+.sidebar-menu .treeview-menu > li > a{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+/* pagination in box-footer
+================================================== */
+.box-footer .pagination{
+    margin: 0px;
+}

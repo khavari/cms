@@ -5,19 +5,33 @@ let mix = require('laravel-mix')
  | Admin panel assets
  |--------------------------------------------------------------------------
  */
-/*
+
 mix.styles([
   'resources/assets/admin/css/bootstrap.min.css',
   'resources/assets/admin/css/font-awesome.min.css',
-  'resources/assets/admin/css/ionicons.min.css',
+  //'resources/assets/admin/css/ionicons.min.css',
   'resources/assets/admin/css/animate.min.css',
   'resources/assets/admin/css/select2.min.css',
   'resources/assets/admin/css/dataTables.bootstrap.min.css',
-  'resources/assets/admin/css/pace.min.css',
+  //'resources/assets/admin/css/pace.min.css',
   'resources/assets/admin/css/AdminLTE.min.css',
   'resources/assets/admin/css/_all-skins.min.css',
   'resources/assets/admin/css/customize.ltr.css',
 ], 'public/assets/admin/css/admin.ltr.min.css');
+
+mix.styles([
+  'resources/assets/admin/css/bootstrap.min.css',
+  'resources/assets/admin/css/bootstrap.rtl.min.css',
+  'resources/assets/admin/css/font-awesome.min.css',
+  //'resources/assets/admin/css/ionicons.min.css',
+  'resources/assets/admin/css/animate.min.css',
+  'resources/assets/admin/css/select2.min.css',
+  'resources/assets/admin/css/dataTables.bootstrap.min.css',
+  //'resources/assets/admin/css/pace.min.css',
+  'resources/assets/admin/css/AdminLTE.RTL.css',
+  'resources/assets/admin/css/_all-skins.min.css',
+  'resources/assets/admin/css/customize.rtl.css',
+], 'public/assets/admin/css/admin.rtl.min.css');
 
 mix.scripts([
   'resources/assets/admin/js/jquery.min.js',
@@ -33,7 +47,7 @@ mix.scripts([
 mix.copy('resources/assets/admin/fonts', 'public/assets/admin/fonts')
 mix.copy('resources/assets/admin/img', 'public/assets/admin/img')
 mix.copy('resources/assets/admin/js/ckeditor', 'public/assets/admin/js/ckeditor')
-*/
+
 /*
  |--------------------------------------------------------------------------
  | Web site assets

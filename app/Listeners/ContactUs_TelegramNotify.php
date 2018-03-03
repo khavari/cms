@@ -34,7 +34,7 @@ class ContactUs_TelegramNotify
             'ip'=>$contact->ip,
         ];
         $telegram->send("یک پیام جدید در سیستم ثبت شد|عنوان: subject|نام: name|شماره تماس: phone|ایمیل: email|پیام: message|آی پی: ip",$displace,$keyboard);
-        
+
 
     }
 }

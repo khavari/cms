@@ -1,3 +1,19 @@
+/* dashboard font
+================================================== */
+@font-face {
+    font-family: OpenSans-Regular;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/OpenSans-Regular.eot');
+    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, td, th {
+    font-family: OpenSans-Regular;
+}
+
 /* Content header divider
 ================================================== */
 .content-header .breadcrumb {
@@ -84,11 +100,11 @@ table tr.updated {
 
 /* login
 ================================================== */
-.login-box-body{
+.login-box-body {
     background: #fff;
     padding: 20px;
     border-top: 0;
     color: #666;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
