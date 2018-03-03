@@ -1,5 +1,6 @@
 .bootstrap-navbar-sticky {
   a {
+    font-size: .9rem;
     transition: all .2s;
     text-decoration: none;
     color: #777777;
@@ -257,8 +258,9 @@
       font-size: 1.5rem;
       font-weight: bold;
     }
-    .brief {
+    p{
       text-align: right;
+      font-size: .9rem;
       margin: 0;
     }
     .logo {
@@ -296,6 +298,7 @@
         background: #eee;
       }
       a {
+        font-size:.9rem;
         padding: 0;
         line-height: 25px;
         text-align: right;
@@ -328,6 +331,7 @@
     margin: 0;
     border-radius: 0;
     a {
+      font-size: .9rem;
       border-bottom: 1px solid #ddd;
     }
     a:last-child {
