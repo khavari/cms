@@ -5,7 +5,7 @@ let mix = require('laravel-mix')
  | Admin panel assets
  |--------------------------------------------------------------------------
  */
-
+/*
 mix.styles([
   'resources/assets/admin/css/bootstrap.min.css',
   'resources/assets/admin/css/font-awesome.min.css',
@@ -47,7 +47,7 @@ mix.scripts([
 mix.copy('resources/assets/admin/fonts', 'public/assets/admin/fonts')
 mix.copy('resources/assets/admin/img', 'public/assets/admin/img')
 mix.copy('resources/assets/admin/js/ckeditor', 'public/assets/admin/js/ckeditor')
-
+*/
 /*
  |--------------------------------------------------------------------------
  | Web site assets
