@@ -3,12 +3,14 @@
 return [
     // user
     'name'             => 'نام',
-    'user'             => 'کاربری',
+    'user'             => 'کاربر',
     'username'         => 'نام کاربری',
-    'users'            => 'کاربرها',
-    'manage_users'     => 'مدیریت کاربر',
+    'users'            => 'کاربران',
+    'manage_users'     => 'مدیریت کاربران',
     'super_user'       => 'کاربر ویژه',
     'user_id'          => 'شناسه کاربری',
+    'create_new_user' => 'ساختن کاربر جدید',
+    'submit_new_user' => 'ثبت کاربر جدید',
     'id'               => 'شناسه',
     'chat_id'          => 'شناسه چت',
     'national_id'      => 'شناسه بین المللی',
@@ -16,9 +18,10 @@ return [
     'root'             => 'ریشه',
     'root_directory'   => 'دایرکتوری ریشه',
     'parent_id'        => 'شناسه والد',
-    'role_id' => 'شناسه نقش',
+    'role_id'          => 'شناسه نقش',
     'roles'            => 'نقش ها',
     'role'             => 'نقش',
+    'author'             => 'نویسنده',
     'email'            => 'ایمیل',
     'password'         => 'رمز عبور',
     'confirm_password' => 'تایید رمز عبور',
@@ -48,8 +51,8 @@ return [
 
     // setting
     'setting'          => 'تنظیمات',
-    'settings'         => 'تمام تنظیمات',
-    'all_settings'     => 'تمام تنظیمات',
+    'settings'         => 'تنظیمات',
+    'all_settings'     => 'همه تنظیمات',
     'manage_settings'  => 'مدیریت تنظیمات',
     'archive'          => 'آرشیو',
     'unarchive'        => 'آرشیو نکردن',
@@ -74,7 +77,7 @@ return [
 
     // content
     'content'          => 'محتوا',
-    'contents'         => 'همه محتوا',
+    'contents'         => 'محتوا',
     'manage_content'   => 'مدیریت محتوا',
     'content_color'    => 'رنگ محتوا',
     'title'            => 'عنوان',
@@ -101,12 +104,12 @@ return [
     'google_map'       => 'نقشه گوگل',
 
 
-    'submit_new'             => 'ثبت جدید :آیتم',
-    'create_new'             => 'ساخت جدید :آیتم',
-    'create_new_in'          => 'ساخت جدید :آیتم در',
+    'submit_new'             => 'ثبت آیتم جدید',
+    'create_new'             => 'ساخت آیتم جدید',
+    'create_new_in'          => 'ساخت آیتم جدید در',
     'slug'                   => 'اسلاگ',
     'link'                   => 'لینک',
-    'size'                   => 'سایز',
+    'size'                   => 'اندازه',
     'download'               => 'دانلود',
     'vocabularies'           => 'واژه ها',
     'vocabulary'             => 'واژه',
@@ -122,7 +125,7 @@ return [
     'submit_new_file'        => 'ثبت فایل جدید',
     'manage_files'           => 'مدیریت فایلها',
     'file_manager'           => 'مدیریت فایل',
-    'uploaded_files'         => 'آپلود فایلها',
+    'uploaded_files'         => 'فایلهای بارگذاری شده',
 
     //'Document
     'docs'                   => 'اسناد',
@@ -137,7 +140,7 @@ return [
     //category
     'manage_category'        => 'مدیریت دسته بندی',
     'category'               => 'دسته بندی',
-    'categories'             => 'دسته بندیها',
+    'categories'             => 'دسته بندی ها',
 
     // action
     'logins'                 => 'ورودیها',
@@ -156,7 +159,7 @@ return [
     'login_to_admin'         => 'وارد شدن به پنل مدیریت',
     'active'                 => 'فعال',
     'inactive'               => 'غیرفعال',
-    'action'                 => 'اکشن',
+    'action'                 => 'عملیات',
     'create'                 => 'ساختن',
     'select_me'              => 'انتخاب نمایید',
 
@@ -182,6 +185,7 @@ return [
     'icons'                  => 'آیکن ها',
     'without_icon'           => 'بدون آیکن',
     'favicon'                => 'آیکن ویژه',
+
 
     //timestamp
     'created_at'             => 'ساخته شده در',
@@ -213,7 +217,7 @@ return [
     //admin
     'seo'                    => 'سئو',
     'dashboard'              => 'داشبورد',
-    'view_home_page'         => 'نمایش صفح اصلی',
+    'view_home_page'         => 'نمایش صفحه اصلی',
 
     //image
     'slide'                  => 'اسلاید',
@@ -227,4 +231,12 @@ return [
     'logo'                   => 'لوگو',
     'yes'                    => 'بله',
     'no'                     => 'خیر',
+
+    //widgets
+    'widget'                 => 'ویدجت',
+    'widgets'                => 'ویدجت ها',
+    'all_widgets'            => 'همه ویدجت ها',
+    'manage_widgets'         => 'مدیریت ویدجت ها',
+    'active_widgets'         => 'ویدجت های فعال',
+    'home_page'              => 'صفحه اصلی ویدجت ها',
 ];
