@@ -1,9 +1,11 @@
 .contact_form{
   button{
+    font-size: .9rem;
     border-radius: 0;
   }
   .form-group{
     input,textarea{
+      font-size: .9rem;
       border-radius: 0;
       &:focus{
         box-shadow: none;
@@ -11,6 +13,7 @@
     }
   }
   form{
+    font-size: .9rem;
     width: 70%;
     margin: auto;
   }

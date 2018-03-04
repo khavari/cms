@@ -35,7 +35,7 @@
   .owl-next{
     right:-16px;
   }
-    .fa-angle-right:before,.fa-angle-left:before  {
+  .fa-angle-right:before,.fa-angle-left:before  {
     content: "\F105";
     font-size: 30px;
     position: absolute;
@@ -71,13 +71,13 @@
     padding: 5px 20px;
     text-align: center;
     white-space: nowrap;
-    margin: 0;
+    margin:0;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-size: 15px;
+    font-size:1.1rem;
     text-decoration: none;
     font-weight: normal;
-      &:hover{
+    &:hover{
       color: #000;
     }
   }

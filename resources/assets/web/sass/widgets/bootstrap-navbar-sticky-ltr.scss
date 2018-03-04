@@ -14,13 +14,14 @@
     border-bottom: 1px solid #eee;
     .search-icon {
       .fa {
-        font-size: 14px;
+        font-size: .9rem;
         &:focus {
           outline: none;
         }
       }
     }
     .search-box {
+      font-size: .9rem;
       border-radius: 0;
       height: 27px;
       display: inline-flex;
@@ -32,9 +33,11 @@
       .modal-body {
         padding: 0 10px;
         .close {
+          font-size: .9rem;
           margin: 5px 0;
         }
         .search {
+          font-size: .9rem;
           border-radius: 0;
           margin: 5px 0;
           &:focus {
@@ -47,7 +50,7 @@
         padding: 10px;
         button {
           transition: all .2s;
-          font-size: 14px;
+          font-size: .9rem;
           padding: 3px 10px;
           margin: 0 2px;
           border-radius: 0;
@@ -127,7 +130,7 @@
           transition:all .2s;
           display: inherit;
           text-decoration: none;
-          font-size: 14px;
+          font-size: .9rem;
           padding:0;
           .txt-social {
             display: none;
@@ -213,6 +216,7 @@
           color: #fff;
         }
         a {
+          font-size: .9rem;
           i {
             padding-right: 3px;
           }

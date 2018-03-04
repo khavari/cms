@@ -12,7 +12,8 @@
     .item-zoom {
       .item-zoom-link, .item-zoom-icon {
         .fa-search, .fa-link {
-          font-size: 23px;
+          font-size:1.1rem;
+          line-height: 25px;
           margin: 14px;
           color: #000;
         }
@@ -52,7 +53,7 @@
       opacity: 1;
     }
     .item-zoom-text {
-      font-size: 17px;
+      font-size: .9rem;
       text-decoration: none;
       margin: 0;
       overflow: hidden;
@@ -93,4 +94,8 @@
     }
   }
 }
-
+.lg-sub-html{
+  h4{
+    font-size:1.1rem;
+  }
+}

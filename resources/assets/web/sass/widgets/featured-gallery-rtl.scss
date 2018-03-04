@@ -53,7 +53,7 @@
       opacity: 1;
     }
     .item-zoom-text {
-      font-size: 14px;
+      font-size:.9rem;
       direction: rtl;
       text-decoration: none;
       margin: 0;
@@ -97,4 +97,9 @@
 }
 .lg-inner{
   direction: ltr;
+}
+.lg-sub-html{
+  h4{
+    font-size: 1.1rem;
+  }
 }
