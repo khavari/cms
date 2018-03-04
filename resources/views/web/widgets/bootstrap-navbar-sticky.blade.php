@@ -87,13 +87,12 @@
                                 {{------------ Language  ------------}}
                                 @if(count(locale('keys')) > 1)
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
                                            data-toggle="dropdown" aria-haspopup="true"
                                            aria-expanded="false">{{ locale('key') }}<span
                                                     class="fa fa-angle-down"></span>
                                         </a>
-                                        <div class="dropdown-menu p-0 flags-menu border_vibrant"
-                                             aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-menu p-0 flags-menu border_vibrant">
 
                                             @foreach(locale('all') as $locale)
                                                 @if($locale['key'] != locale('key'))
@@ -116,8 +115,7 @@
 
                         <div class="form-area">
                             <form action="#" class="form">
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
@@ -175,11 +173,11 @@
                     @foreach($feature->navbar() as $link)
                         @if($link->hasChildren())
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ $link->title }}<span class="fa fa-angle-down"></span>
                                 </a>
-                                <div class="dropdown-menu p-0 submenu border_vibrant" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu p-0 submenu border_vibrant" >
                                     @foreach($link->children()->active()->get() as $item)
                                         @if($item->isExternal())
                                             <a class="dropdown-item" target="_blank" rel="nofollow" href="{{ url($item->url) }}">{{ $item->title }}</a>

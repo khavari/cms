@@ -1,11 +1,5 @@
 @extends('web.layouts.master')
 
-
-{{-- Page title --}}
-{{--------------------------------------------------}}
-@section('title', setting('title'))
-
-
 {{-- Main content --}}
 {{--------------------------------------------------}}
 @section('content')

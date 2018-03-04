@@ -18,10 +18,7 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="heading-{{ $index }}">
                             <h5 class="card-title">
-                                <a class="@if($index != 0) collapsed @endif" data-toggle="collapse"
-                                   href="#collapse-{{$id}}-{{ $index }}" role="button"
-                                   aria-expanded="@if($index == 0) true @else false @endif"
-                                   aria-controls="collapse-{{$id}}-{{ $index }}">
+                                <a class="@if($index != 0) collapsed @endif" data-toggle="collapse" href="#collapse-{{$id}}-{{ $index }}">
                                     {{ $link->title }}
                                 </a>
                             </h5>

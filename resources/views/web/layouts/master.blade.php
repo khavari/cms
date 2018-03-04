@@ -1,10 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}" dir="{{ locale('dir') }}">
-
-{{-- Web head section --}}
-{{------------------------------------------------------------}}
 @include('web.layouts.head')
-
 <body class="bg_body">
 
 {{-- Web header section --}}

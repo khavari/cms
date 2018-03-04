@@ -10,7 +10,7 @@
     url('../fonts/IranYekan.ttf') format('truetype');
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, td, th {
+body, h1, h2, h3, h4, h5, h6, p, a, span, td, th {
     font-family: IranYekan;
 }
 
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, td, th {
     background-color: #fff;
     border-top: 3px solid #3c8dbc;
     border-radius: 3px 3px 0 0;
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
     margin: 10px 0;
     float: none;
     display: block;
@@ -55,7 +55,8 @@ h1, h2, h3, h4, h5, h6, p, a, span, td, th {
 .language-menu .dropdown-menu {
     width: 150px !important;
 }
-.language-menu .dropdown-menu .menu .lang{
+
+.language-menu .dropdown-menu .menu .lang {
     text-transform: uppercase;
     float: left;
     font-weight: 400;
@@ -82,12 +83,12 @@ h1, h2, h3, h4, h5, h6, p, a, span, td, th {
 /* highlight table row
 ================================================== */
 table tr.updated {
-    background: #cff3fc!important;
+    background: #cff3fc !important;
 }
 
 /* hidden overflow text in sidebar menu
 ================================================== */
-.sidebar-menu .treeview-menu > li > a{
+.sidebar-menu .treeview-menu > li > a {
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -98,6 +99,6 @@ table tr.updated {
 
 /* pagination in box-footer
 ================================================== */
-.box-footer .pagination{
+.box-footer .pagination {
     margin: 0px;
 }

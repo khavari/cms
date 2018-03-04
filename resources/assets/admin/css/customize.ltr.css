@@ -10,7 +10,7 @@
     url('../fonts/OpenSans-Regular.ttf') format('truetype');
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, td, th {
+body, h1, h2, h3, h4, h5, h6, p, a, span, td, th {
     font-family: OpenSans-Regular;
 }
 

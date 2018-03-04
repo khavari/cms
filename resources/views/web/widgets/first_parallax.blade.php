@@ -15,15 +15,15 @@
                     @isset($link->label)
                         <a href="{{ $link->url }}" class="btn-group mt-3 more animated flipInX ">
 
-                                <label class="btn mb-0 bg_vibrant bg_vibrant-hover">
+                                <span class="btn mb-0 bg_vibrant bg_vibrant-hover">
                                     {{ $link->label }}
-                                </label>
+                                </span>
 
 
                             @isset($link->icon)
-                                <label class="btn mb-0 bg_vibrant_hover ">
+                                <span class="btn mb-0 bg_vibrant_hover ">
                                     <i class="fa {{ $link->icon }}"></i>&nbsp;
-                                </label>
+                                </span>
                             @endisset
                         </a>
                     @endisset

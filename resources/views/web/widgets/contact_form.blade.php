@@ -1,6 +1,7 @@
 {{-- contact_form-rtl.scss -contact_form-ltr.scss --}}
 <section id="contact_form" class="contact_form pt-5 pb-5">
     <div class="container">
+        <h6 class="d-none">add for seo</h6>
         <form action="{{route('contact-us')}}#contact_form" name="form" method="post">
             {{ csrf_field() }}
             <div class="form-group row">

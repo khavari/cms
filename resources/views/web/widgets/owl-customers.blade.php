@@ -9,7 +9,7 @@
                         <div class="item animated fadeIn border_vibrant">
                             <a href="{{ $link->url }}">
                                 <img src="{{ asset($link->image()) }}{{ $link->feature->dimension }}" alt="{{ $link->title }}" class="img-fluid animated fadeIn">
-                                <p class="owl-text">{{ $link->title }}</p>
+                                <h6 class="owl-text">{{ $link->title }}</h6>
                             </a>
                         </div>
                     @endforeach

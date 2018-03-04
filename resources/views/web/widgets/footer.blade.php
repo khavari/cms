@@ -23,7 +23,7 @@
                     <span class="border_vibrant">@lang('lorem.2')</span>
                 </h6>
 
-                <form action="" method="">
+                <form action="{{ url('/') }}" method="post">
                     <div class="input-group border_bg_dark">
                         <span class="input-group-btn">
                             <button class="btn bg_border_dark" type="submit">@lang('web.submit')</button>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="footer-logo">
-                        <img src="{{ asset(setting('logo')) }}">
+                        <img src="{{ asset(setting('logo')) }}" alt="{{ setting('title') }}">
                     </div>
                 </div>
             </div>
