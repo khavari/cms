@@ -24,16 +24,17 @@
   .content{
         text-align: justify;
         line-height:40px;
+        font-size: .9rem;
   }
   .more{
     color: #f4f5f9;
     text-decoration: none;
     background-color:#FFC107;
     padding: 5px 15px;
-    float:right;
+    float:left;
     transition: all .2s;
     margin-bottom: 10px;
-
+    font-size: 1.1rem;
     &:hover{
       box-shadow: 0px 2px 3px #333;
        }
