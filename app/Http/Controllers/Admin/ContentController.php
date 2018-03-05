@@ -82,12 +82,13 @@ class ContentController extends Controller
     public function edit(Content $content)
     {
         if (request('active') && request('active') === 'toggle') {
-            if ($content->active === 1) {
-                $content->update(['active' => 0]);
-            } else {
-                $content->update(['active' => 1]);
-            }
-            return back()->with('success', __('messages.toggled_success'));
+            $this->toggle_active($content);
+            return back();
+        }
+
+        if (request('featured') && request('featured') === 'toggle') {
+            $this->toggle_featured($content);
+            return back();
         }
 
         $vocabulary_id = $content->vocabulary_id;
@@ -128,5 +129,25 @@ class ContentController extends Controller
         Storage::disk('public')->delete($content->image);
         $content->delete();
         return back();
+    }
+
+    public function toggle_active($content)
+    {
+        if ($content->active === 1) {
+            $content->update(['active' => 0]);
+        } else {
+            $content->update(['active' => 1]);
+        }
+        session()->flash('success', __('messages.toggled_success'));
+    }
+
+    public function toggle_featured($content)
+    {
+        if ($content->featured === 1) {
+            $content->update(['featured' => 0]);
+        } else {
+            $content->update(['featured' => 1]);
+        }
+        session()->flash('success', __('messages.toggled_success'));
     }
 }
