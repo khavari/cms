@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Category;
+use App\Content;
 use App\Http\Utilities\Seo;
+use App\Vocabulary;
 use App\Widget;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

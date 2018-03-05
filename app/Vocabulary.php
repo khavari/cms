@@ -25,10 +25,10 @@ class Vocabulary extends Model
         return $query->where('slug', '=', $slug);
     }
 
-    public function featured_contents($slug)
+    public function featuredContents($slug)
     {
-        //return Vocabulary::where('slug',$slug)->first()->contents()->where('active',1)->get();
-        return $this->slug($slug)->first()->contents()->get();
+        $vocabulary_id = Vocabulary::where('slug',$slug)->first()->getKey();
+        return Content::where('vocabulary_id', $vocabulary_id)->active()->lang()->published()->get();
     }
 
 
