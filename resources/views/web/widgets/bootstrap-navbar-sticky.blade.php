@@ -126,7 +126,7 @@
                                             <form action="#">
                                             <div class="modal-body">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control search mt-3" id="search">
+                                                        <input type="text" class="form-control search mt-3" placeholder="@lang('web.search_in_site')" id="search">
                                                     </div>
                                             </div>
                                             <div class="modal-footer">
