@@ -30,37 +30,38 @@
       padding-left: 40px;
     }
     .modal {
-      .modal-body {
-        font-size: .9rem;
-        padding: 0 10px;
-        .close {
-          font-size: .9rem;
-          margin: 5px 0;
+      .modal-title{
+        font-size: 1.1rem;
+      }
+      .modal-header .close {
+        margin-right:auto;
+        margin-left:0;
+        margin-top: 0;
+        padding:0 .5rem;
+        &:focus,&:hover{
+          outline: none;
+          opacity: .7;
         }
-        .search {
+      }
+      .modal-body{
+        .search{
+          text-align: right;
           font-size: .9rem;
           border-radius: 0;
-          margin: 5px 0;
-          &:focus {
+          &:focus{
             box-shadow: none;
-            border: 1px solid #2e9ad0;
           }
         }
       }
-      .modal-footer {
-        padding: 10px;
-        button {
-          transition: all .2s;
-          font-size: .9rem;
-          padding: 3px 10px;
-          margin: 0 2px;
+      .modal-footer{
+        .btn{
+          margin-left: auto;
+          margin-right: 0;
           border-radius: 0;
-          background: #2196F3;
-          color: #fff;
-          box-shadow: 0 1px 3px #ddd;
-          &:hover {
-            background: #1772bb;
-          }
+          font-size: .9rem;
+             &:focus{
+               box-shadow: none;
+             }
         }
       }
     }

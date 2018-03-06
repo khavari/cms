@@ -28,6 +28,7 @@ return [
     'comment'                  => 'Comment',
     'comments'                 => 'Comments',
     'submit'                   => 'Submit',
+    'search'                   => 'Search',
     'send'                     => 'Send',
     'sort'                     => 'Sort',
     'sort_by'                  => 'Sort_by',
