@@ -1,4 +1,11 @@
 .user-authenticate {
+  .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  label{
+    font-size:.9rem;
+  }
   .form-row {
     .form-control {
       border-radius: 0;
@@ -41,8 +48,11 @@
   }
   .footer-forget-password {
     .form-link {
-      float: right;
-      padding: 4px 20px;
+      float: left;
+      padding: 5px 20px;
     }
+  }
+  .btn-primary:focus{
+    box-shadow: 0 0 4px 0 rgba(0, 123, 255, 0.5) !important;
   }
 }

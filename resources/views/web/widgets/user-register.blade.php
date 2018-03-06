@@ -69,7 +69,7 @@
                     <div class="w-100"></div>
                     {{--------------- submit---------------}}
 
-                    <button class="btn form-btn mb-3 bg_vibrant bg_vibrant_hover" type="submit">@lang('web.submit')</button>
+                    <button class="btn form-btn mb-3 btn-primary" type="submit">@lang('web.submit')</button>
                     <div class="w-100"></div>
 
             </div>

@@ -35,21 +35,20 @@
                     <div class="custom-control custom-checkbox my-1 mr-sm-2">
                         <input type="checkbox" class="custom-control-input" id="remember"
                                name="remember" {{ old('remember') ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="remember">@lang('web.remember_me')</label>
+                        <label class="custom-control-label label-checkbox" for="remember">@lang('web.remember_me')</label>
                     </div>
                 </div>
 
                 <div class="w-100"></div>
                 {{--------------- submit---------------}}
                 <div class="col-md-6 mb-3">
-                    <button class="btn form-btn bg_vibrant" type="submit">@lang('web.submit')</button>
+                    <button class="btn form-btn btn-primary" type="submit">@lang('web.submit')</button>
                 </div>
                 <div class="w-100"></div>
                 {{--------------- login with social---------------}}
                 <div class="col-md-6 mb-3">
                     <a href="{{ route('socialite',['driver'=>'google']) }}" class="btn  login-btn border_vibrant " type="submit"> <i class="fa fa-google-plus"></i> @lang('web.sign_in_with_google-plus')</a>
                     <a href="{{ route('socialite',['driver'=>'facebook']) }}" class="btn  login-btn border_vibrant " type="submit"> <i class="fa fa-facebook"></i> @lang('web.sign_in_with_facebook')</a>
-
                 </div>
             </div>
 
