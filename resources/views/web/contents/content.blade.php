@@ -9,7 +9,7 @@
 {{-- Main content --}}
 {{--------------------------------------------------}}
 @section('content')
-    @includeIf('web.widgets.page')
+    @includeIf('web.widgets.'.$content->vocabulary->slug)
 @endsection
 
 {{-- Add style --}}
