@@ -58,6 +58,7 @@ return [
     'like'                     => 'Like',
     'liked'                    => 'Liked',
     'message'                  => 'Message',
+    'featured_articles'        => 'Featured Articles',
     'contact_info'             => 'Contact Information',
     'sign_in_with_google'      => 'Sign In With Google',
     'sign_in_with_facebook'    => 'Sign In With Facebook',

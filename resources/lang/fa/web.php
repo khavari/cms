@@ -59,6 +59,7 @@ return [
     'liked'                    => 'پسندیدم',
     'message'                  => 'پیام',
     'contact_info'             => 'اطلاعات تماس',
+    'featured_articles'        => 'مقالات ویژه',
     'sign_in_with_google'      => 'وارد شدن با اکانت گوگل',
     'sign_in_with_facebook'    => 'وارد شدن با اکانت فیس بوک',
     'sign_in_with_github'      => 'وارد شدن با اکانت گیت هاب',

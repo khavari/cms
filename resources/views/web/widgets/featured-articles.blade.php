@@ -23,14 +23,14 @@
                                         <div class="overlay-img"></div>
                                     </div>
                                 </a>
-                                <div class="article-footer">
+                                <div class="article-icons">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
                     </span>
-                                    <span class="comments-qty">
+                 <span class="comments-qty">
                         <i class="fa fa-comment-o"></i>
-                        comments
+                     25 @lang('web.comments')
                     </span>
                                     <span class="view-count">
                         <i class="fa fa-eye"></i>
@@ -41,15 +41,12 @@
                                 <div class="article-body">
                                     <h5 class="title">{{ $content->title }}</h5>
                                     <div class="summary">
-                                        <p>{{ str_limit($content->summary,200) }}</p>
-                                        <div class="btn-area">
-                                            <a href="{{ $content->url() }}" class="btn-more">@lang('lorem.1')</a>
-                                            <div class="overlay-btn"></div>
-
-                                        </div>
+                                        <p>{{ str_limit($content->summary,150) }}</p>
                                     </div>
                                 </div>
-
+                                <div class="btn-area">
+                                    <a href="{{ $content->url() }}" class="btn btn-primary btn-more">@lang('web.more')</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
