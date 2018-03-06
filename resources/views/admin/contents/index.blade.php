@@ -60,6 +60,7 @@
                                 <tr class="{{ (isUpdated($content->updated_at))?'updated':'' }}">
                                     <td>
                                         @include('admin.partials.active',['action'=>route('admin.contents.edit', ['id' => $content->id]),'active'=>$content->active])
+                                        @include('admin.partials.featured',['action'=>route('admin.contents.edit', ['id' => $content->id]),'featured'=>$content->featured])
                                     </td>
                                     <td>{{$content->id}}</td>
                                     <td>{{ str_limit($content->title,32) }}</td>

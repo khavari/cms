@@ -33,7 +33,7 @@
             </div>
             <div class="form-row footer-forget-password">
                 <div class="col-md-6">
-                <button class="btn form-btn mb-3 bg_vibrant bg_vibrant_hover" type="submit">@lang('web.submit')</button>
+                <button class="btn form-btn mb-3 btn-primary" type="submit">@lang('web.submit')</button>
                 <a href="#" class="form-link">@lang('web.login')</a>
                 </div>
             </div>

@@ -36,14 +36,14 @@
                         <table class="table table-hover table-striped table-bordered">
                             <tr>
                                 <th>@lang("admin.id")</th>
-                                <th>@lang("admin.title")</th>
+                                <th>@lang("admin.slug")</th>
                                 <th>@lang("admin.categories")</th>
                                 <th>@lang("admin.contents")</th>
                             </tr>
                             @foreach($vocabularies as $vocabulary)
                                 <tr>
                                     <td>{{ $vocabulary->getKey() }}</td>
-                                    <td>{{ $vocabulary->title }}</td>
+                                    <td>{{ $vocabulary->slug }}</td>
                                     <td>
                                         <a href="{{ route('admin.categories.index') }}?vocabulary_id={{ $vocabulary->getKey() }}" class="btn btn-xs btn-flat btn-primary">{{ $vocabulary->categories()->lang()->count() }}&nbsp;&nbsp;@lang("admin.categories")</a>
                                     </td>

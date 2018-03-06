@@ -1,5 +1,13 @@
 .user-authenticate {
   text-align: right;
+  .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  label{
+    font-size:.9rem;
+  }
+
   .form-row {
     .form-control {
       border-radius: 0;
@@ -23,7 +31,7 @@
     transition: all .5s;
     border: 1px solid #ddd;
     padding: 8px 20px;
-    margin-right: 5px;
+    margin-left: 5px;
     color: #333;
     text-decoration: none !important;
     &:hover {
@@ -39,26 +47,23 @@
     &:hover {
       background: #eee;
     }
-    .fa {
-      float: left;
-      margin: 4px 5px;
-    }
-  }
-  .custom-control-label::before {
-    left: auto;
-    right: 0;
-  }
-  .custom-control-label::after {
-    left: auto;
-    right: 0;
-  }
-  .custom-control-label {
-    margin-right: 25px;
   }
   .footer-forget-password {
     .form-link {
-      float: left;
-      padding: 4px 20px;
+      float: right;
+      padding: 5px 20px;
     }
   }
+
+
+input[type=email]{
+  text-align: left;
+}
+.label-checkbox::before,.label-checkbox::after{
+  left: auto ;
+  right: 0 ;
+}
+.btn-primary:focus{
+  box-shadow: 0 0 4px 0 rgba(0, 123, 255, 0.5) !important;
+}
 }

@@ -32,10 +32,8 @@ class Feature extends Model
 
     public function navbar()
     {
-        return $this->slug('navbar')->first()->links()->lang()->parents()->orderBy('order')->get();
-
         return cache()->rememberForever('navbar:' . app()->getLocale(), function () {
-
+            return $this->slug('navbar')->first()->links()->lang()->parents()->orderBy('order')->get();
         });
 
     }

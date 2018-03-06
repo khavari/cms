@@ -20,4 +20,16 @@ class Vocabulary extends Model
         return $this->hasManyThrough(Content::class, Category::class, 'vocabulary_id', 'category_id');
     }
 
+    public function scopeSlug($query, $slug)
+    {
+        return $query->where('slug', '=', $slug);
+    }
+
+    public function featured_contents($slug)
+    {
+        //return Vocabulary::where('slug',$slug)->first()->contents()->where('active',1)->get();
+        return $this->slug($slug)->first()->contents()->get();
+    }
+
+
 }

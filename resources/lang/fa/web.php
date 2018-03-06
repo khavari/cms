@@ -28,6 +28,8 @@ return [
     'comment'                  => 'دیدگاه',
     'comments'                 => 'دیدگاه ها',
     'submit'                   => 'ثبت',
+    'search'                   => 'جستجو',
+    'search_in_site'           => 'جستجو در مطالب سایت ... ',
     'send'                     => 'فرستادن',
     'sort'                     => 'ترتیب',
     'sort_by'                  => 'ترتیب با',

@@ -107,36 +107,35 @@
                                     </li>
                                 @endif
                                 <li><a href="#" class="submit" data-toggle="modal"
-                                       data-target="#exampleModal">
+                                       data-target="#search-modal">
                                         <span class="fa fa-search"></span></a></li>
                             </ul>
                         </div>
 
 
                         <div class="form-area">
-                            <form action="#" class="form">
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modallLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-body">
-                                                <button type="button" class="close" id="search" data-dismiss="modal"
-                                                        aria-label="Close">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title"  for="search"  id="search-modallLabel">@lang('web.search')</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
-                                                <input type="search" class="search form-control" placeholder="Search">
+                                            </div>
+                                            <form action="#">
+                                            <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control search mt-3" placeholder="@lang('web.search_in_site')" id="search">
+                                                    </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn bg_muted bg_muted_hover"
-                                                        data-dismiss="modal">Close
-                                                </button>
-                                                <button type="button" class="btn bg_vibrant_hover bg_vibrant">Search
-                                                </button>
+                                                <button type="button" class="btn btn-primary">@lang('web.search')</button>
                                             </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-
-                            </form>
                         </div>
                     </div>
                 </div>
