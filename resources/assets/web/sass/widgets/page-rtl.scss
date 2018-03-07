@@ -1,28 +1,50 @@
 #contents-page {
-direction: rtl;
+  text-align: right;
+  direction: rtl;
   .wp-page {
-    background: #f7f6f6;
-    border: 1px solid #dfdfdf;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px #dedede;
+    .wp-image {
+      padding: 10px;
+    }
     .breadcrumb {
-      background: #d8d8d8;
+      font-size: .9rem;
+      border: 1px solid #ddd;
+      display: flex;
       border-radius: 0;
+      flex-wrap: wrap;
+      padding: 5px 1rem;
+      margin-bottom: 1rem;
+      list-style: none;
+      border-radius: 0.25rem;
+      border-radius: 0;
+      border-right: 0;
+      border-left: 0;
+      margin-top: 5px;
+      background: transparent;
+      text-align: right;
+
       .breadcrumb-item {
         a {
           text-decoration: none;
           color: inherit;
         }
+        &.active {
+
+        }
       }
     }
     .title {
+      text-align: right;
       font-size: 1.5rem;
       padding: 5px 15px;
-      text-align: right;
     }
     .body {
-      padding: 15px;
       text-align: right;
+      padding: 15px;
       p {
-        font-size: 1.1rem;
+        font-size: .9rem;
         line-height: 2rem;
         font-weight: 100;
       }
@@ -30,10 +52,28 @@ direction: rtl;
         text-decoration: none;
       }
     }
+    .article-icons {
+      text-align: center;
+      border: 1px solid #dadada;
+      border-right: none;
+      border-left: none;
+      font-size: .8rem;
+      margin-top:0;
+      padding: 2px 10px;
+      .view-count {
+        float: right;
+      }
+      .comments-qty {
+        float: none;
+      }
+      .created_at {
+        float: left;
+      }
+    }
   }
   .wp-images {
-    background: #f7f6f6;
-    border: 1px solid #dfdfdf;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px #dedede;
     .images-title {
       font-size: 1.5rem;
       text-align: center;
@@ -67,6 +107,42 @@ direction: rtl;
         margin: 0px;
         font-size: 1rem;
         font-weight: 100;
+      }
+    }
+  }
+  .sidebar{
+    background: #ffffff;
+    box-shadow: 0px 0px 1px #dedede;
+    text-align: right;
+    .title {
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .content{
+      .link{
+        text-decoration: none !important;
+        font-size: .9rem;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        transition: all .3s;
+        color: #555;
+
+        &:hover{
+          color: #000;
+        }
+        p{
+          display: inline-block;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          transition: all .3s;
+          &:hover{
+            opacity: .8;
+          }
+        }
       }
     }
   }
