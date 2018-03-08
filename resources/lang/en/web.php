@@ -49,6 +49,7 @@ return [
     'article'                  => 'Article',
     'articles'                 => 'Articles',
     'last_article'             => 'Last Article',
+    'related_articles'         => 'Related Articles',
     'page'                     => 'Page',
     'education'                => 'Education',
     'portfolio'                => 'Portfolio',

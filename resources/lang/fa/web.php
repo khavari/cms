@@ -49,6 +49,7 @@ return [
     'article'                  => 'مقاله',
     'articles'                 => 'مقالات',
     'last_article'             => 'آخرین مقالات',
+    'related_articles'         => 'مقالات مرتبط',
     'page'                     => 'صفحه',
     'education'                => 'تحصیلات',
     'portfolio'                => 'نمونه کار',

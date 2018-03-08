@@ -25,7 +25,7 @@
                                  alt="{{ $content->title }}">
                         </div>
                     @endif
-                        <div class="header border_vibrant">
+                     <div class="header border_vibrant">
                             <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
                             <div class="article-icons">
                     <span class="created_at">
@@ -40,19 +40,64 @@
                         <i class="fa fa-eye"></i>
                                     {{ $content->views }}
                     </span>
-
                             </div>
                         </div>
-
                     <div class="body">
+                     {!! $content->body !!}
+                    </div>
+                </div>
+                <div class="related-articles">
+                    <div class="row">
+                        <div class="col-12">
+                        <div class="title">@lang('web.related_articles')</div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        @for($i=0;$i<3;$i++)
 
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pr-1 pl-1">
+                                <div class="articles-box">
+                          <div class="date">
+                           <span class="created_at">
+                           <i class="fa fa-clock-o"></i>
+                           {{ $content->created_at }}
+                    </span>
+                          </div>
+                                    <a href="{{ $content->url() }}">
+                                        <div class="image">
+                                            <img src="{{ asset('media/'.$content->image) }}?w=500&h=350&fit=crop"
+                                                 class="img-fluid" alt="{{ $content->title }}">
+                                            <div class="overlay-img"></div>
+                                        </div>
+                                    </a>
+                                    <div class="article-icons">
 
+                                        <span class="comments-qty">
+                        <i class="fa fa-comment-o"></i>
+                     25 @lang('web.comments')
+                    </span>
+                                        <span class="view-count">
+                        <i class="fa fa-eye"></i>
+                                            {{ $content->views }}
+                    </span>
 
-                        {!! $content->body !!}
-
+                                    </div>
+                                    <div class="article-body">
+                                        <h5 class="title">{{ $content->title }}</h5>
+                                        <div class="summary">
+                                            <p>{{ str_limit($content->summary,80) }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-area">
+                                        <a href="{{ $content->url() }}" class="btn btn-primary btn-more">@lang('web.more')</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endfor
                     </div>
                 </div>
             </div>
+
             <div class="col-12 col-lg-3">
                 <div class="sidebar mb-3">
                     <h2 class="title pr-0 pl-0">@lang('web.last_article')</h2>
@@ -77,7 +122,6 @@
                     @endfor
                 </div>
             </div>
-
         </div>
     </div>
 </section>
