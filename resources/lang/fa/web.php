@@ -18,7 +18,7 @@ return [
     'city'                     => 'شهر',
     'nation'                   => 'ملیت',
     'postal_code'              => 'کد پستی',
-    'postal'              => 'کد پستی',
+    'postal'                   => 'کد پستی',
     'captcha'                  => 'کد امنیتی',
     'security_code'            => 'کد امنیتی',
     'remember_me'              => 'مرا بخاطر بسپار',
@@ -47,7 +47,8 @@ return [
     'profile'                  => 'پروفایل',
     'home'                     => 'صفحه اصلی',
     'article'                  => 'مقاله',
-    'articles'                  => 'مقالات',
+    'articles'                 => 'مقالات',
+    'last_article'             => 'آخرین مقالات',
     'page'                     => 'صفحه',
     'education'                => 'تحصیلات',
     'portfolio'                => 'نمونه کار',
@@ -73,5 +74,5 @@ return [
     // widget
     'widget_is_empty'          => 'ویدجت خالی است',
     'empty_widget_message'     => 'لطفا ویدجت را پر یا غیر فعال نمایید',
-    
+
 ];

@@ -48,6 +48,7 @@ return [
     'home'                     => 'Home',
     'article'                  => 'Article',
     'articles'                 => 'Articles',
+    'last_article'             => 'Last Article',
     'page'                     => 'Page',
     'education'                => 'Education',
     'portfolio'                => 'Portfolio',

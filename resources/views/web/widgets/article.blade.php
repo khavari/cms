@@ -1,7 +1,7 @@
-﻿<section id="contents-page">
+﻿<section id="article">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-lg-9">
                 <div class="wp-page mb-3">
                     @if($content->existImage())
                         <div class="wp-image">
@@ -9,20 +9,21 @@
                                  alt="{{ $content->title }}">
                         </div>
                     @endif
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->title }}</a>
-                            </li>
-                            <li class="breadcrumb-item"><a
-                                        href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
-                            </li>
-                        </ol>
-                    </nav>
-                    <h2 class="title">{{ $content->title }}</h2>
+
                     <div class="body">
+                        <nav aria-label="breadcrumb pr-0 pl-0">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->title }}</a>
+                                </li>
+                                <li class="breadcrumb-item"><a
+                                            href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
                         {!! $content->body !!}
                         <div class="article-icons">
                     <span class="created_at">
@@ -41,45 +42,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="wp-images mt-3 mb-3 p-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="images-title"> title</h2>
-                        </div>
-                    </div>
-                    <div class="row" id="lightgallery">
-                        @foreach($content->images as $image)
-                            <div class="col-12 col-xs-12 col-sm-6 col-md-4" data-src="{{ asset($image->image) }}">
-                                <div class="image">
-                                    <img class="img-fluid"
-                                         src="{{ asset('media/'.$image->image) }}?w=450&h=300&fit=crop"
-                                         alt="{{ $image->alt }}">
-
-                                    <h5 class="title fixed-bottom">{{ $image->title }}</h5>
-
-                                </div>
-                            </div>
-
-                        @endforeach
-                    </div>
-
-                </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-3">
                 <div class="sidebar mb-3">
-                    <h2 class="title">{{ $content->title }}</h2>
-                    @for($i=0;$i<=8 ;$i++)
+                    <h2 class="title pr-0 pl-0">@lang('web.last_article')</h2>
+                    @for($i=0;$i<=5 ;$i++)
                         <div class="content mt-3">
                             <a href="#" class="link">
-                                <div class="row">
-                                    <div class="col-5 p-0">
+                                    <div class="col-12 image-thumbnail p-0">
+                                        <div class="overlay"></div>
                                         <img src="{{ asset($content->image) }}" class="img-fluid animated fadeIn"
                                              alt="{{ $content->title }}">
                                     </div>
-                                    <div class="col-7">
-                                        <p>{{ str_limit($content->summary,60) }}</p>
-                                    </div>
+                                <div class="col-12 date-thumbnail ">
+                                    <p>{{ $content->created_at }}</p>
                                 </div>
+                                    <div class="col-12 p-0 text-thumbnail">
+                                        <p>{{ str_limit($content->summary,20) }}</p>
+                                    </div>
+
                             </a>
 
                         </div>
