@@ -1,5 +1,33 @@
 .gallery {
+  text-align: center;
   direction: ltr;
+  .breadcrumb {
+    font-size: .9rem;
+    display: flex;
+    border-radius: 0;
+    flex-wrap: wrap;
+    padding: 10px;
+    list-style: none;
+    margin-top: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 1px #dedede;
+    .breadcrumb-item {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  .header {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    margin: auto;
+    .title {
+      color:#7b7b7b;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
   .wp-page {
     text-align: center;
     background: #ffffff;
@@ -51,26 +79,9 @@
       }
     }
   }
-  .breadcrumb {
-    font-size: .9rem;
-    border: 1px solid #ddd;
-    display: flex;
-    border-radius: 0;
-    flex-wrap: wrap;
-    padding: 5px 1rem;
-    margin-bottom: 1rem;
-    list-style: none;
-    border-radius: 0.25rem;
-    border-radius: 0;
-    border-right: 0;
-    border-left: 0;
-    margin-top: 5px;
-    background: transparent;
-    .breadcrumb-item {
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-    }
+  .lightgallery{
+    border-top: 2px solid #ddd;
+    margin-top: -2px;
+    padding: 10px;
   }
 }

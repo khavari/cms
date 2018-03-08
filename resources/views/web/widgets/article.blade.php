@@ -1,6 +1,22 @@
 ﻿<section id="article">
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb pr-0 pl-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->title }}</a>
+                        </li>
+                        <li class="breadcrumb-item"><a
+                                    href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12 col-lg-9">
                 <div class="wp-page mb-3">
                     @if($content->existImage())
@@ -9,37 +25,31 @@
                                  alt="{{ $content->title }}">
                         </div>
                     @endif
-
-                    <div class="body">
-                        <nav aria-label="breadcrumb pr-0 pl-0">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->title }}</a>
-                                </li>
-                                <li class="breadcrumb-item"><a
-                                            href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
-                                </li>
-                            </ol>
-                        </nav>
-                        <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
-                        {!! $content->body !!}
-                        <div class="article-icons">
+                        <div class="header border_vibrant">
+                            <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
+                            <div class="article-icons">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
                     </span>
-                            <span class="comments-qty">
+                                <span class="comments-qty">
                         <i class="fa fa-comment-o"></i>
                      25 @lang('web.comments')
                     </span>
-                            <span class="view-count">
+                                <span class="view-count">
                         <i class="fa fa-eye"></i>
-                                {{ $content->views }}
+                                    {{ $content->views }}
                     </span>
 
+                            </div>
                         </div>
+
+                    <div class="body">
+
+
+
+                        {!! $content->body !!}
+
                     </div>
                 </div>
             </div>
