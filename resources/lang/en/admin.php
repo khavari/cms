@@ -9,8 +9,8 @@ return [
     'manage_users'     => 'Manage Users',
     'super_user'       => 'Super user',
     'user_id'          => 'User ID',
-    'create_new_user' => 'Create New User',
-    'submit_new_user' => 'Submit New User',
+    'create_new_user'  => 'Create New User',
+    'submit_new_user'  => 'Submit New User',
     'id'               => 'ID',
     'chat_id'          => 'Chat ID',
     'national_id'      => 'National ID',
@@ -21,7 +21,7 @@ return [
     'role_id'          => 'Role ID',
     'roles'            => 'Roles',
     'role'             => 'Role',
-    'author'             => 'Author',
+    'author'           => 'Author',
     'email'            => 'Email',
     'password'         => 'Password',
     'confirm_password' => 'Confirm password',
@@ -238,6 +238,12 @@ return [
     'manage_widgets'         => 'Manage Widgets',
     'active_widgets'         => 'Active Widgets',
     'home_page'              => 'Home page',
+
+    'page'    => 'Page',
+    'news'    => 'News',
+    'article' => 'َArticle',
+    'service' => 'Service',
+    'project' => 'Project',
 
 
 ];

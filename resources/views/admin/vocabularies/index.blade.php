@@ -43,7 +43,7 @@
                             @foreach($vocabularies as $vocabulary)
                                 <tr>
                                     <td>{{ $vocabulary->getKey() }}</td>
-                                    <td>{{ $vocabulary->slug }}</td>
+                                    <td> {{ __('admin.'.$vocabulary->slug) }}</td>
                                     <td>
                                         <a href="{{ route('admin.categories.index') }}?vocabulary_id={{ $vocabulary->getKey() }}" class="btn btn-xs btn-flat btn-primary">{{ $vocabulary->categories()->lang()->count() }}&nbsp;&nbsp;@lang("admin.categories")</a>
                                     </td>

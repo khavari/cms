@@ -32,7 +32,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 @foreach($vocabularies as $vocabulary)
                                     <li>
-                                        <a href="{{ route('admin.contents.create') }}?vocabulary_id={{ $vocabulary->id }}">{{ $vocabulary->title  }}</a>
+                                        <a href="{{ route('admin.contents.create') }}?vocabulary_id={{ $vocabulary->id }}">{{ __('admin.'.$vocabulary->slug) }}</a>
                                     </li>
                                 @endforeach
                                 <li class="divider"></li>

@@ -89,7 +89,7 @@
                                     <select class="form-control" name="vocabulary_id" id="vocabulary_id" required>
                                         <option value="" selected disabled>@lang('admin.select_me')</option>
                                         @foreach($vocabularies as $vocabulary)
-                                            <option value="{{ $vocabulary->id }}" {{ ($category->vocabulary_id == $vocabulary->id) ? 'selected':'' }}>{{ $vocabulary->slug }}</option>
+                                            <option value="{{ $vocabulary->id }}" {{ ($category->vocabulary_id == $vocabulary->id) ? 'selected':'' }}>{{ __('admin.'.$vocabulary->slug) }}</option>
                                         @endforeach
                                     </select>
                                 </div>

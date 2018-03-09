@@ -47,7 +47,7 @@
                                     <td>{{$category->id}}</td>
                                     <td>{{ str_limit($category->title,32) }}</td>
                                     <td>{{ str_limit($category->slug,60) }}</td>
-                                    <td>{{$category->vocabulary->slug}}</td>
+                                    <td>{{ __('admin.'.$category->vocabulary->slug) }}</td>
                                     <td>{{$category->contents()->count()}}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.categories.destroy', ['id' => $category->id])])
