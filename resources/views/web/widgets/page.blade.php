@@ -7,7 +7,7 @@
                         <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->title }}</a>
+                            <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->slug }}</a>
                         </li>
                         <li class="breadcrumb-item"><a
                                     href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
