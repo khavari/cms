@@ -27,7 +27,7 @@
                     <div class="row lightgallery" id="lightgallery" >
                         @foreach($content->images as $image)
                             <div class="col-12 col-sm-6 col-md-4" data-src="{{ asset($image->image) }}">
-                                <div class="image mb-3">
+                                <div class="image mb-3 ">
                                     <img class="img-fluid"
                                          src="{{ asset('media/'.$image->image) }}?w=450&h=300&fit=crop"
                                          alt="{{ $image->alt }}">
