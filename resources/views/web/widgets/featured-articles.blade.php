@@ -2,7 +2,7 @@
 @inject('Vocabulary', 'App\Vocabulary')
 <?php $contents = $Vocabulary->featuredContents('article'); ?>
 @if($contents->count())
-    <section class="featured-articles" id="featured-articles">
+    <section class="featured-articles mt-3 mb-3" id="featured-articles">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -20,32 +20,28 @@
                                     <div class="image">
                                         <img src="{{ asset('media/'.$content->image) }}?w=500&h=350&fit=crop"
                                              class="img-fluid" alt="{{ $content->title }}">
-                                        <div class="overlay-img"></div>
                                     </div>
                                 </a>
+                                <div class="article-body">
+                                    <h5 class="title"><a href="{{ $content->url() }}">{{ $content->title }}</a></h5>
+                                    <div class="summary">
+                                        <p>{{ str_limit($content->summary,150) }}</p>
+                                    </div>
+                                </div>
                                 <div class="article-icons">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
                     </span>
-                 <span class="comments-qty">
+                                    <span class="comments-qty">
                         <i class="fa fa-comment-o"></i>
-                     25 @lang('web.comments')
+                     25
                     </span>
                                     <span class="view-count">
                         <i class="fa fa-eye"></i>
                                         {{ $content->views }}
-                    </span>
+                     </span>
 
-                                </div>
-                                <div class="article-body">
-                                    <h5 class="title">{{ $content->title }}</h5>
-                                    <div class="summary">
-                                        <p>{{ str_limit($content->summary,150) }}</p>
-                                    </div>
-                                </div>
-                                <div class="btn-area">
-                                    <a href="{{ $content->url() }}" class="btn btn-primary btn-more">@lang('web.more')</a>
                                 </div>
                             </div>
                         </div>
