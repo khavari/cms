@@ -179,9 +179,9 @@
                                 <div class="dropdown-menu p-0 submenu border_vibrant" >
                                     @foreach($link->children()->active()->get() as $item)
                                         @if($item->isExternal())
-                                            <a class="dropdown-item" target="_blank" rel="nofollow" href="{{ url($item->url) }}">{{ $item->title }}</a>
+                                            <a class="dropdown-item" target="_blank" rel="nofollow" href="{{ url($item->url()) }}">{{ $item->title }}</a>
                                         @else
-                                            <a class="dropdown-item" href="{{ url($item->url) }}">{{ $item->title }}</a>
+                                            <a class="dropdown-item" href="{{ url($item->url()) }}">{{ $item->title }}</a>
                                         @endif
                                     @endforeach
                                 </div>
