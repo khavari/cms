@@ -1,11 +1,6 @@
 @extends('web.layouts.master')
 
 
-{{-- Page title --}}
-{{--------------------------------------------------}}
-@section('title', setting('title'))
-
-
 {{-- Main content --}}
 {{--------------------------------------------------}}
 @section('content')
@@ -14,12 +9,10 @@
 
 {{-- Add style --}}
 {{--------------------------------------------------}}
-@section('style')
+@section('styles')
 @endsection
 
 {{-- Add script --}}
 {{--------------------------------------------------}}
-@section('script')
-    <script>
-    </script>
+@section('scripts')
 @endsection

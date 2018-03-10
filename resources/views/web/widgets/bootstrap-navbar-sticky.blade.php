@@ -123,10 +123,10 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="#">
+                                            <form action="{{ route('search') }}" method="get">
                                             <div class="modal-body">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control search mt-3" placeholder="@lang('web.search_in_site')" id="search">
+                                                        <input type="text" class="form-control search mt-3" placeholder="@lang('web.search_in_site')" name="q" required>
                                                     </div>
                                             </div>
                                             <div class="modal-footer">

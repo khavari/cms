@@ -32,4 +32,22 @@ class ContentController extends Controller
         return view('web.contents.content', compact('content'));
     }
 
+
+    public function search()
+    {
+        if (Request('q')) {
+            $search = Request('q');
+            $contents = Content::lang()->where('keywords', 'like', '%' . $search . '%')
+                ->orWhere('slug', 'like', '%' . $search . '%')
+                ->orWhere('title', 'like', '%' . $search . '%')
+                ->orWhere('summary', 'like', '%' . $search . '%')
+                ->orWhere('body', 'like', '%' . $search . '%')
+                ->paginate(15);
+        }
+        else {
+           return back();
+        }
+        return view('web.contents.search', compact('contents'));
+    }
+
 }

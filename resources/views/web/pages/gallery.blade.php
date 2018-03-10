@@ -1,9 +1,5 @@
 @extends('web.layouts.master')
 
-{{-- Page title --}}
-{{------------------------------------------------------------}}
-@section('title', trans('lorem.2'))
-
 {{-- Main content --}}
 {{------------------------------------------------------------}}
 @section('content')
@@ -25,7 +21,7 @@
 
 {{-- Add style --}}
 {{------------------------------------------------------------}}
-@section('style')
+@section('styles')
     <style>
         .parallax{
             margin-top: 0px;
@@ -35,5 +31,5 @@
 
 {{-- Add script --}}
 {{------------------------------------------------------------}}
-@section('script')
+@section('scripts')
 @endsection

@@ -10,10 +10,10 @@
 
 {{-- Add style --}}
 {{--------------------------------------------------}}
-@section('style')
+@section('styles')
 @endsection
 
 {{-- Add script --}}
 {{--------------------------------------------------}}
-@section('script')
+@section('scripts')
 @endsection

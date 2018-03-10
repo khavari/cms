@@ -1,11 +1,5 @@
 @extends('web.layouts.master')
 
-
-{{-- Page title --}}
-{{--------------------------------------------------}}
-@section('title', setting('title'))
-
-
 {{-- Main content --}}
 {{--------------------------------------------------}}
 @section('content')
@@ -20,7 +14,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $content->title }}</h5>
                 <p class="card-text">{{ $content->summary }}</p>
-                <a href="{{ $content->url() }}" class="btn btn-primary">Button</a>
+                <a href="{{ $content->url() }}">@lang('web.more')..</a>
             </div>
         </div>
         <br>
