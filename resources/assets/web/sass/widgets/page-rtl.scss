@@ -1,30 +1,30 @@
-#contents-page{
+#contents-page {
   text-align: right;
   direction: rtl;
   .breadcrumb {
     font-size: .9rem;
-    border: 1px solid #ddd;
     display: flex;
     border-radius: 0;
     flex-wrap: wrap;
-    padding: 5px 1rem;
+    padding: 10px;
     margin-bottom: 1rem;
     list-style: none;
-    border-radius: 0.25rem;
-    border-radius: 0;
-    border-right: 0;
-    border-left: 0;
     margin-top: 5px;
-    background: transparent;
+    background: #fff;
+    box-shadow: 0px 0px 1px #dedede;
     .breadcrumb-item {
       a {
         text-decoration: none;
         color: inherit;
       }
-      &.active {
-
-      }
     }
+  }
+  .header {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    background: #ffff;
+    padding: 20px;
+    padding-bottom: 10px;
   }
   .wp-page {
     text-align: center;
@@ -34,13 +34,16 @@
       padding: 10px;
     }
     .title {
-      text-align: right;
+      color: #7b7b7b;
+      text-align: center;
       font-size: 1.5rem;
       padding: 5px 15px;
     }
     .body {
       text-align: right;
+      margin-top: -2px;
       padding: 15px;
+      border-top: 2px solid #ddd;
       p {
         font-size: .9rem;
         line-height: 2rem;

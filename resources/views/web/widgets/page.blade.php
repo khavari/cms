@@ -25,7 +25,9 @@
                                  alt="{{ $content->title }}">
                         </div>
                     @endif
-                    <h2 class="title">{{ $content->title }}</h2>
+                        <div class="header border_vibrant">
+                            <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
+                        </div>
                     <div class="body">
                         {!! $content->body !!}
                     </div>

@@ -92,17 +92,15 @@
                     @for($i=0;$i<=5 ;$i++)
                         <div class="content mt-3">
                             <a href="#" class="link">
-                                    <div class="col-12 image-thumbnail p-0">
-                                        <div class="overlay"></div>
-                                        <img src="{{ asset($content->image) }}" class="img-fluid animated fadeIn"
-                                             alt="{{ $content->title }}">
-                                    </div>
-                                <div class="col-12 date-thumbnail ">
-                                    <p>{{ $content->created_at }}</p>
+                                <div class="col-12 image-thumbnail p-0">
+                                    <div class="overlay"></div>
+                                    <img src="{{ asset($content->image) }}" class="img-fluid animated fadeIn"
+                                         alt="{{ $content->title }}">
                                 </div>
-                                    <div class="col-12 p-0 text-thumbnail">
-                                        <p>{{ str_limit($content->summary,20) }}</p>
-                                    </div>
+
+                                <div class="col-12  text-thumbnail">
+                                    <p>{{ str_limit($content->summary,50) }}</p>
+                                </div>
 
                             </a>
 

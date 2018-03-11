@@ -91,6 +91,11 @@
       .nav-link {
         line-height: 30px;
         border-bottom: 1px solid #ddd;
+        &:active{
+          color: #777;
+          text-decoration: none;
+          background-color:#f8f9fa;
+        }
         i {
           float: right;
           padding-right: 10px;
@@ -197,7 +202,6 @@
     }
     .number {
       float: right;
-      font-family: Arial;
       text-align: center;
       font-size: 13px;
       ul {
@@ -210,11 +214,8 @@
         padding: 5px 5px;
         border-right: 1px solid #eee;
         float: right;
-        &:hover {
-          background: #000;
-        }
         &:hover .fa, &:hover a {
-          color: #fff;
+          color:#333;
         }
         a {
           font-size: .9rem;
@@ -316,6 +317,7 @@
         background: #eee;
       }
       a {
+        color:#333 !important;
         font-size:.9rem;
         padding: 0;
         line-height: 25px;
@@ -343,7 +345,7 @@
     display: none;
   }
   .submenu {
-    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 2px 3px 0px #444;
     border: 1px solid #f1f1f1;
     border-top: none;
     margin: 0;
@@ -367,7 +369,7 @@
   .nav-item {
     .dropdown-menu {
       border: none;
-      border-top: 1px solid transparent;
+      border-top: 2px solid transparent;
       .dropdown-item {
         padding: 5px;
       }
