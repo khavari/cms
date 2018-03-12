@@ -130,7 +130,7 @@ return [
     [
         'name'    => 'featured-services',
         'path'    => 'web.widgets.featured-services',
-        'group'   => 'single',
+        'group'   => 'home',
         'active'  => 0,
         'approve' => 1,
     ],

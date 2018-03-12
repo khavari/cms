@@ -3,32 +3,25 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="top-featured-services">
-                    <h3 class="title">@lang('lorem.3')</h3>
-                </div>
+                    <h3 class="title mb-3 mt-3">@lang('web.featured_services')</h3>
 
             </div>
         </div>
         <div class="row">
-           @for($i=0;$i<3;$i++)
-            <div class="col-12 col-md-6 col-lg-4">
+           @for($i=0;$i<6;$i++)
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
                 <div class="services-item">
                     <div class="image">
-                        <img src="assets/web/img/featured-services-1.jpg" class="img-fluid">
-                        <div class="overlay-img"></div>
+                        <a href="#">
+                       <img src="http://www.backgroundscreeningservices.com/wp-content/uploads/2015/01/background-screening-employment-verification-services-icon-2-180x180.png"
+                            alt="" class="img-fluid">
+                        </a>
                     </div>
+                        <div class="body">
+                            <a href="#"> <h6 class="title">@lang('lorem.5')</h6> </a>
+                            <div class="txt">@lang('lorem.15')</div>
+                        </div>
 
-                    <div class="content">
-                        <div class="body-item">
-                            <span><i class="fa fa-gear"></i></span>
-                            <h6 class="title">@lang('lorem.1')</h6>
-                            <div class="txt">@lang('lorem.8')</div>
-                        </div>
-                        <div class="footer-item">
-                            <a href="#" class="more">@lang('lorem.1')
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             @endfor
