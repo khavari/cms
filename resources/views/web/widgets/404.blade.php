@@ -12,8 +12,8 @@
         <div class="row align-items-center">
             <div class="col-md-7">
                 <div class="content mb-5">
-                    <h6 class="title"><i class="fa fa-gg text_bg_vibrant"></i>@lang('lorem.3')</h6>
-                    <p class="summary">@lang('lorem.lorem')</p>
+                    <h6 class="title"><i class="fa fa-gg text_bg_vibrant"></i>@lang('web.404_title')</h6>
+                    <p class="summary">@lang('web.404_body')</p>
 
                 </div>
             </div>

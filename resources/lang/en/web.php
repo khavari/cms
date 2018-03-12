@@ -76,7 +76,11 @@ return [
     // errors
     'back_to_home'             => 'Back to home page',
     '404_message'              => 'PAGE NOT FOUND',
+    '404_title'                => 'Dear user, Unfortunately, your requested page or file is not available.',
+    '404_body'                 => 'The wrong page address may have been entered. But if you get this error by linking to other pages of the site, please let us know its address through our contact page. Thanks and best regards.',
     '500_message'              => 'Internal Server Error',
+    '500_title'                => 'Unfortunately, the server error occurred',
+    '500_body'                 => 'There may have been a problem with the server hosting the site And we are also consciously trying to fix this issue. Please visit the site a few moments later.Thanks and best regards',
     // widget
     'widget_is_empty'          => 'This Widget is Empty',
     'empty_widget_message'     => 'Please fill out or disable the widget.',

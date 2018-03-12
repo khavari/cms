@@ -14,6 +14,9 @@
     background: #fff;
     overflow: hidden;
     box-shadow: 0 0 3px 0px #ccc;
+    &:hover{
+      box-shadow: 0 0 3px 1px #ccc;
+    }
     .image {
       display: inline-block;
       position: relative;
