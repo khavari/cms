@@ -17,6 +17,13 @@ direction: ltr;
       }
     }
   }
+  .header {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    background: #ffff;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
   .wp-page {
     text-align: center;
     background: #ffffff;
@@ -25,13 +32,16 @@ direction: ltr;
       padding: 10px;
     }
     .title {
-      text-align: left;
+      color:#7b7b7b;
+      text-align: center;
       font-size: 1.5rem;
       padding: 5px 15px;
     }
     .body {
       text-align: left;
+      margin-top:-2px;
       padding: 15px;
+      border-top: 2px solid #ddd;
       p {
         font-size: .9rem;
         line-height: 2rem;

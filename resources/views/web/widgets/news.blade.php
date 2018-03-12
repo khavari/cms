@@ -1,4 +1,4 @@
-<section id="service-single">
+﻿<section id="news-single">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -25,25 +25,25 @@
                                  alt="{{ $content->title }}">
                         </div>
                     @endif
-                    <div class="header border_vibrant">
-                        <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
-                        <div class="article-icons">
+                     <div class="header border_vibrant">
+                            <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
+                            <div class="article-icons">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
                     </span>
-                            <span class="comments-qty">
+                                <span class="comments-qty">
                         <i class="fa fa-comment-o"></i>
                      25 @lang('web.comments')
                     </span>
-                            <span class="view-count">
+                                <span class="view-count">
                         <i class="fa fa-eye"></i>
-                                {{ $content->views }}
+                                    {{ $content->views }}
                     </span>
+                            </div>
                         </div>
-                    </div>
                     <div class="body">
-                        {!! $content->body !!}
+                     {!! $content->body !!}
                     </div>
                 </div>
                 <div class="related-articles mb-3">
@@ -52,12 +52,12 @@
                             <div class="col-12 col-sm-12 col-md-6 col-lg-4 ">
                                 <div class="articles-box">
 
-                                    <div class="image">
-                                        <a href="{{ $content->url() }}">
+                                        <div class="image">
+                                            <a href="{{ $content->url() }}">
                                             <img src="{{ asset('media/'.$content->image) }}?w=500&h=350&fit=crop"
                                                  class="img-fluid" alt="{{ $content->title }}">
-                                        </a>
-                                    </div>
+                                            </a>
+                                        </div>
 
                                     <div class="article-body">
                                         <h5 class="title"><a href="{{ $content->url() }}">{{ $content->title }}</a></h5>

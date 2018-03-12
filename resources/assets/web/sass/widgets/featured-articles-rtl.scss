@@ -1,4 +1,5 @@
 .featured-articles {
+  direction: rtl;
   .title {
     font-size: 1.5rem;
     text-align: center;
@@ -41,7 +42,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        text-align: left;
+        text-align: right;
         font-weight: bold;
         margin: 0px 0 20px 0;
       }
@@ -57,18 +58,7 @@
           }
         }
       }
-      .btn-more {
-        text-decoration: none;
-        border-radius: 0;
-        padding: 4px 10px;
-        text-align: center;
-        margin: 10px;
-        margin-top: 0;
-        box-shadow: 0 1px 1px rgba(0, 0, 200, 0.24), 0 1px 0px rgba(0, 0, 200, .25);
-        &:focus{
-          box-shadow: 0 0 4px 1px rgba(0, 123, 255, 0.5) !important;
-        }
-      }
+
       .article-icons {
         text-align: center;
         font-size: .8rem;
@@ -81,14 +71,14 @@
         bottom: 0;
         color: #696969;
         .view-count {
-          float: right;
+          float: left;
         }
         .comments-qty {
-          float: right;
-          margin-left: 15px;
+          float: left;
+          margin-right: 15px;
         }
         .created_at {
-          float: left;
+          float: right;
         }
       }
     }

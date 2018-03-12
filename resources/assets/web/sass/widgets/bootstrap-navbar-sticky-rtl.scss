@@ -97,6 +97,11 @@
         line-height: 30px;
         border-bottom: 1px solid #ddd;
         font-size: .9rem;
+        &:active{
+          color: #777;
+          text-decoration: none;
+          background-color:#f8f9fa;
+        }
         span {
           color: #333;
         }
@@ -210,7 +215,6 @@
     }
     .number {
       float: left;
-      font-family: Arial;
       text-align: center;
       font-size: .9rem;
       ul {
@@ -222,11 +226,8 @@
         padding: 5px 5px;
         border-left: 1px solid #eee;
         float: left;
-        &:hover {
-          background: #000;
-        }
-        &:hover .fa, &:hover a {
-          color: #fff;
+         &:hover .fa, &:hover a {
+          color: #333;
         }
         a {
           font-size: .9rem;
@@ -306,6 +307,7 @@
         background: #eee;
       }
       a {
+        color:#333 !important;
         font-size:.9rem;
         padding: 0;
         line-height: 25px;
@@ -333,7 +335,7 @@
     display: none;
   }
   .submenu {
-    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 2px 3px 0px #444;
     border: 1px solid #f1f1f1;
     border-top: none;
     margin: 0;
@@ -358,7 +360,7 @@
     .dropdown-menu {
       right: 0;
       border: none;
-      border-top: 1px solid transparent;
+      border-top: 2px solid transparent;
       .dropdown-item {
         padding: 5px;
       }

@@ -1,5 +1,30 @@
-#contents-page {
+#project-single {
   direction: ltr;
+  .breadcrumb {
+    font-size: .9rem;
+    display: flex;
+    border-radius: 0;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 1rem;
+    list-style: none;
+    margin-top: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 1px #dedede;
+    .breadcrumb-item {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  .header {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    background: #ffff;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
   .wp-page {
     text-align: center;
     background: #ffffff;
@@ -7,39 +32,17 @@
     .wp-image {
       padding: 10px;
     }
-    .breadcrumb {
-      font-size: .9rem;
-      border: 1px solid #ddd;
-      display: flex;
-      border-radius: 0;
-      flex-wrap: wrap;
-      padding: 5px 1rem;
-      margin-bottom: 1rem;
-      list-style: none;
-      border-radius: 0.25rem;
-      border-radius: 0;
-      border-right: 0;
-      border-left: 0;
-      margin-top: 5px;
-      background: transparent;
-      .breadcrumb-item {
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-        &.active {
-
-        }
-      }
-    }
     .title {
-      text-align: left;
+      color:#7b7b7b;
+      text-align: center;
       font-size: 1.5rem;
       padding: 5px 15px;
     }
     .body {
       text-align: left;
+      margin-top:-2px;
       padding: 15px;
+      border-top: 2px solid #ddd;
       p {
         font-size: .9rem;
         line-height: 2rem;
@@ -51,95 +54,173 @@
     }
     .article-icons {
       text-align: center;
-      border: 1px solid #dadada;
       border-right: none;
       border-left: none;
       font-size: .8rem;
-      margin-top:0;
-      padding: 2px 10px;
+      margin-top: 0;
+      display: inline-block;
+      padding: 2px 0px;
+      color:#7b7b7b;
       .view-count {
-        float: right;
+        margin: 0 10px;
       }
       .comments-qty {
-        float: none;
-      }
-      .created_at {
-        float: left;
+        margin: 0 10px;
       }
     }
+
   }
-  .wp-images {
-    background: #ffffff;
-    box-shadow: 0px 0px 1px #dedede;
-    .images-title {
-      font-size: 1.5rem;
-      text-align: center;
-      font-weight: bold;
-      padding: 5px 0px;
-      line-height: 25px;
-      text-decoration: none;
-      display: block;
-    }
-    .image {
-      position: relative;
+  .related-articles {
+    .articles-box {
+      background: #fff;
       overflow: hidden;
-      cursor: zoom-in;
-      margin-bottom: 15px;
-      &:hover img{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-      }
-      img {
-        transition: all ease 1s;
+      position: relative;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 3px;
+      margin: 5px 0;
+      .image {
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 100%;
+          height:100%;
+          object-fit: cover;
+          transition: all .5s;
+          &:hover {
+            height:110%;
+          }
+        }
       }
       .title {
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.6);
+        a{
+          transition: all .5s;
+          text-decoration: none !important;
+          color: #333;
+          &:hover{
+            color: #000;
+          }
+        }
+        font-size:1.1rem;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+        font-weight: bold;
+        margin: 0px 0 20px 0;
+      }
+      .article-body {
+        min-height: 200px;
+        padding: 10px;
+        padding-bottom: 60px;
+        .summary {
+          font-size:.9rem;
+          color: #717171;
+          p{
+            margin: 0;
+          }
+        }
+      }
+      .btn-more {
+        text-decoration: none;
+        border-radius: 0;
+        padding: 4px 10px;
         text-align: center;
-        color: #fcfcfc;
-        padding: 10px 0px;
-        margin: 0px;
-        font-size: 1rem;
-        font-weight: 100;
+        margin: 10px;
+        margin-top: 0;
+        box-shadow: 0 1px 1px rgba(0, 0, 200, 0.24), 0 1px 0px rgba(0, 0, 200, .25);
+        &:focus{
+          box-shadow: 0 0 4px 1px rgba(0, 123, 255, 0.5) !important;
+        }
+      }
+      .article-icons {
+        text-align: center;
+        font-size: .8rem;
+        margin-top: 0;
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        background: #f5f5f5;
+        position: absolute;
+        bottom: 0;
+        color: #696969;
+        .view-count {
+          float: right;
+        }
+        .comments-qty {
+          float: right;
+          margin-left: 15px;
+        }
+        .created_at {
+          float: left;
+        }
       }
     }
+
   }
-  .sidebar{
+  .sidebar {
+    padding: 10px;
     background: #ffffff;
     box-shadow: 0px 0px 1px #dedede;
-    text-align: left;
+    text-align: center;
     .title {
+      text-align: left;
       font-size: 1.1rem;
       padding: 10px 15px;
       border-bottom: 1px solid #ddd;
     }
-    .content{
-      .link{
+    .content {
+      max-width: 250px;
+      margin: auto;
+      .link {
+        text-align: center;
         text-decoration: none !important;
         font-size: .9rem;
-        display: inline-block;
-        width: 100%;
-        overflow: hidden;
         transition: all .3s;
         color: #555;
-
-        &:hover{
+        display: inline-block;
+        box-shadow: 0 0 3px 0px #888;
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+        &:hover {
           color: #000;
         }
-        p{
-          display: inline-block;
-        }
-        img{
-          width: 100%;
-          height: 100%;
-          transition: all .3s;
-          &:hover{
-            opacity: .8;
+        .image-thumbnail {
+          position: relative;
+          overflow: hidden;
+          height: 100px;
+          img {
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
           }
+          &:hover .overlay {
+            opacity: .2;
+          }
+          .overlay {
+            transition: all .5s;
+            position: absolute;
+            background: #000000;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+          }
+
         }
+      }
+    }
+    .text-thumbnail {
+      font-size: .8rem;
+      font-weight: bold;
+      text-align: left;
+      padding: 10px;
+      p {
+        text-align: left;
+        display: inline-block;
+        margin:0;
       }
     }
   }

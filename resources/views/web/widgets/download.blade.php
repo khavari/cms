@@ -1,4 +1,4 @@
-<section id="service-single">
+<section id="download-single">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -97,9 +97,11 @@
                                     <img src="{{ asset($content->image) }}" class="img-fluid animated fadeIn"
                                          alt="{{ $content->title }}">
                                 </div>
-
-                                <div class="col-12  text-thumbnail">
-                                    <p>{{ str_limit($content->summary,50) }}</p>
+                                <div class="col-12 date-thumbnail ">
+                                    <p>{{ $content->created_at }}</p>
+                                </div>
+                                <div class="col-12 p-0 text-thumbnail">
+                                    <p>{{ str_limit($content->summary,20) }}</p>
                                 </div>
 
                             </a>

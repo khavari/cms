@@ -1,6 +1,6 @@
 {{-- introduction-rtl.scss introduction-ltr.scss --}}
 <section class="introduction bg_vibrant">
-    <div class="container-fluid full-height-section">
+    <div class="container full-height-section">
         <div class="row ">
             <div class="col-12 col-sm-6">
                 <h3 class="title border_vibrant_hover">
