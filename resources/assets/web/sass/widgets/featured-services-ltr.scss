@@ -1,98 +1,53 @@
 .featured-services {
-  .top-featured-services {
     .title {
       font-size: 1.5rem;
       text-align: center;
       font-weight: bold;
     }
-  }
   .services-item {
     margin-bottom: 10px;
     transition: all .5s;
     text-align: center;
     position: relative;
+    background: #fff;
     overflow: hidden;
+    box-shadow: 0 0 3px 0px #ccc;
     .image {
       display: inline-block;
       position: relative;
-      .overlay-img {
-        position: absolute;
-        background: #000;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        opacity: .5;
-      }
+      height: 100px;
+      width: 100px;
+      margin: 30px;
+
     }
-    .content {
-      transition: all .5s;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      .body-item {
-        transition: all .5s;
-        padding: 20px;
-        color: #fff;
-        text-align: justify;
-        height: 100%;
-        top: 20px;
-        width: 100%;
-        position: absolute;
-        .title {
-          font-size: 22px;
-          padding-bottom: 5px;
-          font-weight: bold;
-          border-bottom: 1px dotted #ddd;
-        }
-        span {
-          text-align: center;
-          width: 100%;
-          display: inline-block;
-          .fa {
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-    .footer-item {
-      transition: all .5s;
-      padding: 20px;
-      position: absolute;
-      width: 100%;
-      top: 100%;
+    .body {
+      min-height: 150px;
+      text-align: left;
+      padding: 15px;
       a{
-        transition: all .5s;
-        background: #fff;
-        padding: 7px 15px;
-        color: #000;
-        font-weight: bold;
         text-decoration: none;
-        box-shadow: 0px 1px 3px #666;
+        color: #333;
+      }
+      .title {
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all .5s;
         &:hover{
-          background: #000;
-          color: #fff;
+          color: #666;
         }
       }
+      .txt {
+        color: #777777;
+        text-align: left;
+        font-size: .9rem;
+      }
+
     }
-  }
-  .content:hover .footer-item {
-    top:65%;
-  }
-  .services-item:hover .body-item {
-    opacity: 1;
-    top: -20px;
-  }
-  @media (max-width: 400px) {
-      .services-item {
-        .content{
-          .body-item {
-            font-size:12px;
-            top:1px;
-          }
-        }
-      }
   }
 }
