@@ -39,8 +39,6 @@ return [
     'admin.logo'               => ['type' => 'text', 'group' => 'admin', 'value' => '/assets/admin/img/logo.png'],
     'admin.link'               => ['type' => 'url', 'group' => 'admin', 'value' => 'http://www.asrenet.net'],
     'admin.favicon'            => ['type' => 'text', 'group' => 'admin', 'value' => '/assets/admin/img/favicon.png'],
-    'admin.help'               => ['type' => 'editor', 'group' => 'admin', 'value' => ''],
-    'admin.seo'                => ['type' => 'editor', 'group' => 'admin', 'value' => ''],
 
     // email
     'email.username'           => ['type' => 'text', 'group' => 'email', 'value' => null],

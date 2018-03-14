@@ -1458,9 +1458,6 @@ a:focus {
     text-align: left;
 }
 
-.form-control.error {
-    border-color: #df9215;
-}
 
 select.form-control {
     font-size: 12px;

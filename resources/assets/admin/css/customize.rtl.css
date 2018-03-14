@@ -28,16 +28,15 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, td, th {
     top: inherit;
     left: auto;
     right: auto;
+    font-size: 13px;
 }
 
 .content-header .breadcrumb li {
-    font-size: 14px;
     font-weight: 400;
     color: #444;
 }
 
 .content-header .breadcrumb li a {
-    font-size: 14px;
     font-weight: 400;
     color: #444;
 }
@@ -108,10 +107,11 @@ table tr.updated {
 input.form-control {
     font-size: 14px;
 }
+
 input[type='number'],
 input[name*='phone'],
 input[name*='mobile'],
-input[name*='postal']{
+input[name*='postal'] {
     font-family: arial;
 }
 
@@ -125,4 +125,8 @@ input[name*='postal']{
     font-family: arial !important;
     /*font-size: 14px !important;*/
     font-weight: 100 !important;
+}
+
+.btn.btn-xs {
+    font-size: 11px;
 }

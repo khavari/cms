@@ -212,7 +212,7 @@ return [
     'without_url'            => 'بدون آدرس',
     'menu'                   => 'منو',
     'links'                  => 'لینک ها',
-    'navbar'                 => 'نوبار',
+    'navbar'                 => 'منو',
     'button_label'           => 'دکمه برچسب',
 
     //admin
