@@ -1,7 +1,7 @@
 @extends('admin.master.master')
 
 {{--------------------------------------------------}}
-@section('title', __('admin.social_media'))
+@section('title', __('admin.fonts'))
 
 {{--------------------------------------------------}}
 @section('content')
@@ -10,7 +10,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">@lang("admin.dashboard")</a></li>
                 <li class="breadcrumb-item" aria-current="page">@lang("admin.manage_settings")</li>
-                <li class="breadcrumb-item active" aria-current="page">@lang('admin.social_media')</li>
+                <li class="breadcrumb-item active" aria-current="page">@lang('admin.fonts')</li>
             </ol>
         </nav>
     </section>
@@ -21,7 +21,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-sitemap"></i> @lang('admin.social_media')</h3>
+                        <h3 class="box-title"><i class="fa fa-sitemap"></i> @lang('admin.fonts')</h3>
                     </div>
                     <form role="form" action="{{route('admin.settings.update',['group'=>'fonts'])}}" method="post">
                         {{ csrf_field() }} {{ method_field('PATCH') }}

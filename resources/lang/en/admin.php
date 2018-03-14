@@ -181,6 +181,7 @@ return [
 
     // font
     'fonts'                  => 'Fonts',
+    'font'                   => 'Font',
     'icon'                   => 'Icon',
     'icons'                  => 'Icons',
     'without_icon'           => 'Without icon',
@@ -238,6 +239,12 @@ return [
     'manage_widgets'         => 'Manage Widgets',
     'active_widgets'         => 'Active Widgets',
     'home_page'              => 'Home page',
+    'home'                   => 'Home',
+    'single'                 => 'Single',
+
+    'single'                 => 'Single',
+    'error'                  => 'Error',
+    'errors'                 => 'Errors',
 
     'page'    => 'Page',
     'news'    => 'News',

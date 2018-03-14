@@ -15,7 +15,7 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3>{{ $users_count }}</h3>
+                        <h3 class="text-ltr">{{ $users_count }}</h3>
                         <p>@lang('admin.users')</p>
                     </div>
                     <div class="icon">
@@ -28,7 +28,7 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3>{{ $uploads_size }}</h3>
+                        <h3 class="text-ltr">{{ $uploads_size }}</h3>
                         <p>@lang('admin.uploaded_files')</p>
                     </div>
                     <div class="icon">
@@ -41,7 +41,7 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3>{{ $contacts_count }}</h3>
+                        <h3 class="text-ltr">{{ $contacts_count }}</h3>
                         <p>@lang('admin.contacts')</p>
                     </div>
                     <div class="icon">
@@ -54,7 +54,7 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3>{{ $widgets_count }}</h3>
+                        <h3 class="text-ltr">{{ $widgets_count }}</h3>
                         <p>@lang('widgets.active_widgets')</p>
                     </div>
                     <div class="icon">

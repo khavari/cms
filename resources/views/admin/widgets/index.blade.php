@@ -46,11 +46,11 @@
                                 <tr class="{{ (isUpdated($widget->updated_at)) ? 'updated' : '' }}">
                                     <td>{{ $widget->getKey() }}</td>
                                     <td>{{ $widget->name }}</td>
-                                    <td>{{ $widget->group }}</td>
+                                    <td>@lang("admin.".$widget->group)</td>
                                     <td>
                                         @include('admin.partials.active',['action'=>route('admin.widgets.edit', ['id' => $widget->id]),'active'=>$widget->active])
                                     </td>
-                                    <td>{{ $widget->updated_at }}</td>
+                                    <td class="text-ltr">{{ $widget->updated_at }}</td>
                                 </tr>
                             @endforeach
                         </table>

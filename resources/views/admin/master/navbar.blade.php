@@ -12,7 +12,7 @@ for ($i = 0; $i < count($admin_title_characters); $i++) {
         <span class="logo-lg">{{ setting('admin.title') }}</span>
     </a>
     <nav class="navbar navbar-static-top">
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="font-size: 15px;">
             <span class="sr-only">Toggle navigation</span>
         </a>
 
@@ -47,7 +47,7 @@ for ($i = 0; $i < count($admin_title_characters); $i++) {
                        aria-expanded="true">
                         <img src="{{ asset(locale('flag')) }}" width="25">
                         &nbsp;
-                        <span>{{ locale('key') }}</span>
+                        <span class="text-ltr">{{ locale('key') }}</span>
                     </a>
                     @if(count(locale('keys')) > 1)
                         <ul class="dropdown-menu">
@@ -59,7 +59,7 @@ for ($i = 0; $i < count($admin_title_characters); $i++) {
                                                 <a href="{{ route('admin.languages',['lang'=> $locale['key']]) }}">
                                                     <img src="{{ asset($locale['flag']) }}" width="25">
                                                     <span>{{ $locale['name'] }}</span>
-                                                    <b class="lang">{{ $locale['key'] }}</b>
+                                                    <b class="lang text-ltr">{{ $locale['key'] }}</b>
                                                 </a>
                                             </li>
                                         @endif
@@ -74,7 +74,7 @@ for ($i = 0; $i < count($admin_title_characters); $i++) {
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{{ asset(auth()->user()->avatar()) }}?w=120&h=120&fit=crop" class="user-image" alt="User Image">
-                        <span class="hidden-xs">{{ auth()->user()->email }}</span>
+                        <span class="hidden-xs text-ltr">{{ auth()->user()->email }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="user-header">

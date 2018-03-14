@@ -7,13 +7,13 @@
                 <img src="{{ asset(auth()->user()->avatar()) }}?w=120&h=120&fit=crop" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>{{ auth()->user()->email }}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> {{ auth()->user()->role()->first()->slug }}</a>
+                <p class="text-ltr">{{ auth()->user()->email }}</p>
+                <a href="#" class="text-ltr"><i class="fa fa-circle text-success"></i> {{ auth()->user()->role()->first()->slug }}</a>
             </div>
         </div>
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <input type="text" name="q" class="form-control" placeholder="@lang('admin.search')..">
                 <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>

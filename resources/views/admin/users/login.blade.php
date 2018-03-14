@@ -7,7 +7,6 @@
         <a href="">{{ setting('admin.title') }}</a>
     </div>
     <div class="login-box-body animated @if ($errors->has('*'))jello @else fadeInUp @endif">
-
         @if ($errors->has('*'))
             <p class="login-box-msg text-red">{{ $errors->first('email') }}</p>
         @else
@@ -33,8 +32,6 @@
         </form>
         <br>
         <a href="#">@lang('admin.forget_password')</a><br>
-
-
     </div>
 </div>
 <script src="{{ asset('assets/admin/js/admin.ltr.min.js') }}"></script>

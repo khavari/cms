@@ -76,7 +76,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, td, th {
 
 #notification p {
     color: #fff;
-    font-style: 14px;
+    font-size: 14px;
     font-weight: 100;
 }
 
@@ -101,4 +101,28 @@ table tr.updated {
 ================================================== */
 .box-footer .pagination {
     margin: 0px;
+}
+
+/* form-control ltr
+================================================== */
+input.form-control {
+    font-size: 14px;
+}
+input[type='number'],
+input[name*='phone'],
+input[name*='mobile'],
+input[name*='postal']{
+    font-family: arial;
+}
+
+.form-control.ltr {
+    direction: ltr;
+    font-family: arial;
+    font-weight: 100;
+}
+
+.text-ltr {
+    font-family: arial !important;
+    /*font-size: 14px !important;*/
+    font-weight: 100 !important;
 }

@@ -42,7 +42,7 @@
                                    <div class="form-group">
                                        <label for="contact.email">@lang('admin.email')</label>
                                        <input type="text" name="settings[contact.email]"
-                                              class="form-control"
+                                              class="form-control ltr"
                                               id="contact.email"
                                               value="{{$setting['contact.email']}}">
                                    </div>
@@ -112,7 +112,7 @@
                                    <div class="form-group">
                                        <label for="map.key">@lang('admin.key')</label>
                                        <input type="text" name="settings[map.key]"
-                                              class="form-control"
+                                              class="form-control ltr"
                                               id="map.key"
                                               value="{{$setting['map.key']}}">
                                    </div>
@@ -122,7 +122,7 @@
                                    <div class="form-group">
                                        <label for="map.latitude">@lang('admin.latitude')</label>
                                        <input type="text" name="settings[map.latitude]"
-                                              class="form-control"
+                                              class="form-control ltr"
                                               id="map.latitude"
                                               value="{{$setting['map.latitude']}}">
                                    </div>
@@ -132,18 +132,11 @@
                                    <div class="form-group">
                                        <label for="map.longitude">@lang('admin.longitude')</label>
                                        <input type="text" name="settings[map.longitude]"
-                                              class="form-control"
+                                              class="form-control ltr"
                                               id="map.longitude"
                                               value="{{$setting['map.longitude']}}">
                                    </div>
                                </div>
-
-
-
-
-
-
-
 
                            </div>
                         </div>
