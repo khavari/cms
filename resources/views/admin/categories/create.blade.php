@@ -19,7 +19,7 @@
             <div class="col-xs-12">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">@lang('admin.create_new',['item'=> strtolower(__('admin.category'))])</h3>
+                        <h3 class="box-title">@lang('admin.create_new',['item'=> __('admin.category')])</h3>
                         <div class="box-tools"></div>
                     </div>
                     <form role="form" action="{{route('admin.categories.store')}}" method="post" enctype="multipart/form-data">

@@ -23,7 +23,7 @@
                         </div>
                         <div class="btn-group">
                             <button type="button"
-                                    class="btn btn-info btn-flat">@lang('admin.create_new',['item'=> strtolower(__('admin.content'))])</button>
+                                    class="btn btn-info btn-flat">@lang('admin.create_new',['item'=> __('admin.content')])</button>
                             <button type="button" class="btn btn-info btn-flat dropdown-toggle" data-toggle="dropdown"
                                     aria-expanded="false">
                                 <span class="caret"></span>
@@ -37,7 +37,7 @@
                                 @endforeach
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="{{ route('admin.categories.create') }}">@lang('admin.create_new',['item'=> strtolower(__('admin.category'))])</a>
+                                    <a href="{{ route('admin.categories.create') }}">@lang('admin.create_new',['item'=> __('admin.category')])</a>
                                 </li>
                             </ul>
                         </div>

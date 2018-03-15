@@ -23,7 +23,7 @@
                         </div>
                         <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
                                 data-target="#modal-link">
-                            @lang('admin.create_new',['item'=> strtolower(__('admin.parallax'))])
+                            @lang('admin.create_new',['item'=> __('admin.parallax')])
                         </button>
                     </div>
 
@@ -76,7 +76,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">@lang('admin.create_new',['item'=> strtolower(__('admin.parallax'))])</h4>
+                        <h4 class="modal-title">@lang('admin.create_new',['item'=> __('admin.parallax')])</h4>
                     </div>
                     <div class="modal-body">
                         {{--------------- image ---------------}}

@@ -22,7 +22,7 @@
                             @include('admin.partials.search')
                         </div>
                         <a href="{{ route('admin.categories.create') }}" class="btn btn-flat btn-primary">
-                            @lang('admin.create_new',['item'=> strtolower(__('admin.category'))])
+                            @lang('admin.create_new',['item'=> __('admin.category')])
                         </a>
                     </div>
                     <div class="box-body table-responsive no-padding">

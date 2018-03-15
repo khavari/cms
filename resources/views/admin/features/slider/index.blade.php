@@ -23,7 +23,7 @@
                         </div>
                         <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
                                 data-target="#modal-link">
-                            @lang('admin.submit_new',['item'=> strtolower(__('admin.slide'))])
+                            @lang('admin.submit_new',['item'=> __('admin.slide')])
                         </button>
                         <button type="button" class="btn btn-flat btn-default" data-toggle="modal" data-target="#modal-feature">
                             <i class="fa fa-cogs"></i>
@@ -79,7 +79,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">@lang('admin.submit_new',['item'=> strtolower(__('admin.slide'))])</h4>
+                        <h4 class="modal-title">@lang('admin.submit_new',['item'=> __('admin.slide')])</h4>
                     </div>
                     <div class="modal-body">
                         {{--------------- image ---------------}}

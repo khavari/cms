@@ -24,7 +24,7 @@
 
                         <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
                                 data-target="#modal-link">
-                            @lang('admin.submit_new',['item'=> strtolower(__('admin.link'))])
+                            @lang('admin.submit_new',['item'=> __('admin.link')])
                         </button>
                     </div>
 
@@ -79,7 +79,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">@lang('admin.submit_new',['item'=> strtolower(__('admin.link'))])</h4>
+                        <h4 class="modal-title">@lang('admin.submit_new',['item'=> __('admin.link')])</h4>
                     </div>
                     <div class="modal-body">
                         {{--------------- title ---------------}}

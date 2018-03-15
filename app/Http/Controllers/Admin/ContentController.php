@@ -31,7 +31,10 @@ class ContentController extends Controller
             $contents = Content::lang()->latest()->paginate($this->per_page);
         }
 
-        $vocabularies = Vocabulary::all();
+        $vocabularies = Vocabulary::all()->reject(function ($vocabulary) {
+            return $vocabulary->categories->count() == 0;
+        });
+
 
         return view('admin.contents.index', compact('contents', 'vocabularies'));
     }

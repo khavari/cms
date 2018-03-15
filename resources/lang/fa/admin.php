@@ -105,7 +105,7 @@ return [
 
 
     'submit_new'             => 'ثبت :item جدید',
-    'create_new'             => 'ساخت آیتم جدید',
+    'create_new'             => 'ایجاد :item جدید',
     'create_new_in'          => 'افزودن :item جدید',
     'slug'                   => 'اسلاگ',
     'link'                   => 'لینک',
