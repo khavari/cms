@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class UserLoginController extends Controller
 {
-    private $per_page = 20;
+    private $per_page = 25;
 
     /**
      * Display a listing of the resource.
@@ -17,13 +17,14 @@ class UserLoginController extends Controller
      */
     public function index()
     {
-
         if (Request('search')) {
             $search = Request('search');
-            $logins = UserLogin::where('id', 'like', '%' . $search . '%')
-                ->orWhere('user_id', 'like', '%' . $search . '%')
-                ->orWhere('ip', 'like', '%' . $search . '%')
-                ->paginate($this->per_page);
+
+            if (is_numeric($search)) {
+                $logins = UserLogin::where('user_id', $search)->latest()->paginate($this->per_page);
+            } else {
+                $logins = UserLogin::where('ip', 'like', '%' . $search . '%')->orWhere('created_at', 'like', '%' . $search . '%')->latest()->paginate($this->per_page);
+            }
         } else {
             $logins = UserLogin::latest()->paginate($this->per_page);
         }

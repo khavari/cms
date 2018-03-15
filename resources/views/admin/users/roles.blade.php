@@ -20,7 +20,7 @@
                     <div class="box-header with-border">
 
                         <button type="button" class="btn btn-flat btn-primary" data-toggle="modal" data-target="#modal-role">
-                            @lang('admin.submit_new',['item'=> strtolower(__('admin.role'))])
+                            @lang('admin.submit_new',['item'=> __('admin.role')])
                         </button>
                         <div class="box-tools">
                             @include('admin.partials.search')
@@ -95,8 +95,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             @endforeach
                             </tbody>
                         </table>
@@ -105,8 +103,6 @@
             </div>
         </div>
     </section>
-
-
 
 
     <div class="modal fade" id="modal-role">
@@ -149,8 +145,6 @@
             </div>
         </div>
     </div>
-
-
 
 @endsection
 

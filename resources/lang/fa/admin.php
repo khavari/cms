@@ -104,7 +104,7 @@ return [
     'google_map'       => 'نقشه گوگل',
 
 
-    'submit_new'             => 'ثبت آیتم جدید',
+    'submit_new'             => 'ثبت :item جدید',
     'create_new'             => 'ساخت آیتم جدید',
     'create_new_in'          => 'افزودن :item جدید',
     'slug'                   => 'اسلاگ',

@@ -7,6 +7,7 @@ use App\Content;
 use App\Http\Utilities\Seo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cookie;
 
 class ContentController extends Controller
 {
@@ -15,6 +16,7 @@ class ContentController extends Controller
     {
         $vocabulary = Content::lang()->active()->where('slug', $slug)->firstOrFail();
         Seo::share($vocabulary);
+
         return view('web.contents.content', compact('content'));
     }
 
@@ -22,13 +24,22 @@ class ContentController extends Controller
     {
         $category = Category::lang()->active()->where('slug', $slug)->firstOrFail();
         Seo::share($category);
+
         return view('web.contents.category', compact('category'));
     }
 
     public function content($slug)
     {
         $content = Content::lang()->active()->published()->where('slug', $slug)->firstOrFail();
+
+        Cookie::queue('content', $content->id, 2);
+        if (Cookie::get('content') != $content->id) {
+            $content->views += 1;
+            $content->timestamps = false;
+            $content->save();
+        }
         Seo::share($content);
+
         return view('web.contents.content', compact('content'));
     }
 
@@ -43,10 +54,10 @@ class ContentController extends Controller
                 ->orWhere('summary', 'like', '%' . $search . '%')
                 ->orWhere('body', 'like', '%' . $search . '%')
                 ->paginate(15);
+        } else {
+            return back();
         }
-        else {
-           return back();
-        }
+
         return view('web.contents.search', compact('contents'));
     }
 

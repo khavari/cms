@@ -37,7 +37,7 @@
                         <table class="table table-hover table-striped">
                             <thead>
                             <tr>
-                                <th>@lang("admin.id")</th>
+                                <th>@lang("admin.user_id")</th>
                                 <th>@lang("admin.user")</th>
                                 <th>@lang("admin.ip")</th>
                                 <th>@lang("admin.created_at")</th>
@@ -46,10 +46,10 @@
                             <tbody>
                             @foreach($logins as $login)
                                 <tr class="{{ (isUpdated($login->updated_at))?'updated':'' }}">
-                                    <td>{{$login->id}}</td>
-                                    <td>{{$login->user->name}}</td>
-                                    <td>{{$login->ip}}</td>
-                                    <td>{{$login->updated_at}}</td>
+                                    <td class="text-ltr">{{$login->user->id}}</td>
+                                    <td class="text-ltr">{{$login->user->username}}</td>
+                                    <td class="text-ltr">{{$login->ip}}</td>
+                                    <td class="text-ltr">{{$login->updated_at}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

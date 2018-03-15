@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserLogin_Notify
 {
-    
+
     public function __construct()
     {
     }
