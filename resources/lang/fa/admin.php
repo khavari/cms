@@ -187,7 +187,7 @@ return [
     'icon'                   => 'آیکن',
     'icons'                  => 'آیکن ها',
     'without_icon'           => 'بدون آیکن',
-    'favicon'                => 'آیکن ویژه',
+    'favicon'                => 'فاوآیکون',
 
 
     //timestamp
@@ -219,7 +219,7 @@ return [
 
     //admin
     'seo'                    => 'سئو',
-    'dashboard'              => 'داشبورد',
+    'dashboard'              => 'دشبورد',
     'view_home_page'         => 'نمایش صفحه اصلی',
 
     //image

@@ -117,7 +117,7 @@ class CategoryController extends Controller
         $category->update($request->except(['file', '_token', '_method']));
         session()->flash('success', __('messages.updated_success'));
 
-        return back();
+        return redirect(route('admin.categories.index'));
     }
 
 
