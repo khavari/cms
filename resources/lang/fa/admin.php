@@ -234,7 +234,6 @@ return [
     'logo'                   => 'لوگو',
     'yes'                    => 'بله',
     'no'                     => 'خیر',
-    
 
     //widgets
     'widget'                 => 'ویدجت',
