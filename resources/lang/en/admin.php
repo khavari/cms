@@ -130,6 +130,9 @@ return [
     //'Document
     'docs'                   => 'Documentation',
     'help'                   => 'Help',
+    'guide'                  => 'Guide',
+    'panel_guide'            => 'Admin panel guide',
+
 
     //site
     'site'                   => 'Site',
@@ -242,9 +245,9 @@ return [
     'home'                   => 'Home',
     'single'                 => 'Single',
 
-    'single'                 => 'Single',
-    'error'                  => 'Error',
-    'errors'                 => 'Errors',
+    'single' => 'Single',
+    'error'  => 'Error',
+    'errors' => 'Errors',
 
     'page'    => 'Page',
     'news'    => 'News',

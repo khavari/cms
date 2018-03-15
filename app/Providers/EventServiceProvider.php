@@ -16,12 +16,12 @@ class EventServiceProvider extends ServiceProvider
 
         // UserRegister
         'App\Events\UserRegister' => [
-            'App\Listeners\UserRegister_TelegramNotify',
+            'App\Listeners\UserRegister_Notify',
         ],
 
         // UserLogin
         'App\Events\UserLogin' => [
-            'App\Listeners\UserLogin_TelegramNotify',
+            'App\Listeners\UserLogin_Notify',
         ],
 
         // contact us form

@@ -61,8 +61,8 @@
 
                                     </td>
                                     <td>{{ str_limit($file->title, 30) }}</td>
-                                    <td class="ltr">{{ asset($file->file) }}</td>
-                                    <td class="ltr">{{ byte_convert($file->size) }}</td>
+                                    <td class="ltr text-ltr">{{ asset($file->file) }}</td>
+                                    <td class="ltr text-ltr">{{ byte_convert($file->size) }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.files.destroy', ['id' => $file->id])])
                                         <a href="" class="btn btn-xs btn-flat btn-primary" data-toggle="modal" data-target="#modal-file-{{$file->id}}">@lang('admin.edit')</a>

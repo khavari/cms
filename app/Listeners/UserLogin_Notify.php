@@ -6,26 +6,17 @@ use App\Events\UserLogin;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class UserLogin_TelegramNotify
+class UserLogin_Notify
 {
-    /**
-     * Create the event listener.
-     *
-     * @return void
-     */
+    
     public function __construct()
     {
-        //
     }
 
-    /**
-     * Handle the event.
-     *
-     * @param  UserLogin  $event
-     * @return void
-     */
+
     public function handle(UserLogin $event)
     {
-        //
+        $user = $event->user;
+        $user->logins()->create(['ip' => request()->ip()]);
     }
 }

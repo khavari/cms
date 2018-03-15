@@ -21,16 +21,7 @@
                     <div class="box-header">
                         <h3 class="box-title">@lang("widgets.widgets")</h3>
                         <div class="box-tools">
-                            <form class="inline-block">
-                                <div class="input-group input-group-sm" style="width: 200px;">
-                                    <input type="text" name="table_search" class="form-control pull-right"
-                                           placeholder="Search">
-                                    <div class="input-group-btn">
-                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                            <a href="" class="btn btn-flat btn-success">@lang('admin.update') @lang("widgets.widgets")</a>
                         </div>
                     </div>
                     <div class="box-body table-responsive no-padding">
@@ -40,17 +31,17 @@
                                 <th>@lang("admin.name")</th>
                                 <th>@lang("admin.group")</th>
                                 <th>@lang("admin.status")</th>
-                                <th>@lang("admin.updated_at")</th>
+                                <th class="hidden-xs">@lang("admin.updated_at")</th>
                             </tr>
                             @foreach($widgets as $widget)
                                 <tr class="{{ (isUpdated($widget->updated_at)) ? 'updated' : '' }}">
-                                    <td>{{ $widget->getKey() }}</td>
-                                    <td>{{ $widget->name }}</td>
+                                    <td class="text-ltr">{{ $widget->getKey() }}</td>
+                                    <td class="text-ltr">{{ $widget->name }}</td>
                                     <td>@lang("admin.".$widget->group)</td>
                                     <td>
                                         @include('admin.partials.active',['action'=>route('admin.widgets.edit', ['id' => $widget->id]),'active'=>$widget->active])
                                     </td>
-                                    <td class="text-ltr">{{ $widget->updated_at }}</td>
+                                    <td class="text-ltr hidden-xs">{{ $widget->updated_at }}</td>
                                 </tr>
                             @endforeach
                         </table>

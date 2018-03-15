@@ -37,7 +37,7 @@ mix.scripts([
   'resources/assets/admin/js/jquery.min.js',
   'resources/assets/admin/js/bootstrap.min.js',
   'resources/assets/admin/js/select2.min.js',
-  'resources/assets/admin/js/pace.min.js',
+  //'resources/assets/admin/js/pace.min.js',
   'resources/assets/admin/js/jquery.slimscroll.min.js',
   'resources/assets/admin/js/fastclick.js',
   'resources/assets/admin/js/adminlte.min.js',

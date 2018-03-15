@@ -41,6 +41,7 @@ class SocialiteController extends Controller
             if (User::where('email', $email)->count() === 1) {
                 $user = User::where('email', $email)->first();
                 auth()->loginUsingId($user->id);
+                event(new \App\Events\UserLogin($user));
                 return redirect('/');
             } else {
                 $user = User::create([
@@ -57,6 +58,7 @@ class SocialiteController extends Controller
             }
 
             auth()->loginUsingId($user->id);
+            event(new \App\Events\UserRegister($user));
             return redirect(app()->getLocale());
         } else {
             return Socialite::driver($driver)->redirect();

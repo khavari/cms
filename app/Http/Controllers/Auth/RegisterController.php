@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -85,4 +86,10 @@ class RegisterController extends Controller
             'active' => 1,
         ]);
     }
+
+    protected function registered(Request $request, $user)
+    {
+        event(new \App\Events\UserRegister($user));
+    }
+
 }

@@ -130,6 +130,8 @@ return [
     //'Document
     'docs'                   => 'اسناد',
     'help'                   => 'کمک',
+    'guide'                  => 'راهنما',
+    'panel_guide'            => 'راهنمای پنل مدیریت',
 
     //site
     'site'                   => 'سایت',

@@ -11,7 +11,7 @@ class DashboardMenu
 
     public function __construct()
     {
-        $this->menus[] = $this->viewHomePage();
+       // $this->menus[] = $this->viewHomePage();
         $this->menus[] = $this->settings();
 
         $this->menus[] = $this->widgets();
@@ -24,12 +24,12 @@ class DashboardMenu
 
         $this->menus[] = $this->contacts();
 
-        $this->menus[] = $this->payments();
+        //$this->menus[] = $this->payments();
 
         $this->menus[] = $this->files();
 
 
-        $this->menus[] = $this->document();
+        $this->menus[] = $this->guide();
     }
 
     public function get()
@@ -285,12 +285,12 @@ class DashboardMenu
         ];
     }
 
-    public function document()
+    public function guide()
     {
         return [
-            'title'  => __('admin.docs'),
+            'title'  => __('admin.panel_guide'),
             'icon'   => 'fa-book',
-            'url'    => url(''),
+            'url'    => 'http://www.asrenet.net',
             'target' => '_black',
         ];
     }

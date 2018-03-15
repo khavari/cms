@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
-use App\UserLogin;
-use App\User;
 
 class LoginController extends Controller
 {
@@ -88,8 +85,7 @@ class LoginController extends Controller
     // I copied this method from AuthenticatesUsers trait
     protected function authenticated(Request $request, $user)
     {
-        $user->logins()->create(['ip' => request()->ip()]);
-        //event(new \App\Events\UserLogin($user));
+        event(new \App\Events\UserLogin($user));
     }
 
 
