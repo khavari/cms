@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
-            $table->string('slug',64)->index()->unique();
+            $table->string('slug', 64)->index()->unique();
             $table->text('description')->nullable();
             $table->timestamps();
         });
@@ -26,8 +26,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->integer('role_id')->unsigned();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('restrict')->onUpdate('cascade');
-            $table->string('username','64')->index()->unique();
-            $table->string('email','64')->unique()->index();
+            $table->string('username', '64')->index()->unique();
+            $table->string('email', '64')->unique()->index();
             $table->string('password');
             $table->string('passcode');
             $table->string('name');
@@ -56,19 +56,19 @@ class CreateUsersTable extends Migration
 
         Schema::create('permissions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullable();
-            $table->string('slug',64)->index()->unique();
+            $table->string('uri', 64)->index()->unique();
+            $table->text('action')->nullable();
+            $table->string('method')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });
 
         Schema::create('permission_role', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('permission_id')->unsigned()->index();
             $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('role_id')->unsigned()->index();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade')->onUpdate('cascade');
-            $table->timestamps();
+            $table->primary(['permission_id', 'role_id']);
         });
     }
 

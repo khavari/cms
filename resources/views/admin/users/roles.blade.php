@@ -19,7 +19,8 @@
                 <div class="box box-primary">
                     <div class="box-header with-border">
 
-                        <button type="button" class="btn btn-flat btn-primary" data-toggle="modal" data-target="#modal-role">
+                        <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
+                                data-target="#modal-role">
                             @lang('admin.submit_new',['item'=> __('admin.role')])
                         </button>
                         <div class="box-tools">
@@ -48,9 +49,10 @@
                                     <td>{{$role->created_at}}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.roles.destroy', ['id' => $role->id])])
-
-                                        <a href="#" class="btn btn-xs btn-flat btn-primary" data-toggle="modal" data-target="#modal-role-{{$role->id}}">@lang('admin.edit')</a>
-                                        <a href="" class="btn btn-xs btn-flat btn-info btn-primary">@lang('admin.permissions')</a>
+                                        <a href="#" class="btn btn-xs btn-flat btn-primary" data-toggle="modal"
+                                           data-target="#modal-role-{{$role->id}}">@lang('admin.edit')</a>
+                                        <a href="{{ route('admin.roles.edit',['id' => $role->id]) }}"
+                                           class="btn btn-xs btn-flat btn-info btn-primary">{{ $role->permissions->count() }} @lang('admin.permissions')</a>
 
                                     </td>
                                 </tr>
@@ -58,10 +60,13 @@
                                 <div class="modal fade" id="modal-role-{{$role->id}}">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <form role="form" action="{{route('admin.roles.update', ['id' => $role->id])}}" method="post">
+                                            <form role="form"
+                                                  action="{{route('admin.roles.update', ['id' => $role->id])}}"
+                                                  method="post">
                                                 {{ csrf_field() }} {{ method_field('PATCH') }}
                                                 <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                         <span aria-hidden="true">&times;</span></button>
                                                     <h4 class="modal-title">@lang('admin.submit_new',['item'=> strtolower(__('admin.role'))])</h4>
                                                 </div>
@@ -70,26 +75,31 @@
                                                     {{--------------- name ---------------}}
                                                     <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
                                                         <label for="name">@lang('admin.name')</label>
-                                                        <input type="text" required class="form-control" id="name" name="name"
+                                                        <input type="text" required class="form-control" id="name"
+                                                               name="name"
                                                                value="{{ $role->name }}">
                                                     </div>
 
                                                     {{--------------- slug ---------------}}
                                                     <div class="form-group {{ $errors->has('slug') ? ' has-error' : '' }}">
                                                         <label for="slug">@lang('admin.slug')</label>
-                                                        <input type="text" required class="form-control" id="slug" slug="slug" name="slug"
+                                                        <input type="text" required class="form-control" id="slug"
+                                                               slug="slug" name="slug"
                                                                value="{{ $role->slug }}">
                                                     </div>
 
                                                     {{--------------- description ---------------}}
                                                     <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                                         <label for="description">@lang('admin.description')</label>
-                                                        <textarea rows="2" required class="form-control" id="description" name="description">{{ $role->description }}</textarea>
+                                                        <textarea rows="2" required class="form-control"
+                                                                  id="description"
+                                                                  name="description">{{ $role->description }}</textarea>
                                                     </div>
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-flat btn-primary">@lang('admin.update')</button>
+                                                    <button type="submit"
+                                                            class="btn btn-flat btn-primary">@lang('admin.update')</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -134,7 +144,8 @@
                         {{--------------- description ---------------}}
                         <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                             <label for="description">@lang('admin.description')</label>
-                            <textarea rows="2" required class="form-control" id="description" name="description">{{old('description')}}</textarea>
+                            <textarea rows="2" required class="form-control" id="description"
+                                      name="description">{{old('description')}}</textarea>
                         </div>
 
                     </div>

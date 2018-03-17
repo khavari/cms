@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Permission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Role;
+use App\User;
+use Illuminate\Support\Facades\Artisan;
 
 class PermissionController extends Controller
 {
@@ -15,7 +18,18 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        if (Request('search')) {
+            $search = Request('search');
+            $permissions = Permission::where('uri', 'like', '%' . $search . '%')
+                ->orWhere('action', 'like', '%' . $search . '%')
+                ->orWhere('method', 'like', '%' . $search . '%')
+                ->latest()->get();
+        } else {
+            $permissions = Permission::latest()->get();
+        }
+
+
+        return view('admin.users.permissions', compact('permissions'));
     }
 
     /**
@@ -25,7 +39,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,7 +50,9 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Artisan::call('setup:permissions');
+        session()->flash('success', __('messages.updated_success'));
+        return back();
     }
 
     /**
@@ -68,7 +84,7 @@ class PermissionController extends Controller
      * @param  \App\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Permission $permission)
+    public function update(Request $request, Role $role)
     {
         //
     }

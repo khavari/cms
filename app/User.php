@@ -26,6 +26,11 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
+//    public function roles()
+//    {
+//        return $this->belongsToMany(Role::class);
+//    }
+
     public function deleteAssets(){
          File::delete($this->image);
          return true;
@@ -43,6 +48,18 @@ class User extends Authenticatable
             }
         }
 
+    }
+
+    public function hasRole($role)
+    {
+        if(is_string($role)) {
+            return $this->role->slug === $role;
+            // after has many role for ane user
+            //return $this->roles->contains('name' , $role);
+        }
+        return false;
+
+        //return !! $role->intersect($this->roles)->count();
     }
 
 

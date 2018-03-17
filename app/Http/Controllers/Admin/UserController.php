@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\UserRequest;
+use App\Permission;
 use App\Role;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 
@@ -127,6 +129,7 @@ class UserController extends Controller
     {
         $user->deleteAssets();
         $user->delete();
+
         return back()->with('success', __('messages.deleted_success'));
     }
 

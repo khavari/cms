@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\RoleRequest;
+use App\Permission;
 use App\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,6 +26,7 @@ class RoleController extends Controller
         } else {
             $roles = Role::latest()->get();
         }
+
         return view('admin.users.roles', compact('roles'));
     }
 
@@ -57,40 +59,33 @@ class RoleController extends Controller
         return back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Role $role
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function show(Role $role)
     {
-        //
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Role $role
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Role $role)
     {
-        //
+        $keys = collect($role->permissions)->pluck('id')->toArray();
+
+        $permissions = Permission::latest()->get();
+
+        return view('admin.users.permissions', compact('role', 'permissions', 'keys'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \App\Role                $role
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function update(RoleRequest $request, Role $role)
+
+    public function update(Request $request, Role $role)
     {
+
+        if($request->permissions){
+           $role->permissions()->sync($request->permissions);
+            session()->flash('success', __('messages.updated_success'));
+
+            return back();
+        }
+
+
 
         $role->update([
             'name'        => $request->name,
@@ -98,16 +93,11 @@ class RoleController extends Controller
             'description' => $request->description,
         ]);
         session()->flash('success', __('messages.updated_success'));
+
         return back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Role $role
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Role $role)
     {
         $role->users()->count();

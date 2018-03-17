@@ -9,7 +9,7 @@
 Route::get('admin', 'Admin\LoginController@show_admin_login_form');
 Route::post('admin', 'Admin\LoginController@login')->name('admin');
 
-Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth'], 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth','acl'], 'prefix' => 'admin'], function () {
 
     // languages
     $this->get('languages/{lang}/', 'LanguageController@index')->name('admin.languages');
@@ -23,6 +23,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth'], 'prefix' 
     // users
     $this->resource('users', 'UserController', ["as" => "admin"]);
     $this->resource('roles', 'RoleController', ["as" => "admin"]);
+    $this->resource('permissions', 'PermissionController', ["as" => "admin"]);
     $this->resource('logins', 'UserLoginController', ["as" => "admin"]);
 
 
