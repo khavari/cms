@@ -12,8 +12,8 @@ class TelegramNotify
 
     public function __construct()
     {
-        $this->token = '417047850:AAFoFlVsgPOrQWxaaZv0YC9ekEoeHWxHmhQ';
-        $this->chat_id = '188201989';
+        $this->token = env('TELEGRAM_TOKEN');
+        $this->chat_id = env('CHAT_ID');
         $this->status = 1;
     }
 

@@ -26,7 +26,7 @@ class EventServiceProvider extends ServiceProvider
 
         // contact us form
         'App\Events\ContactUs' => [
-            'App\Listeners\ContactUs_TelegramNotify',
+            'App\Listeners\ContactUs_Notify',
         ],
 
     ];

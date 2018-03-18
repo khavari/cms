@@ -39,7 +39,7 @@
                     @endif
                 </div>
             </div>
-            <button type="submit" class="btn btn-flat btn-primary">@lang('web.submit')</button>
+            <button type="submit" class="btn btn-flat btn-primary">@lang('web.send_message')</button>
         </form>
     </div>
 </section>

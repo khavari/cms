@@ -31,6 +31,7 @@ return [
     'search'                   => 'Search',
     'search_in_site'           => 'Search In Site ... ',
     'send'                     => 'Send',
+    'send_message'             => 'Send Message',
     'sort'                     => 'Sort',
     'sort_by'                  => 'Sort_by',
     'image'                    => 'Image',

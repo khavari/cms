@@ -16,7 +16,7 @@ class FormController extends Controller
     {
         $request->merge(['ip' => $request->ip()]);
         $contact = Contact::create($request->all());
-        session()->flash('success', __('messages.created_success'));
+        session()->flash('success', __('messages.message_sent_successfully'));
         event(new ContactUs($contact));
         return back();
     }

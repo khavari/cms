@@ -7,7 +7,7 @@ use App\Events\ContactUs;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactUs_TelegramNotify
+class ContactUs_Notify
 {
 
     public function __construct()
@@ -26,7 +26,7 @@ class ContactUs_TelegramNotify
         $contact = $event->contact;
         $telegram = new TelegramNotify();
         $displace = [
-            'subject'=>$contact->subject,
+            'subject'=> 'فرم تماس',
             'name'=>$contact->name,
             'phone'=>$contact->phone,
             'email'=>$contact->email,
