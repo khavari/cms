@@ -7,7 +7,7 @@
                         <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->slug }}</a>
+                            <a href="{{ url($content->category->url()) }}">@lang('web.'.$content->vocabulary->slug)</a>
                         </li>
                         <li class="breadcrumb-item"><a
                                     href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
@@ -27,7 +27,7 @@
                     @endif
                     <div class="header border_vibrant">
                         <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
-                        <div class="article-icons">
+                        <div class="article-icons d-none">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
