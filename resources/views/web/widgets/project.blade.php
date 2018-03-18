@@ -17,8 +17,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-9">
-                <div class="wp-page mb-3">
+            <div class="col-12 col-lg-12">
+                <div class="wp-page mb-3 d-none">
                     @if($content->existImage())
                         <div class="wp-image">
                             <img src="{{ asset($content->image) }}" class="img-fluid animated fadeIn"

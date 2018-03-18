@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-9">
+            <div class="col-12 ">
                 <div class="wp-page mb-3">
                     @if($content->existImage())
                         <div class="wp-image">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-lg-3 d-none">
                 <div class="sidebar mb-3">
                     <h2 class="title pr-0 pl-0">@lang('web.last_article')</h2>
                     @for($i=0;$i<=5 ;$i++)
