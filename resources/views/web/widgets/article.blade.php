@@ -7,7 +7,7 @@
                         <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->slug }}</a>
+                            <a href="{{ url($content->category->url()) }}">@lang('web.'.$content->vocabulary->slug)</a>
                         </li>
                         <li class="breadcrumb-item"><a
                                     href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-9">
+            <div class="col-12 ">
                 <div class="wp-page mb-3">
                     @if($content->existImage())
                         <div class="wp-image">
@@ -27,7 +27,7 @@
                     @endif
                     <div class="header border_vibrant">
                         <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
-                        <div class="article-icons">
+                        <div class="article-icons  d-none">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-lg-3 d-none">
                 <div class="sidebar mb-3">
                     <h2 class="title pr-0 pl-0">@lang('web.last_article')</h2>
                     @for($i=0;$i<=5 ;$i++)

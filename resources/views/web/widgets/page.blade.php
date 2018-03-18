@@ -7,7 +7,7 @@
                         <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{ url($content->category->url()) }}">{{ $content->vocabulary->slug }}</a>
+                            <a href="{{ url($content->category->url()) }}">@lang('web.'.$content->vocabulary->slug)</a>
                         </li>
                         <li class="breadcrumb-item"><a
                                     href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
@@ -59,9 +59,8 @@
                     </div>
                 @endfor
             </div>
-
         </div>
-        <div class="video mb-3">
+        <div class="video mb-3 d-none">
             <div class="row">
                 <h2 class="title border_vibrant">@lang('web.video')</h2>
             </div>
@@ -76,7 +75,7 @@
                 @endfor
             </div>
         </div>
-        <div class="download mb-3">
+        <div class="download mb-3 d-none">
             <div class="row">
                 <h2 class="title border_vibrant">@lang('web.download')</h2>
             </div>
@@ -97,7 +96,7 @@
                 @endfor
             </div>
         </div>
-        <div class="comment mb-3">
+        <div class="comment mb-3 d-none">
             <div class="comment-header">
             <div class="row">
                 <h2 class="title border_vibrant">@lang('web.comments')</h2>

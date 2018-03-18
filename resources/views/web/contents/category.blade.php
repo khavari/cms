@@ -6,11 +6,11 @@
 
 <div class="container">
     <br>
-    <h1 class=" text-center">{{ $category->title }}</h1>
+    <h1 class="title text-center">{{ $category->title }}</h1>
 
 
     @foreach($category->contents as $content)
-        <div class="card ">
+        <div class="card card-rtl">
             <div class="card-body">
                 <h5 class="card-title">{{ $content->title }}</h5>
                 <p class="card-text">{{ $content->summary }}</p>
@@ -26,10 +26,33 @@
 
 {{-- Add style --}}
 {{--------------------------------------------------}}
-@section('style')
+@section('styles')
+
+    <style>
+        .card-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .card-text {
+            font-size: .9rem;
+        }
+        .title{
+            font-size: 1.5rem;
+        }
+        .card a{
+            text-decoration: none;
+            color: #333;
+            font-size: .9rem;
+        }
+        html[dir="rtl"] .card-rtl{
+            text-align: right;
+            direction: rtl;
+        }
+
+    </style>
 @endsection
 
 {{-- Add script --}}
 {{--------------------------------------------------}}
-@section('script')
+@section('scripts')
 @endsection
