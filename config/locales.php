@@ -27,7 +27,7 @@ return [
         'dir'      => 'ltr',
         'flag'     => '/assets/admin/img/flags/en.png',
         'timezone' => 'Asia/Tehran',
-        'approve'  => 1,
+        'approve'  => 0,
     ],
     [
         'key'      => 'ar',
@@ -35,7 +35,7 @@ return [
         'dir'      => 'rtl',
         'flag'     => '/assets/admin/img/flags/ar.png',
         'timezone' => 'Asia/Tehran',
-        'approve'   => 1,
+        'approve'   => 0,
     ],
     [
         'key'      => 'tr',
@@ -91,6 +91,6 @@ return [
         'dir'      => 'ltr',
         'flag'     => '/assets/admin/img/flags/ja.png',
         'timezone' => 'Asia/Tehran',
-        'approve'  => 1,
+        'approve'  => 0,
     ],
 ];
