@@ -121,7 +121,9 @@
                         {{--------------- dimension ---------------}}
                         <div class="form-group {{ $errors->has('dimension') ? ' has-error' : '' }}">
                             <label for="dimension">@lang('admin.dimension')</label>
-                            <input type="text" required class="form-control" id="dimension" name="dimension"
+                            <input type="text" required class="form-control ltr" id="dimension"
+                                   name="dimension"
+                                   placeholder="?w=250&h=250&fit=crop"
                                    value="{{ $feature->dimension }}">
                         </div>
                         {{--------------- title ---------------}}
