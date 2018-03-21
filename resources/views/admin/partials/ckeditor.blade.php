@@ -13,14 +13,18 @@
       editorHead.appendChild(bootstrapScriptTag)
     }
   }
+
   CKEDITOR.replace('body', {
     language: '{{app()->getLocale()}}',
     height: 300,
-    customConfig: '/assets/admin/js/ckeditor/config.js',
-    contentsCss: ['{{ asset('assets/web/css/web-ltr.css') }}'],
-    on: {
-      instanceReady: loadBootstrap,
-      mode: loadBootstrap
-    }
+      @if(locale('dir') == 'ltr')
+      contentsCss: ['{{ asset('assets/web/css/web-ltr.css') }}'],
+      @else
+      contentsCss: ['{{ asset('assets/web/css/web-rtl.css') }}'],
+      @endif
+      on: {
+        instanceReady: loadBootstrap,
+        mode: loadBootstrap
+      }
   })
 </script>

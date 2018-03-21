@@ -1,13 +1,10 @@
-// RTL Fonts
-//------------------------------------------------------------
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 // Variables
 //------------------------------------------------------------
 @import "variables";
 // Dependencies sass
 //------------------------------------------------------------
 @import "../../../../node_modules/bootstrap/scss/bootstrap";
-// v4.0.0-beta.2
+// v4.0.0
 @import "../../../../node_modules/font-awesome/scss/font-awesome";
 // 4.7.0
 @import "../../../../node_modules/animate-sass/animate";
@@ -19,6 +16,7 @@
 //------------------------------------------------------------
 @import "widgets/footer-rtl";
 // footer.blade.php
+body{ text-align: right; }
 @import "widgets/scroll-back-to-top";
 @import "widgets/featured-products-rtl";
 @import "widgets/bootstrap-carousel-slide-rtl";
