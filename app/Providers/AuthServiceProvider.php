@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Permission;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -24,12 +25,16 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerPolicies();
 
-        foreach ($this->getPermissions() as $permission) {
-            Gate::define($permission->slug , function ($user) use($permission){
-                return $user->hasRole($permission->roles);
-            });
+        if (Schema::hasTable('settings')) {
+
+            $this->registerPolicies();
+            foreach ($this->getPermissions() as $permission) {
+                Gate::define($permission->slug , function ($user) use($permission){
+                    return $user->hasRole($permission->roles);
+                });
+            }
+
         }
 
     }
