@@ -478,7 +478,7 @@ class LinkController extends Controller
         $link->update($request->except(['file', '_token', '_method']));
         session()->flash('success', __('messages.created_success'));
 
-        return back();
+        return redirect()->route('admin.links.index', ['id' => $feature->id]);
     }
 
     public function destroy(Feature $feature, Link $link)

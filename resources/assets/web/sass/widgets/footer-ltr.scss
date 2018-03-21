@@ -132,17 +132,16 @@
   }
 
   #footer-bottom {
-    margin-top: 15px;
 
     .copyright {
       display: inline-block;
-      padding-top: 6px;
-      margin: 0px;
-      font-size: .9rem;
+      margin: 0;
+      font-size: 0.8rem;
       font-weight: 100;
+      line-height: 40px;
     }
     .footer-logo img {
-      max-height: 25px;
+      max-height: 30px;
       float: right;
       margin: 5px;
     }

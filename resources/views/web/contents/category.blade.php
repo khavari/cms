@@ -10,7 +10,7 @@
 
 
     @foreach($category->contents as $content)
-        <div class="card card-rtl">
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title">{{ $content->title }}</h5>
                 <p class="card-text">{{ $content->summary }}</p>
@@ -44,7 +44,7 @@
             color: #333;
             font-size: .9rem;
         }
-        html[dir="rtl"] .card-rtl{
+        html[dir="rtl"] .card{
             text-align: right;
             direction: rtl;
         }

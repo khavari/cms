@@ -131,7 +131,7 @@ border-color: #2a2a2a !important;
 
 .bg_dark_hover {
 background-color: #222222 !important;
-color: #ffffff;
+color: #c0c0c0;
 }
 .text_dark_hover {
 color: #222222 !important;
@@ -145,7 +145,7 @@ color: #c0c0c0;
 }
 
 .text_bg_dark_hover{
-color: #ffffff;
+color: #c0c0c0;
 }
 
 .border_bg_dark{
@@ -166,7 +166,7 @@ border-color: #414141 !important;
 
 .bg_dark-hover:hover {
 background-color: #222222 !important;
-color: #ffffff !important;
+color: #c0c0c0 !important;
 }
 
 .bg_dark_hover-hover:hover {
@@ -179,14 +179,14 @@ color: #c0c0c0 !important;
 
 
 .bg_body {
-background-color: #fcfcfc !important;
-color: #000000;
+background-color: #fbfbfb !important;
+color: #121212;
 }
 
 .text_bg_body {
-color: #000000 !important;
+color: #131313 !important;
 }
 
 .title_bg_body{
-color: #000000 !important;
+color: #121212 !important;
 }

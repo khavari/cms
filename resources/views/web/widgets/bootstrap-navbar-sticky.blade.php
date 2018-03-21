@@ -151,8 +151,7 @@
                     </div>
                     <div class="col-12 col-sm-3">
                         <div class="logo">
-                            <a href="{{ url(app()->getLocale()) }}"><img src="{{ asset(setting('logo')) }}"
-                                                                         alt="{{ setting('title') }}"></a>
+                            <a href="{{ url(app()->getLocale()) }}"><img src="{{ asset(setting('logo')) }}" alt="{{ setting('title') }}"></a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +176,7 @@
                                     {{ $link->title }}<span class="fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu p-0 submenu border_vibrant" >
-                                    @foreach($link->children()->active()->get() as $item)
+                                    @foreach($link->children()->active()->orderBy('order')->get() as $item)
                                         @if($item->isExternal())
                                             <a class="dropdown-item" target="_blank" rel="nofollow" href="{{ url($item->url()) }}">{{ $item->title }}</a>
                                         @else
