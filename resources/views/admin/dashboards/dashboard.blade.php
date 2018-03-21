@@ -68,6 +68,53 @@
 
 
         </div>
+
+@if($contents->count())
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">@lang("admin.resent_contents")</h3>
+                    </div>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th style="width: 50px;">@lang("admin.status")</th>
+                                <th>@lang("admin.id")</th>
+                                <th>@lang("admin.title")</th>
+                                <th class="hidden-xs">@lang("admin.slug")</th>
+                                <th>@lang("admin.vocabulary")</th>
+                                <th class="hidden-xs">@lang("admin.created_at")</th>
+                                <th>@lang("admin.action")</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($contents as $content)
+                                <tr class="{{ (isUpdated($content->updated_at))?'updated':'' }}">
+                                    <td>
+                                        @include('admin.partials.active',['action'=>route('admin.contents.edit', ['id' => $content->id]),'active'=>$content->active])
+                                    </td>
+                                    <td class="text-ltr">{{$content->id}}</td>
+                                    <td>{{ str_limit($content->title,32) }}</td>
+                                    <td class="hidden-xs">{{ str_limit($content->slug,60) }}</td>
+                                    <td>@lang('admin.'.$content->vocabulary->slug)</td>
+                                    <td class="text-ltr hidden-xs">{{ $content->created_at }}</td>
+                                    <td>
+                                        @include('admin.partials.delete',['action'=>route('admin.contents.destroy', ['id' => $content->id])])
+                                        @include('admin.partials.edit',['action'=>route('admin.contents.edit', ['id' => $content->id])])
+                                        @include('admin.partials.show',['action'=>route('admin.contents.destroy', ['id' => $content->id])])
+                                        @include('admin.partials.copy',['url'=>url(app()->getLocale().'/content/'.$content->slug)])
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
     </section>
 @endsection
 

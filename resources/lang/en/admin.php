@@ -85,6 +85,7 @@ return [
     'brief'            => 'Brief',
     'description'      => 'Description',
     'keywords'         => 'Keywords',
+    'resent_contents'  => 'Resent Contents',
 
     // feature
     'feature'          => 'Feature',
@@ -242,9 +243,9 @@ return [
     'home'                   => 'Home',
     'single'                 => 'Single',
 
-    'single'                 => 'Single',
-    'error'                  => 'Error',
-    'errors'                 => 'Errors',
+    'single' => 'Single',
+    'error'  => 'Error',
+    'errors' => 'Errors',
 
     'page'    => 'Page',
     'news'    => 'News',

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Contact;
+use App\Content;
 use App\User;
 use App\Widget;
 use Illuminate\Http\File;
@@ -26,10 +27,17 @@ class DashboardController extends Controller
         $widgets_count = Widget::lang()->active()->get()->count();
         $contacts_count = Contact::whereNull('archived_at')->count();
 
+        $contents = Content::latest()->lang()->limit(10)->get();
+
         return view('admin.dashboards.dashboard',
             compact(
                 'users_count',
                 'files_count',
-                'widgets_count', 'contacts_count', 'uploads_size'));
+                'widgets_count',
+                'contacts_count',
+                'uploads_size',
+                'contents'
+            )
+        );
     }
 }

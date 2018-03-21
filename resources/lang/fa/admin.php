@@ -85,6 +85,7 @@ return [
     'brief'            => 'خلاصه',
     'description'      => 'توضیحات',
     'keywords'         => 'کلمات کلیدی',
+    'resent_contents'  => 'آخرین مطالب',
 
     // feature
     'feature'          => 'ویژه',
