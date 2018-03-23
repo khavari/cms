@@ -87,7 +87,7 @@ return [
     'sign_in_with_github'      => 'وارد شدن با اکانت گیت هاب',
     'sign_in_with_linkedin'    => 'وارد شدن با اکانت لینکدین',
     'sign_in_with_google-plus' => 'وارد شدن با اکانت گوگل پلاس',
-    'developed_by'             => 'طراحی و برنامه نویسی با تمام عشق توسط <a href="#" target="_blank" class=" text_bg_vibrant_hover">عصرنت</a> ',
+    'developed_by'             => 'طراحی و برنامه نویسی توسط <a href="http://www.asrenet.net?referer='.request()->getHost().'" target="_blank" class=" text_bg_vibrant_hover">عصرنت</a>',
     // errors
     'back_to_home'             => 'بازگشت به صفحه اصلی',
     '404_message'              => 'صفحه مورد نظر یافت نشد',

@@ -137,6 +137,9 @@ return [
     'customer'               => 'Customer',
     'customers'              => 'Customers',
     'footer'                 => 'Footer',
+    'introduction'           => 'Introduction',
+    'subject'                => 'Subject',
+    'message'                => 'Message',
 
     //category
     'manage_category'        => 'Manage Category',

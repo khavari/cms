@@ -89,8 +89,6 @@
                                 <td>@lang('admin.updated_at')</td>
                                 <td>{{ $content->updated_at }}</td>
                             </tr>
-
-
                         </table>
                     </div>
                 </div>
@@ -108,12 +106,12 @@
 
                         <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
                                 data-target="#modal-image">
-                            @lang('admin.create_new',['item'=> strtolower(__('admin.image'))])
+                            @lang('admin.submit_new',['item'=> __('admin.image')])
                         </button>
 
                         <button type="button" class="btn btn-flat btn-primary" data-toggle="modal"
                                 data-target="#modal-file">
-                            @lang('admin.create_new',['item'=> strtolower(__('admin.file'))])
+                            @lang('admin.submit_new',['item'=> __('admin.file')])
                         </button>
                     </div>
                     <div class="box-body table-responsive no-padding">
@@ -167,7 +165,7 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">@lang('admin.submit_new',['item'=> strtolower(__('admin.slide'))])</h4>
+                            <h4 class="modal-title">@lang('admin.submit_new',['item'=> __('admin.image')])</h4>
                         </div>
                         <div class="modal-body">
                             {{--------------- image ---------------}}

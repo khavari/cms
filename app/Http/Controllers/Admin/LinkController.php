@@ -476,7 +476,7 @@ class LinkController extends Controller
         }
 
         $link->update($request->except(['file', '_token', '_method']));
-        session()->flash('success', __('messages.created_success'));
+        session()->flash('success', __('messages.updated_success'));
 
         return redirect()->route('admin.links.index', ['id' => $feature->id]);
     }

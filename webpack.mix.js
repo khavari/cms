@@ -68,3 +68,4 @@ mix.scripts([
   'resources/assets/web/js/axios.min.js',
   'resources/assets/web/js/script.js'
 ], 'public/assets/web/js/web.js')
+

@@ -87,7 +87,7 @@ return [
     'sign_in_with_github'      => 'Sign In With Github',
     'sign_in_with_linkedin'    => 'Sign In With Linkedin',
     'sign_in_with_google-plus' => 'Sign In With Google plus',
-    'developed_by'             => 'Designed and developed with all the love by <a href="#" target="_blank" class=" text_bg_vibrant_hover">asrenet</a>',
+    'developed_by'             => 'Designed and developed by <a href="http://www.asrenet.net?referer='.request()->getHost().'" target="_blank" class=" text_bg_vibrant_hover">asrenet</a>',
     // errors
     'back_to_home'             => 'Back to home page',
     '404_message'              => 'PAGE NOT FOUND',

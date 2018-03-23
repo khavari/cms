@@ -65,7 +65,7 @@
                                     <td class="text-ltr">{{$content->id}}</td>
                                     <td>{{ str_limit($content->title,32) }}</td>
                                     <td class="hidden-xs">{{ str_limit($content->slug,60) }}</td>
-                                    <td>{{ $content->vocabulary_id }}</td>
+                                    <td>@lang('admin.'.$content->vocabulary->slug)</td>
                                     <td class="text-ltr hidden-xs">{{ $content->created_at }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.contents.destroy', ['id' => $content->id])])

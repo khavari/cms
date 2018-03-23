@@ -77,7 +77,7 @@ return [
 
     // content
     'content'          => 'محتوا',
-    'contents'         => 'محتوا',
+    'contents'         => 'محتوا ها',
     'manage_content'   => 'مدیریت محتوا',
     'content_color'    => 'رنگ محتوا',
     'title'            => 'عنوان',
@@ -139,6 +139,9 @@ return [
     'customer'               => 'مشتری',
     'customers'              => 'مشتری ها',
     'footer'                 => 'فوتر',
+    'introduction'           => 'معرفی',
+    'subject'                => 'عنوان',
+    'message'                => 'پیام',
 
     //category
     'manage_category'        => 'مدیریت دسته بندی',
@@ -235,7 +238,7 @@ return [
     'logo'                   => 'لوگو',
     'yes'                    => 'بله',
     'no'                     => 'خیر',
-    
+
 
     //widgets
     'widget'                 => 'ویدجت',

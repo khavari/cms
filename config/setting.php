@@ -14,6 +14,7 @@ return [
     'analytics'                => ['type' => 'text', 'group' => 'site', 'value' => null],
     'robots'                   => ['type' => 'text', 'group' => 'site', 'value' => 'index,follow'],
     'copyright'                => ['type' => 'text', 'group' => 'site', 'value' => null],
+    'introduction'             => ['type' => 'editor', 'group' => 'site', 'value' => null],
 
 
     // social media
