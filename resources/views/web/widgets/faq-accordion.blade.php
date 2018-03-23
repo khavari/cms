@@ -8,8 +8,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    @if($links->first()->feature->dimension)
-                        <h3 class="title">{{ $links->first()->feature->dimension }}</h3>
+                    @if($links->first()->feature->title)
+                        <h3 class="title">{{ $links->first()->feature->title }}</h3>
+                    @endif
+                    @if($links->first()->feature->summary)
+                        <p class="text-center">{{ $links->first()->feature->summary }}</p>
                     @endif
                 </div>
             </div>
@@ -18,7 +21,8 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="heading-{{ $index }}">
                             <h5 class="card-title">
-                                <a class="@if($index != 0) collapsed @endif" data-toggle="collapse" href="#collapse-{{$id}}-{{ $index }}">
+                                <a class="@if($index != 0) collapsed @endif" data-toggle="collapse"
+                                   href="#collapse-{{$id}}-{{ $index }}">
                                     {{ $link->title }}
                                 </a>
                             </h5>

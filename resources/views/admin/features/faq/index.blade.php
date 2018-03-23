@@ -69,7 +69,6 @@
         </div>
     </section>
 
-
     <div class="modal fade" id="modal-link">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -141,14 +140,6 @@
                         <h4 class="modal-title">@lang('dimension')</h4>
                     </div>
                     <div class="modal-body">
-                        {{--------------- dimension ---------------}}
-                        <div class="form-group {{ $errors->has('dimension') ? ' has-error' : '' }}">
-                            <label for="dimension">@lang('admin.dimension')</label>
-                            <input type="text" class="form-control ltr" id="dimension"
-                                   name="dimension"
-                                   placeholder="?w=300&h=300&fit=crop"
-                                   value="{{ $feature->dimension }}">
-                        </div>
                         {{--------------- title ---------------}}
                         <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title">@lang('admin.title')</label>
@@ -169,7 +160,6 @@
             </div>
         </div>
     </div>
-
 @endsection
 
 {{--------------------------------------------------}}
@@ -179,7 +169,6 @@
       $('#url').select2({
         tags: true
       });
-
       function formatState (state) {
         if (!state.id) {
           return state.text
@@ -189,11 +178,9 @@
         )
         return $state
       }
-
       $('#icon').select2({
         templateResult: formatState
       })
-
     </script>
 @endsection
 
