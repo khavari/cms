@@ -122,7 +122,7 @@ return [
 
     //file
     'file'                   => 'فایل',
-    'files'                  => 'فایلها',
+    'files'                  => 'فایل ها',
     'submit_new_file'        => 'ثبت فایل جدید',
     'manage_files'           => 'مدیریت فایلها',
     'file_manager'           => 'مدیریت فایل',
@@ -231,6 +231,8 @@ return [
     'slider'                 => 'اسلایدر',
     'parallax'               => 'پارالاکس',
     'gallery'                => 'گالری',
+    'video'                  => 'ویدئو',
+    'videos'                 => 'ویدئو ها',
     'faq'                    => 'سوالات متداول',
     'alt'                    => 'متن تصویر',
     'image'                  => 'عکس',
@@ -246,6 +248,7 @@ return [
     'all_widgets'            => 'همه ویدجت ها',
     'manage_widgets'         => 'مدیریت ویدجت ها',
     'active_widgets'         => 'ویدجت های فعال',
+    'manage'                 => 'مدیریت',
     'home_page'              => 'صفحه اصلی',
     'home'                   => 'صفحه اصلی',
     'single'                 => 'صفحه پایانی',
@@ -257,4 +260,9 @@ return [
     'article' => 'مقاله',
     'service' => 'سرویس',
     'project' => 'پروژه',
+
+    //comments
+    'comment'  => 'دیدگاه',
+    'comments' => 'دیدگاه ها',
+
 ];

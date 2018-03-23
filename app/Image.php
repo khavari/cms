@@ -4,11 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Relations\Relation;
 
 class Image extends Model
 {
     protected $table = "images";
     protected $guarded  = ['id'];
+
+
 
     public function imageable()
     {
@@ -56,6 +59,14 @@ class Image extends Model
     public function fileExists()
     {
         return file_exists( $this->getFullPath() );
+    }
+
+    protected static function boot()
+    {
+        Relation::morphMap([
+            'contents' => 'App\Content',
+            'products' => 'App\Product',
+        ]);
     }
 
 }

@@ -70,7 +70,34 @@
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.contents.destroy', ['id' => $content->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.contents.edit', ['id' => $content->id])])
-                                        @include('admin.partials.show',['action'=>route('admin.contents.destroy', ['id' => $content->id])])
+
+
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                    class="btn btn-xs btn-info btn-flat">@lang('admin.manage')</button>
+                                            <button type="button" class="btn btn-xs btn-info btn-flat dropdown-toggle"
+                                                    data-toggle="dropdown" aria-expanded="false">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="{{ route('admin.contents.show', ['id' => $content->id]) }}">@lang('admin.images') | {{ $content->images->count() }}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('admin.contents.show', ['id' => $content->id]) }}">@lang('admin.videos')</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('admin.contents.show', ['id' => $content->id]) }}">@lang('admin.files')</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="{{ route('admin.contents.show', ['id' => $content->id]) }}">@lang('admin.comments')</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
                                         @include('admin.partials.copy',['url'=>url(app()->getLocale().'/content/'.$content->slug)])
                                     </td>
                                 </tr>

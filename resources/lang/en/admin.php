@@ -230,6 +230,8 @@ return [
     'gallery'                => 'Gallery',
     'faq'                    => 'FAQ',
     'alt'                    => 'Alt',
+    'video'                  => 'Video',
+    'videos'                 => 'Videos',
     'image'                  => 'Image',
     'images'                 => 'Images',
     'logo'                   => 'Logo',
@@ -241,6 +243,7 @@ return [
     'widgets'                => 'Widgets',
     'all_widgets'            => 'All Widgets',
     'manage_widgets'         => 'Manage Widgets',
+    'manage'                 => 'Manage',
     'active_widgets'         => 'Active Widgets',
     'home_page'              => 'Home page',
     'home'                   => 'Home',
@@ -250,11 +253,14 @@ return [
     'error'  => 'Error',
     'errors' => 'Errors',
 
-    'page'    => 'Page',
-    'news'    => 'News',
-    'article' => 'َArticle',
-    'service' => 'Service',
-    'project' => 'Project',
+    'page'     => 'Page',
+    'news'     => 'News',
+    'article'  => 'َArticle',
+    'service'  => 'Service',
+    'project'  => 'Project',
 
+    //comments
+    'comment'  => 'Comment',
+    'comments' => 'Comments',
 
 ];
