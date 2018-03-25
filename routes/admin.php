@@ -26,7 +26,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth','acl'], 'pr
     $this->resource('permissions', 'PermissionController', ["as" => "admin"]);
     $this->resource('logins', 'UserLoginController', ["as" => "admin"]);
 
-
     // features
     $this->resource('features', 'FeatureController', ["as" => "admin"]);
     $this->resource('features/{feature}/links', 'LinkController', ["as" => "admin"]);
@@ -37,31 +36,9 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth','acl'], 'pr
     $this->resource('contents', 'ContentController', ["as" => "admin"]);
     $this->resource('images', 'ImageController', ["as" => "admin"]);
 
-
     // comments
-    $this->resource('comments', 'CommentController');
-    $this->put('comments/{comment}/status', 'CommentController@status')->name('users.status');
+    $this->resource('comments', 'CommentController', ["as" => "admin"]);
 
-    // =============================================================
-    // groups
-    $this->resource('{type}/groups', 'GroupController');
-    $this->put('{type}/groups/{group}/status', 'GroupController@status')->name('groups.status');
-
-    // posts
-    $this->resource('{type}/posts', 'PostController');
-    $this->put('{type}/posts/{post}/status', 'PostController@status')->name('posts.status');
-
-    // post_images
-    $this->resource('posts/{post}/images', 'PostImageController');
-    $this->put('posts/{post}/images/{image}/status', 'PostImageController@status')->name('images.status');
-
-    // post_files
-    $this->resource('posts/{post}/files', 'PostFileController');
-    $this->put('posts/{post}/files/{file}/status', 'PostFileController@status')->name('post_files.status');
-
-    // post_videos
-    $this->resource('posts/{post}/videos', 'PostVideoController');
-    $this->put('posts/{post}/videos/{video}/status', 'PostVideoController@status')->name('videos.status');
     // =============================================================
 
     // provinces  sub provinces in ajax
@@ -82,10 +59,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth','acl'], 'pr
     $this->put('files/{file}/status', 'FileController@status')->name('admin.files.status');
     $this->get('all-files', 'FileController@all')->name('admin.files.all');
 
-
-    // Document
-    $this->get('document/seo', 'DocumentController@seo')->name('admin.documents.seo');
-    $this->get('document/help', 'DocumentController@help')->name('admin.documents.help');
 
     $this->resource('widgets', 'WidgetController', ["as" => "admin"]);
 

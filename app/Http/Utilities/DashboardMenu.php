@@ -195,6 +195,11 @@ class DashboardMenu
                     'icon'  => ' fa-file-text-o',
                     'url'   => route('admin.contents.index'),
                 ],
+                [
+                    'title' => __('admin.comments'),
+                    'icon'  => ' fa-commenting-o',
+                    'url'   => route('admin.comments.index'),
+                ],
             ],
         ];
     }

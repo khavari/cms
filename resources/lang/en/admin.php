@@ -262,5 +262,6 @@ return [
     //comments
     'comment'  => 'Comment',
     'comments' => 'Comments',
+    'reply'    => 'Reply',
 
 ];

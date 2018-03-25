@@ -13,7 +13,7 @@ class CommentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'message'        => ['required', 'min:3'],
+            'commentable_id' => ['numeric'],
         ];
+
     }
 }

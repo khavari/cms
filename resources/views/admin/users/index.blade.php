@@ -55,7 +55,7 @@
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.users.destroy', ['id' => $user->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.users.edit', ['id' => $user->id])])
-                                        @include('admin.partials.show',['action'=>route('admin.users.destroy', ['id' => $user->id])])
+                                        @include('admin.partials.show',['action'=>route('admin.users.show', ['id' => $user->id])])
                                     </td>
 
                                 </tr>

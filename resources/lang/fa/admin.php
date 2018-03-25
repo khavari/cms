@@ -255,14 +255,15 @@ return [
     'error'                  => 'خطا',
     'errors'                 => 'خطاها',
 
-    'page'    => 'صفحه',
-    'news'    => 'اخبار',
-    'article' => 'مقاله',
-    'service' => 'سرویس',
-    'project' => 'پروژه',
+    'page'     => 'صفحه',
+    'news'     => 'اخبار',
+    'article'  => 'مقاله',
+    'service'  => 'سرویس',
+    'project'  => 'پروژه',
 
     //comments
     'comment'  => 'دیدگاه',
     'comments' => 'دیدگاه ها',
+    'reply'    => 'پاسخ',
 
 ];
