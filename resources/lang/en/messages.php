@@ -19,7 +19,7 @@ return [
     'unFeaturedSuccess'         => 'The unfeature operation was successfully.',
     'undoDeleteSuccess'         => 'The undo delete operation was successfully.',
     'notAlloweDeleteActive'     => 'Delete operation failed, This item is active.',
-    'notAlloweDeleteChild'      => 'Delete operation failed, This item have childs.',
+    'not_allowe_delete_child'      => 'Delete operation failed, This item have childs.',
     'message_sent_successfully' => 'Your message sent successfully',
 
 ];

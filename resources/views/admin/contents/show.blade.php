@@ -159,8 +159,8 @@
                     <form action="{{route('admin.images.store')}}" method="post"
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <input type="hidden" name="commentable_id" value="{{ $content->id }}">
-                        <input type="hidden" name="commentable_type" value="App\Content">
+                        <input type="hidden" name="imageable_id" value="{{ $content->id }}">
+                        <input type="hidden" name="imageable_type" value="App\Content">
 
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">

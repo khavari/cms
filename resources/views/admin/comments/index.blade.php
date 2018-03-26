@@ -61,9 +61,12 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <form role="form"
-                                                  action="{{route('admin.comments.update', ['id' => $comment->id])}}"
+                                                  action="{{route('admin.comments.store')}}"
                                                   method="post">
-                                                {{ csrf_field() }} {{ method_field('PATCH') }}
+                                                {{ csrf_field() }}
+                                                <input type="hidden" name="parent_id" value="{{ $comment->getKey() }}">
+                                                <input type="hidden" name="commentable_id" value="{{ $comment->commentable->getKey() }}">
+                                                <input type="hidden" name="commentable_type" value="App\Content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">

@@ -33,8 +33,8 @@ class ImageController extends Controller
 
     public function store(ImageRequest $request)
     {
-        $model = app()->make($request->commentable_type);
-        $object = $model->findOrFail($request->commentable_id);
+        $model = app()->make($request->imageable_type);
+        $object = $model->findOrFail($request->imageable_id);
 
         $file = $request->file("image");
         $directory = 'uploads/images/' . date('Y') . '/' . date('m') . '/';

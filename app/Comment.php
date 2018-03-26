@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
-    protected $table = "comments";
+    //use SoftDeletes;
+    protected $table = 'comments';
     protected $guarded = ['id'];
-    use SoftDeletes;
-    protected $dates = ['deleted_at'];
+    //protected $dates = ['deleted_at'];
 
     public function commentable()
     {
