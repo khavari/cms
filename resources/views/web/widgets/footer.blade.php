@@ -102,7 +102,7 @@
     @endif
     <div id="footer-bottom" class="bg_dark_hover">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-8">
                     <p class="copyright">{{ setting('copyright') }}</p>
                 </div>

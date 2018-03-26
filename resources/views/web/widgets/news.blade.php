@@ -27,12 +27,12 @@
                     @endif
                      <div class="header border_vibrant">
                             <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
-                            <div class="article-icons d-none">
+                            <div class="article-icons">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
                     </span>
-                                <span class="comments-qty">
+                                <span class="comments-qty  d-none">
                         <i class="fa fa-comment-o"></i>
                      25 @lang('web.comments')
                     </span>
@@ -46,7 +46,7 @@
                      {!! $content->body !!}
                     </div>
                 </div>
-                <div class="related-articles mb-3">
+                <div class="related-articles mb-3  d-none">
                     <div class="row">
                         @for($i=0;$i<3;$i++)
                             <div class="col-12 col-sm-12 col-md-6 col-lg-4 ">

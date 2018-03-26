@@ -33,7 +33,7 @@
                        <i class="fa fa-clock-o"></i>
                         {{ $content->created_at }}
                     </span>
-                                    <span class="comments-qty">
+                                    <span class="comments-qty d-none">
                         <i class="fa fa-comment-o"></i>
                      25
                     </span>

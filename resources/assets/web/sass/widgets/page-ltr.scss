@@ -8,8 +8,7 @@
     padding: 10px;
     list-style: none;
     margin-top: 5px;
-    background: #fff;
-    box-shadow: 0px 0px 1px #dedede;
+    background:transparent;
     .breadcrumb-item {
       a {
         text-decoration: none;
@@ -20,14 +19,13 @@
   .header {
     display: inline-block;
     border-bottom: 2px solid transparent;
-    background: #ffff;
+    background: transparent;
     padding: 20px;
     padding-bottom: 10px;
   }
   .wp-page {
     text-align: center;
-    background: #ffffff;
-    box-shadow: 0px 0px 1px #dedede;
+    background: transparent;
     .wp-image {
       padding: 10px;
     }
@@ -42,6 +40,24 @@
       margin-top: -2px;
       padding: 15px;
       border-top: 2px solid #ddd;
+      h1{
+        font-size: 1.7rem;
+      }
+      h2{
+        font-size: 1.5rem;
+      }
+      h3{
+        font-size: 1.3rem;
+      }
+      h4{
+        font-size: 1.1rem;
+      }
+      h5{
+        font-size: 0.9rem;
+      }
+      h6{
+        font-size: 0.7rem;
+      }
       h1,h2,h3,h4,h5,h6{text-align: left; }
       p {
         text-align: left;
@@ -62,9 +78,8 @@
   }
   .gallery {
     text-align: center;
-    background: #ffffff;
+    background:transparent;
     padding: 15px;
-    box-shadow: 0px 0px 1px #dedede;
     .title {
       padding-bottom: 10px;
       border-bottom: 2px solid #ddd;
@@ -161,9 +176,8 @@
   }
   .video {
     text-align: center;
-    background: #ffffff;
+    background:transparent;
     padding: 15px;
-    box-shadow: 0px 0px 1px #dedede;
     .title {
       padding-bottom: 10px;
       border-bottom: 2px solid #ddd;
@@ -174,9 +188,8 @@
   }
   .download {
     text-align: center;
-    background: #ffffff;
+   background: transparent;
     padding: 15px;
-    box-shadow: 0px 0px 1px #dedede;
     .title {
       padding-bottom: 10px;
       border-bottom: 2px solid #ddd;
@@ -211,9 +224,9 @@
   }
   .comment {
     text-align: center;
-    background: #ffffff;
+    background: transparent;
     padding: 15px;
-    box-shadow: 0px 0px 1px #dedede;
+
     .title {
       padding-bottom: 10px;
       border-bottom: 2px solid #ddd;
