@@ -35,7 +35,8 @@
                     <div class="custom-control custom-checkbox my-1 mr-sm-2">
                         <input type="checkbox" class="custom-control-input" id="remember"
                                name="remember" {{ old('remember') ? 'checked' : '' }}>
-                        <label class="custom-control-label label-checkbox" for="remember">@lang('web.remember_me')</label>
+                        <label class="custom-control-label label-checkbox"
+                               for="remember">@lang('web.remember_me')</label>
                     </div>
                 </div>
 
@@ -47,8 +48,26 @@
                 <div class="w-100"></div>
                 {{--------------- login with social---------------}}
                 <div class="col-md-6 mb-3">
-                    <a href="{{ route('socialite',['driver'=>'google']) }}" class="btn  login-btn border_vibrant " type="submit"> <i class="fa fa-google-plus"></i> @lang('web.sign_in_with_google-plus')</a>
-                    <a href="{{ route('socialite',['driver'=>'facebook']) }}" class="btn  login-btn border_vibrant " type="submit"> <i class="fa fa-facebook"></i> @lang('web.sign_in_with_facebook')</a>
+                    @if(env('GOOGLE_CLIENT_ID'))
+                        <a href="{{ route('socialite',['driver'=>'google']) }}" class="btn  login-btn border_vibrant "
+                           type="submit"> <i class="fa fa-google-plus"></i> @lang('web.sign_in_with_google-plus')</a>
+                    @endif
+
+                    @if(env('FACEBOOK_CLIENT_ID'))
+                        <a href="{{ route('socialite',['driver'=>'facebook']) }}" class="btn  login-btn border_vibrant "
+                           type="submit"> <i class="fa fa-facebook"></i> @lang('web.sign_in_with_facebook')</a>
+                    @endif
+
+                    @if(env('LINKEDIN_CLIENT_ID'))
+                        <a href="{{ route('socialite',['driver'=>'linkedin']) }}" class="btn  login-btn border_vibrant "
+                           type="submit"> <i class="fa fa-linkedin"></i> @lang('web.sign_in_with_linkedin')</a>
+                    @endif
+
+                    @if(env('GITHUB_CLIENT_ID'))
+                        <a href="{{ route('socialite',['driver'=>'github']) }}" class="btn  login-btn border_vibrant "
+                           type="submit"> <i class="fa fa-github"></i> @lang('web.sign_in_with_github')</a>
+                    @endif
+
                 </div>
             </div>
 
