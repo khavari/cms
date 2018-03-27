@@ -37,6 +37,7 @@ class ContentRequest extends FormRequest
                     'keywords'      => ['nullable', 'min:3', 'max:190'],
                     'file'          => ['nullable', 'mimes:jpeg,jpg,png', 'max:1024'],
                     'order'         => ['nullable', 'numeric'],
+                    'published_at'  => ['required', 'date' ,'date_format:Y-m-d', 'after:2018-01-01', 'before:2037-01-01'],
                     'featured'      => ['nullable', 'numeric'],
                     'active'        => ['nullable', 'numeric'],
                 ];
@@ -53,6 +54,7 @@ class ContentRequest extends FormRequest
                     'description'   => ['nullable', 'min:3', 'max:190'],
                     'keywords'      => ['nullable', 'min:3', 'max:190'],
                     'file'          => ['nullable', 'mimes:jpeg,jpg,png', 'max:1024'],
+                    'published_at'  => ['required', 'date' ,'date_format:Y-m-d', 'after:2018-01-01', 'before:2037-01-01'],
                     'order'         => ['nullable', 'numeric'],
                     'featured'      => ['nullable', 'numeric'],
                     'active'        => ['nullable', 'numeric'],

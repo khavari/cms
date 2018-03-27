@@ -11,8 +11,8 @@ use App\Http\Controllers\Controller;
 class CommentController extends Controller
 {
 
-
     private $per_page = 20;
+
 
     public function index()
     {
@@ -37,8 +37,6 @@ class CommentController extends Controller
 
     public function create()
     {
-
-
     }
 
 
@@ -50,15 +48,15 @@ class CommentController extends Controller
         $model = app()->make($request->commentable_type);
         $object = $model->findOrFail($request->commentable_id);
         $comment = new Comment();
-        $comment->message = $request->message;
-        $comment->parent_id = $parent_id;
         $comment->user_id = auth()->user()->getKey();
+        $comment->parent_id = $parent_id;
+        $comment->message = $request->message;
+        $comment->approved_at = Carbon::now();
         $object->comments()->save($comment);
 
         session()->flash('success', __('messages.created_success'));
 
         return back();
-
 
     }
 
@@ -97,10 +95,11 @@ class CommentController extends Controller
 
     public function destroy(Comment $comment)
     {
-        if($comment->hasChildren()){
+        if ($comment->hasChildren()) {
             return back()->with('error', __('messages.not_allowe_delete_child'));
-        }else{
+        } else {
             $comment->delete();
+
             return back()->with('success', __('messages.deleted_success'));
         }
     }
