@@ -44,7 +44,7 @@
                                     <select class="form-control" id="parent_id" name="parent_id" style="width: 100%;">
                                         <option value="0">@lang('admin.root')</option>
                                         @foreach($links as $item)
-                                            <option value="{{ $item->id }}" {{ ($item->id == $link->parent_id)?'selected':'' }}>{{ $item->title }}</option>
+                                            <option value="{{ $item->id }}" {{ ($item->id == $link->parent_id)?'selected':'' }}>{{ $item->id }} - {{ $item->title }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -106,7 +106,7 @@
     <script>
       $('#parent_id').select2();
       $('#url').select2({
-        tags: true
+        tags: true,
       });
 
       function formatState (state) {
@@ -129,4 +129,10 @@
 
 {{--------------------------------------------------}}
 @section('styles')
+    <style>
+        #select2-url-container ,
+        #select2-parent_id-container{
+            direction: ltr;
+        }
+    </style>
 @endsection

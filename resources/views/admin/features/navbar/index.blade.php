@@ -104,7 +104,7 @@
                             <select class="form-control" id="parent_id" name="parent_id" style="width: 100%;">
                                 <option value="0">@lang('admin.root')</option>
                                 @foreach($links as $link)
-                                    <option value="{{ $link->id }}">{{ $link->title }}</option>
+                                    <option value="{{ $link->id }}">{{ $link->id }} - {{ $link->title }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -157,5 +157,11 @@
 
 {{--------------------------------------------------}}
 @section('styles')
+    <style>
+        #select2-url-container ,
+        #select2-parent_id-container{
+            direction: ltr;
+        }
+    </style>
 @endsection
 

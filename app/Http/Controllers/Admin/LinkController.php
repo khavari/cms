@@ -509,6 +509,11 @@ class LinkController extends Controller
 
         $user = [
             [
+                'title' => app()->getLocale().'/',
+                'slug'  => app()->getLocale().'/',
+                'url'   => app()->getLocale().'/',
+            ],
+            [
                 'title' => 'login',
                 'slug'  => 'login',
                 'url'   => app()->getLocale() . '/user/profile',

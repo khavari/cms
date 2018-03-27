@@ -138,4 +138,10 @@
 
 {{--------------------------------------------------}}
 @section('styles')
+    <style>
+        #select2-url-container ,
+        #select2-parent_id-container{
+            direction: ltr;
+        }
+    </style>
 @endsection
