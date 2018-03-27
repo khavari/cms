@@ -121,7 +121,7 @@
                         {{--------------- dimension ---------------}}
                         <div class="form-group {{ $errors->has('dimension') ? ' has-error' : '' }}">
                             <label for="dimension">@lang('admin.dimension')</label>
-                            <input type="text" required class="form-control ltr" id="dimension"
+                            <input type="text" class="form-control ltr" id="dimension"
                                    name="dimension"
                                    placeholder="?w=250&h=250&fit=crop"
                                    value="{{ $feature->dimension }}">
@@ -129,7 +129,7 @@
                         {{--------------- title ---------------}}
                         <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title">@lang('admin.title')</label>
-                            <input type="text" required class="form-control" id="title" name="title"
+                            <input type="text" class="form-control" id="title" name="title"
                                    value="{{ $feature->title }}">
                         </div>
                         {{--------------- summary ---------------}}
