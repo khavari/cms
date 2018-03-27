@@ -25,13 +25,13 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, td, th {
 }
 
 .content-header .breadcrumb li {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #444;
 }
 
 .content-header .breadcrumb li a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #444;
 }

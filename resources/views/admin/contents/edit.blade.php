@@ -93,15 +93,15 @@
                                     {{--------------- image ---------------}}
                                     <div class="col-md-12">
                                         <div class="form-group {{ $errors->has('image') ? ' has-error' : '' }}">
-                                            <a href="" target="_blank">
                                                 @if($content->image)
+                                                <a href="{{ asset($content->image) }}" target="_blank">
                                                     <img id="tag-img" src="{{ asset($content->image) }}"
                                                     class="img-responsive" style="margin:15px 0px;"/>
+                                                </a>
                                                 @else
                                                     <img id="tag-img" src="{{ asset('assets/admin/img/nopic.jpg') }}"
                                                          class="img-responsive" style="margin:15px 0px;"/>
                                                 @endif
-                                            </a>
                                             <input type="file" name="file" class="form-control" id="input-img">
                                         </div>
                                     </div>

@@ -131,6 +131,8 @@ return [
     //'Document
     'docs'                   => 'Documentation',
     'help'                   => 'Help',
+    'guide'                  => 'Guide',
+    'panel_guide'            => 'Panel Guide',
 
     //site
     'site'                   => 'Site',

@@ -484,9 +484,10 @@ class LinkController extends Controller
     public function destroy(Feature $feature, Link $link)
     {
         if ($link->hasChildren()) {
-            session()->flash('error', __('messages.notAlloweDeleteActive'));
+            session()->flash('error', __('messages.not_allowe_delete_child'));
         } else {
             session()->flash('success', __('messages.deleted_success'));
+            Storage::disk('public')->delete($link->image);
             $link->delete();
 
         }
@@ -497,7 +498,6 @@ class LinkController extends Controller
 
     public function address()
     {
-
 
         $categories = collect(Category::lang()->get())->map(function ($category) {
             return [
