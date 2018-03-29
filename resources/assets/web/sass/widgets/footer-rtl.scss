@@ -141,14 +141,17 @@
     .copyright {
       display: inline-block;
       margin: 0;
-      font-size: 0.8rem;
-      font-weight: 100;
-      line-height: 40px;
+      font-size: .6rem;
+      font-weight: normal;
+      color: #a5a5a5;
     }
     .footer-logo img {
       max-height: 30px;
       float: left;
       margin: 5px;
+      font-size: .6rem;
+      font-weight: normal;
+      color: #a5a5a5;
     }
   }
 

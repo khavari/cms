@@ -12,6 +12,7 @@
     font-weight: bold;
   }
   .card {
+    background: transparent;
     .collapse::after, .collapsed::after {
       position: absolute;
       right: 20px;
@@ -28,8 +29,9 @@
       content: "+";
     }
     .card-header {
+
       padding: 5px 15px;
-      background-color: #fcfcfc;
+
       .card-title {
         margin: 0px;
         a {
@@ -55,5 +57,5 @@
       }
     }
   }
-  
+
 }
