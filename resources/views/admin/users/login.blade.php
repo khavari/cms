@@ -4,7 +4,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="">{{ setting('admin.title') }}</a>
+        {{--<a href="">{{ setting('admin.title') }}</a>--}}
     </div>
     <div class="login-box-body animated @if ($errors->has('*'))jello @else fadeInUp @endif">
         @if ($errors->has('*'))
@@ -31,9 +31,16 @@
             </div>
         </form>
         <br>
-        <a href="#">@lang('admin.forget_password')</a><br>
+            <p class="pull-left text-left info">{{ request()->ip() }}</p>
+            <p class="pull-right text-right info">{{ \Carbon\Carbon::now() }}</p>
+            <br>
     </div>
 </div>
 <script src="{{ asset('assets/admin/js/admin.ltr.min.js') }}"></script>
+<style>
+    .info{
+        color: #000;
+    }
+</style>
 </body>
 </html>

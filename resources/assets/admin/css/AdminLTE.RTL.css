@@ -3802,22 +3802,9 @@ table.text-center th {
 
 .login-page,
 .register-page {
-    background-image: url(/admin/img/login_bg_1.jpg);
-    overflow: hidden;
-    background-size: cover;
-    height: 100vh;
-    background-position: center top;
+    background-image: linear-gradient(45deg,#D04D6F 0%,#413b54 100%);background-size: 100%;background-position: left center;overflow: hidden;
 }
 
-.login-page:before {
-    content: ' ';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.38);
-}
 
 .login-page hr {
     margin: 10px 0px;
@@ -3840,12 +3827,11 @@ table.text-center th {
 
 .login-box-body,
 .register-box-body {
-    background: rgba(255, 255, 255, 0.12);
+    background: #fff;
     padding: 20px;
-    padding-bottom: 5px;
     border-top: 0;
-    color: #FFFDFD;
-    border: 4px solid rgba(255, 255, 255, 0.3);
+    color: #666;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .login-box-body .form-control-feedback,
@@ -3867,11 +3853,11 @@ table.text-center th {
 
 .login-box-body a.info {
     margin-top: 8px;
-    color: #c5c5c5;
+    color: #000;
 }
 
 .login-box-body p.info {
-    color: #c5c5c5;
+    color: #000;
 }
 
 .social-auth-links {
