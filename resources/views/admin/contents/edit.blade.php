@@ -55,7 +55,7 @@
                             <div class="col-md-12">
                                 <div class="form-group {{ $errors->has('body') ? ' has-error' : '' }}">
                                     <label for="body">@lang('admin.body')</label>
-                                    <textarea name="body" class="form-control" id="body">{!! $content->body !!}</textarea>
+                                    <textarea name="body" class="form-control" id="body">{{ $content->body }}</textarea>
                                 </div>
                             </div>
                             {{--------------- description ---------------}}
