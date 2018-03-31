@@ -35,9 +35,9 @@
                 </div>
             </div>
                   </div>
-        @includeIf('web.widgets.partial-gallery')
-        @includeIf('web.widgets.partial-videos')
-        @includeIf('web.widgets.partial-downloads')
+        {{--@includeIf('web.widgets.partial-gallery')--}}
+        {{--@includeIf('web.widgets.partial-videos')--}}
+        {{--@includeIf('web.widgets.partial-downloads')--}}
         @includeIf('web.widgets.partial-comments')
         </div>
 </section>

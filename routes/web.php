@@ -47,3 +47,4 @@ Route::get('/clear', function () {
 
 // used in contact_form widget
 $this->post('form/contact', 'Web\FormController@contact')->name('contact-us');
+$this->post('form/comment', 'Web\FormController@comment')->name('submit-comment');

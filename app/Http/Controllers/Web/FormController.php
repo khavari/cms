@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Comment;
 use App\Events\ContactUs;
 use App\Contact;
 use App\Http\Requests\ContactRequest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -20,4 +22,26 @@ class FormController extends Controller
         event(new ContactUs($contact));
         return back();
     }
+
+
+    public function comment(Request $request)
+    {
+
+        $parent_id = (isset($request->parent_id)) ? $request->parent_id : null;
+
+        $model = app()->make($request->commentable_type);
+        $object = $model->findOrFail($request->commentable_id);
+        $comment = new Comment();
+        $comment->user_id = auth()->user()->getKey();
+        $comment->parent_id = $parent_id;
+        $comment->message = $request->message;
+        $comment->approved_at = Carbon::now();
+        $object->comments()->save($comment);
+
+        session()->flash('success', __('messages.created_success'));
+
+        return back();
+
+    }
+
 }
