@@ -1,0 +1,86 @@
+.partial-comments {
+  text-align: center;
+  background: #ffffff;
+  padding: 15px;
+  box-shadow: 0px 0px 1px #dedede;
+  .title {
+    padding-bottom: 10px;
+    margin:0 15px;
+    font-size: 1.1rem;
+  }
+  .btn-modal {
+    padding: 2px 5px;
+    height: 35px;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-left: 10px;
+    margin-top: -6px;
+    transition: all .5s;
+    &:focus {
+      box-shadow:none;
+      outline: none;
+    }
+  }
+  .modal {
+    .modal-header {
+      border-bottom: 1px solid #e9ecef;
+      color: #555;
+      .modal-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+    .modal-body {
+      .textarea {
+        padding: 10px;
+        font-size: .9rem;
+        overflow: auto;
+        resize: vertical;
+        width: 100%;
+        min-height: 150px;
+        border-color: #ddd;
+        border-radius: 2px;
+      }
+      .submit {
+        width: 100%;
+        border-radius: 2px;
+        &:focus {
+          box-shadow: 0 0 0 0.1rem rgba(74, 74, 74, 0.25);
+          outline: none;
+        }
+      }
+      padding: 10px;
+    }
+  }
+  .author-area {
+    text-align: left;
+    font-size: .9rem;
+  }
+  .btn-area {
+    text-align: right;
+  }
+  .comment-body{
+    margin-top: -2px;
+    border-top: 2px solid #f5f5f5;
+    padding: 15px;
+  }
+  .first-level {
+    padding: 15px;
+
+    .content {
+      text-align: left;
+      font-size: .9rem;
+      padding: 15px 0;
+    }
+  }
+  .second-level {
+    background: #f5f4f4;
+    border-radius: 3px;
+    padding: 15px;
+    .content {
+      text-align: left;
+      font-size: .9rem;
+      padding: 15px 0;
+    }
+  }
+}
