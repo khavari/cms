@@ -24,6 +24,29 @@
 {{-- Add style --}}
 {{--------------------------------------------------}}
 @section('styles')
+
+    <style>
+        .card-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .card-text {
+            font-size: .9rem;
+        }
+        .title{
+            font-size: 1.5rem;
+        }
+        .card a{
+            text-decoration: none;
+            color: #333;
+            font-size: .9rem;
+        }
+        html[dir="rtl"] .card{
+            text-align: right;
+            direction: rtl;
+        }
+
+    </style>
 @endsection
 
 {{-- Add script --}}
