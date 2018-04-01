@@ -1,10 +1,8 @@
 <section id="partial-comments" class="partial-comments mb-3">
-
-
     <div class="comment-header">
-        <div class="row">
+        <div class="row align-items-center">
             <h2 class="title border_vibrant">@lang('web.comments')</h2>
-            <button type="button" class="btn-modal btn-primary" data-toggle="modal" data-target="#comment-modal">
+            <button type="button" class="badge badge-primary" data-toggle="modal" data-target="#comment-modal">
                 @lang('web.write_comment')
             </button>
             <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="comment-modalLabel"
@@ -37,17 +35,17 @@
 
 
     @foreach($content->comments()->parent()->approve()->latest()->get() as $comment)
-        <div class="comment-body mb-3">
-            <div class="first-level">
+        <div class="comment-body mb-3 p-1 p-md-3">
+            <div class="first-level p-1 p-md-3">
                 <div class="head">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12 col-sm-6 mb-3 author-area">
                             <span class="author">{{ $comment->user->name }}</span>
                             &nbsp; | &nbsp;
                             <span class="date">{{ $comment->created_at->diffForHumans() }}</span>
                         </div>
                         <div class="col-12 col-sm-6 mb-3 btn-area">
-                            <button type="button" class="btn-modal btn-primary" data-toggle="modal"
+                            <button type="button" class="badge badge-primary" data-toggle="modal"
                                     data-target="#reply{{ $comment->getKey() }}">
                                 @lang('web.answer_comment')
                             </button>
@@ -88,7 +86,7 @@
             </div>
             @if($comment->hasChildren())
                 @foreach($comment->children()->approve()->get() as $comment)
-                    <div class="second-level mb-3">
+                    <div class="second-level mb-3 p-1 p-md-3">
                         <div class="head">
                             <div class="row">
                                 <div class="col-12 author-area">

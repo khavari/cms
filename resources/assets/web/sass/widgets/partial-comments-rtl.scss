@@ -1,37 +1,26 @@
 .partial-comments {
   text-align: center;
-  background: #ffffff;
-  padding: 15px;
-  box-shadow: 0px 0px 1px #dedede;
   .title {
-    padding-bottom: 10px;
-    margin:0 15px;
+    margin:10px 30px;
     font-size: 1.1rem;
   }
-  .btn-modal {
-    padding: 2px 5px;
-    height: 35px;
+  .badge {
+    font-weight: normal;
+    height: 25px;
+    padding: 5px;
+    box-shadow: none;
+    border: none;
     cursor: pointer;
-    font-size: .9rem;
-    margin-right: 10px;
-    margin-top: -6px;
-    transition: all .5s;
-    &:focus {
-      box-shadow:none;
-      outline: none;
-    }
   }
   .modal {
     .modal-header {
       border-bottom: 1px solid #e9ecef;
       color: #555;
-      .close{
-        margin-left: 0;
-      }
       .modal-title {
         font-size: 1.1rem;
         font-weight: bold;
       }
+      .close{margin-left: 0}
     }
     .modal-body {
       .textarea {
@@ -63,13 +52,13 @@
     text-align: left;
   }
   .comment-body{
-    margin-top: -2px;
-    border-top: 2px solid #f5f5f5;
-    padding: 15px;
+    border-top: 1px solid #f5f5f5;
+    -webkit-box-shadow:0px 1px 1px -1px #777;
+    -moz-box-shadow: 0px 1px 1px -1px #777;
+    box-shadow: 0px 1px 1px -1px #777;
+    background: #fff;
   }
   .first-level {
-    padding: 15px;
-
     .content {
       text-align: right;
       font-size: .9rem;
@@ -79,11 +68,21 @@
   .second-level {
     background: #f5f4f4;
     border-radius: 3px;
-    padding: 15px;
     .content {
       text-align: right;
       font-size: .9rem;
       padding: 15px 0;
     }
+  }
+
+  @media screen and (max-width:992px) {
+    .badge{
+      margin: auto;
+    }
+    .author-area {
+      font-size: .7rem;
+      text-align: center
+    }
+    .btn-area {text-align: center}
   }
 }
