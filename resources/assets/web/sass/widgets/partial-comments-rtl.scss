@@ -44,9 +44,12 @@
       padding: 10px;
     }
   }
-  .author-area {
+  .commenter {
     text-align: right;
     font-size: .9rem;
+    .author{
+      float: right;
+    }
   }
   .btn-area {
     text-align: left;
@@ -79,7 +82,7 @@
     .badge{
       margin: auto;
     }
-    .author-area {
+    .commenter {
       font-size: .7rem;
       text-align: center
     }
