@@ -192,6 +192,10 @@ return [
     'icons'                  => 'آیکن ها',
     'without_icon'           => 'بدون آیکن',
     'favicon'                => 'فاوآیکون',
+    'large_title_font'       => 'فونت عنوان بزرگ',
+    'title_font'             => 'فونت عنوان',
+    'default_font'           => 'فونت پیش فرض',
+    'default_font_size'      => 'سایز فونت پیش فرض',
 
 
     //timestamp

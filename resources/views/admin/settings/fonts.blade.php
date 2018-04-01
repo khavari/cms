@@ -30,7 +30,7 @@
                                 {{-------------------- font.bold --------------------}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="facebook">@lang('admin.font.bold')</label>
+                                        <label for="font.bold">@lang('admin.large_title_font')</label>
                                         <select name="settings[font.bold]" class="form-control ltr" id="font.bold">
                                             @foreach($fonts as $font)
                                                 <option value="{{ $font }}" {{ ($font == $setting['font.bold'])?'selected':'' }}>{{ $font }}</option>
@@ -41,7 +41,7 @@
                                 {{-------------------- font.medium --------------------}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="facebook">@lang('admin.font.medium')</label>
+                                        <label for="font.medium">@lang('admin.title_font')</label>
                                         <select name="settings[font.medium]" class="form-control ltr" id="font.medium">
                                             @foreach($fonts as $font)
                                                 <option value="{{ $font }}" {{ ($font == $setting['font.medium'])?'selected':'' }}>{{ $font }}</option>
@@ -52,11 +52,22 @@
                                 {{-------------------- font.normal --------------------}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="facebook">@lang('admin.font.normal')</label>
+                                        <label for="font.normal">@lang('admin.default_font')</label>
                                         <select name="settings[font.normal]" class="form-control ltr" id="font.normal">
                                             @foreach($fonts as $font)
                                                 <option value="{{ $font }}" {{ ($font == $setting['font.normal'])?'selected':'' }}>{{ $font }}</option>
                                             @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                {{-------------------- font.size --------------------}}
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="font.size">@lang('admin.default_font_size')</label>
+                                        <select name="settings[font.size]" class="form-control ltr" id="font.size">
+                                            @for($i = 12 ; $i <= 25 ; $i++)
+                                                <option value="{{ $i }}" {{ ($i == $setting['font.size'])?'selected':'' }}>{{ $i }}</option>
+                                            @endfor
                                         </select>
                                     </div>
                                 </div>

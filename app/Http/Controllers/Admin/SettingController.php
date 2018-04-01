@@ -80,8 +80,10 @@ class SettingController extends Controller
         $locale = app()->getLocale();
         $skin = view('admin.settings.skin')->render();
         $admin = view('admin.settings.admin_skin')->render();
+
         File::delete('assets/web/css/skin-' . $locale . '.css');
         File::put('assets/web/css/skin-' . $locale . '.css', $skin);
+
         File::delete('assets/admin/css/skin-' . $locale . '.css');
         File::put('assets/admin/css/skin-' . $locale . '.css', $admin);
 

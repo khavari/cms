@@ -100,4 +100,5 @@ return [
     'font.bold'                => ['type' => 'text', 'group' => 'fonts', 'value' => 'default'],
     'font.medium'              => ['type' => 'text', 'group' => 'fonts', 'value' => 'default'],
     'font.normal'              => ['type' => 'text', 'group' => 'fonts', 'value' => 'default'],
+    'font.size'                => ['type' => 'number', 'group' => 'fonts', 'value' => '16'],
 ];

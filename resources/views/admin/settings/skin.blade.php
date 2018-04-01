@@ -36,10 +36,14 @@ url('../fonts/{{ locale('dir') }}/{{setting('font.normal')}}.ttf') format('truet
 body{
 font-family:'{{setting('font.normal')}}';
 }
+
 h1,h2,h3{
 font-family:'{{setting('font.normal')}}';
 }
 
+html[lang="{{ app()->getLocale() }}"]{
+font-size: {{setting('font.size')}}px;
+}
 
 {{------------------------------------------------------}}
 {{--vibrant--}}

@@ -192,6 +192,10 @@ return [
     'icons'                  => 'Icons',
     'without_icon'           => 'Without icon',
     'favicon'                => 'Favicon',
+    'large_title_font'       => 'Large Title Font',
+    'title_font'             => 'Title Font',
+    'default_font'           => 'Default Font',
+    'default_font_size'      => 'Default Font Size',
 
     //timestamp
     'created_at'             => 'Created at',
