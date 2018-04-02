@@ -102,8 +102,8 @@
                                 <div class="form-group {{ $errors->has('featured') ? ' has-error' : '' }}">
                                     <label for="featured">@lang('admin.featured')</label>
                                     <select class="form-control" name="featured" id="featured" required>
-                                        <option value="0" {{ (old('featured') == 0) ? 'selected':'' }}>@lang('admin.featured')</option>
-                                        <option value="1" {{ (old('featured') == 1) ? 'selected':'' }}>@lang('admin.unfeatured')</option>
+                                        <option value="0">@lang('admin.no')</option>
+                                        <option value="1">@lang('admin.yes')</option>
                                     </select>
                                 </div>
                             </div>
@@ -112,8 +112,8 @@
                                 <div class="form-group {{ $errors->has('active') ? ' has-error' : '' }}">
                                     <label for="active">@lang('admin.active')</label>
                                     <select class="form-control" name="active" id="active" required>
-                                        <option value="0" {{ (old('active') == 0) ? 'selected':'' }}>@lang('admin.inactive')</option>
-                                        <option value="1" {{ (old('active') == 1) ? 'selected':'' }}>@lang('admin.active')</option>
+                                        <option value="1">@lang('admin.yes')</option>
+                                        <option value="0">@lang('admin.no')</option>
                                     </select>
                                 </div>
                             </div>

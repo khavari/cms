@@ -112,9 +112,9 @@ return [
     'link'                   => 'لینک',
     'size'                   => 'اندازه',
     'download'               => 'دانلود',
-    'vocabularies'           => 'واژه ها',
-    'vocabulary'             => 'واژه',
-    'vocabulary_id'          => 'شناسه واژه',
+    'vocabularies'           => 'شاخه ها',
+    'vocabulary'             => 'شاخه',
+    'vocabulary_id'          => 'شناسه شاخه',
 
     // payment
     'manage_payments'        => 'مدیریت پرداخت ها',
@@ -144,16 +144,16 @@ return [
     'message'                => 'پیام',
 
     //category
-    'manage_category'        => 'مدیریت دسته بندی',
-    'category'               => 'دسته بندی',
-    'categories'             => 'دسته بندی ها',
+    'manage_category'        => 'مدیریت گروه',
+    'category'               => 'گروه',
+    'categories'             => 'گروه ها',
 
     // action
     'logins'                 => 'سوابق ورود به سایت',
     'logout'                 => 'خروج',
     'update'                 => 'بروزرسانی',
     'cancel'                 => 'انصراف',
-    'back'                   => 'برگشت',
+    'back'                   => 'بازگشت',
     'edit'                   => 'ویرایش',
     'show'                   => 'نمایش',
     'delete'                 => 'حذف',
