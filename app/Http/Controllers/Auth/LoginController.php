@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo;
 
     /**
      * Create a new controller instance.
@@ -35,6 +35,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        $this->redirectTo = request()->headers->get('referer');
         $this->middleware('guest')->except('logout');
     }
 
@@ -52,6 +53,16 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         event(new \App\Events\UserLogin($user));
+    }
+
+    // I copied this method from AuthenticatesUsers trait for change redirect
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect(app()->getLocale());
     }
 
 }

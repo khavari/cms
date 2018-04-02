@@ -21,8 +21,14 @@ Route::group(['namespace' => 'Auth'], function () {
     $this->get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     $this->post('password/reset', 'ResetPasswordController@reset');
 });
-Route::get('user/profile', 'Web\UserController@showProfileForm')->name('profile');
-Route::patch('user/profile', 'Web\UserController@updateProfile');
+
+Route::group(['middleware' => ['web', 'auth']], function () {
+    $this->get('user/profile', 'Web\UserController@showProfileForm')->name('profile');
+    $this->patch('user/profile', 'Web\UserController@updateProfile');
+    $this->post('form/comment', 'Web\FormController@comment')->name('submit-comment');
+});
+$this->post('form/contact', 'Web\FormController@contact')->name('contact-us');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +36,11 @@ Route::patch('user/profile', 'Web\UserController@updateProfile');
 |--------------------------------------------------------------------------
 */
 Route::get('/', 'Web\HomeController@index')->name('home');
-
-Route::get('vocabulary/{slug}', 'Web\ContentController@vocabulary');
-Route::get('category/{slug}', 'Web\ContentController@category');
-Route::get('content/{slug}', 'Web\ContentController@content');
-
+Route::get('vocabulary/{slug}', 'Web\ContentController@vocabulary')->name('vocabulary');
+Route::get('category/{slug}', 'Web\ContentController@category')->name('category');
+Route::get('content/{slug}', 'Web\ContentController@content')->name('content');
 Route::get('search', 'Web\ContentController@search')->name('search');
+
 
 Route::get('/clear', function () {
     \Illuminate\Support\Facades\Artisan::call('cach:clear');
@@ -43,8 +48,3 @@ Route::get('/clear', function () {
     \Illuminate\Support\Facades\Artisan::call('config:clear');
     return 'ok';
 });
-
-
-// used in contact_form widget
-$this->post('form/contact', 'Web\FormController@contact')->name('contact-us');
-$this->post('form/comment', 'Web\FormController@comment')->name('submit-comment');
