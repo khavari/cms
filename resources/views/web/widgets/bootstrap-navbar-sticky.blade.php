@@ -9,7 +9,7 @@
                             <ul>
                                 @if(setting('facebook'))
                                     <li>
-                                        <a href="{{ url(setting('facebook')) }}" class="facebook" target="_blank">
+                                        <a href="{{ url(setting('facebook')) }}" class="facebook" target="_blank" rel="nofollow">
                                             <span class="fa fa-facebook"></span>
                                             <span class="txt-social">Facebook</span>
                                         </a>
@@ -17,7 +17,7 @@
                                 @endif
                                 @if(setting('instagram'))
                                     <li>
-                                        <a href="{{ url(setting('instagram')) }}" class="instagram" target="_blank">
+                                        <a href="{{ url(setting('instagram')) }}" class="instagram" target="_blank" rel="nofollow">
                                             <span class="fa fa-instagram"></span><span
                                                     class="txt-social">instagram</span>
                                         </a>
@@ -25,14 +25,14 @@
                                 @endif
                                 @if(setting('twitter'))
                                     <li>
-                                        <a href="{{ url(setting('twitter')) }}" class="twitter" target="_blank">
+                                        <a href="{{ url(setting('twitter')) }}" class="twitter" target="_blank" rel="nofollow">
                                             <span class="fa fa-twitter"></span><span class="txt-social">twitter</span>
                                         </a>
                                     </li>
                                 @endif
                                 @if(setting('google_plus'))
                                     <li>
-                                        <a href="{{ url(setting('google_plus')) }}" class="google-plus" target="_blank">
+                                        <a href="{{ url(setting('google_plus')) }}" class="google-plus" target="_blank" rel="nofollow">
                                             <span class="fa fa-google-plus"></span><span
                                                     class="txt-social">Google Plus</span>
                                         </a>
@@ -40,21 +40,21 @@
                                 @endif
                                 @if(setting('linkedin'))
                                     <li>
-                                        <a href="{{ url(setting('linkedin')) }}" class="linkedin" target="_blank">
+                                        <a href="{{ url(setting('linkedin')) }}" class="linkedin" target="_blank" rel="nofollow">
                                             <span class="fa fa-linkedin"></span><span class="txt-social">linkedin</span>
                                         </a>
                                     </li>
                                 @endif
                                 @if(setting('github'))
                                     <li>
-                                        <a href="{{ url(setting('github')) }}" class="git" target="_blank">
+                                        <a href="{{ url(setting('github')) }}" class="git" target="_blank" rel="nofollow">
                                             <span class="fa fa-github"></span><span class="txt-social">git</span>
                                         </a>
                                     </li>
                                 @endif
                                 @if(setting('telegram'))
                                     <li>
-                                        <a href="{{ url(setting('telegram')) }}" class="telegram" target="_blank">
+                                        <a href="{{ url(setting('telegram')) }}" class="telegram" target="_blank" rel="nofollow">
                                             <span class="fa fa-telegram"></span><span class="txt-social">telegram</span>
                                         </a>
                                     </li>

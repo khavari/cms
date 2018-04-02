@@ -25,19 +25,19 @@
                                  alt="{{ $content->title }}">
                         </div>
                     @endif
-                        <div class="header border_vibrant">
-                            <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
-                        </div>
+                    <div class="header border_vibrant">
+                        <h2 class="title pr-0 pl-0">{{ $content->title }}</h2>
+                    </div>
                     <div class="editor">
                         {!! $content->body !!}
                     </div>
 
                 </div>
             </div>
-                  </div>
-        {{--@includeIf('web.widgets.partial-gallery')--}}
-        {{--@includeIf('web.widgets.partial-videos')--}}
-        {{--@includeIf('web.widgets.partial-downloads')--}}
-        @includeIf('web.widgets.partial-comments')
         </div>
+        @includeIf('web.widgets.partial-gallery')
+        @includeIf('web.widgets.partial-videos')
+        @includeIf('web.widgets.partial-downloads')
+        @includeIf('web.widgets.partial-comments')
+    </div>
 </section>

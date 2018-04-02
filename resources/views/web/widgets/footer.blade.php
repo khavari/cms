@@ -37,57 +37,57 @@
 
                     <div class="social-area">
                         @if(setting('facebook'))
-                            <a href="{{ url(setting('facebook')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('facebook')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.facebook')">
                                 <span class="fa fa-facebook"></span>
                             </a>
                         @endif
                         @if(setting('instagram'))
-                            <a href="{{ url(setting('instagram')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('instagram')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.instagram')">
                                 <span class="fa fa-instagram"></span>
                             </a>
                         @endif
                         @if(setting('twitter'))
-                            <a href="{{ url(setting('twitter')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('twitter')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.twitter')">
                                 <span class="fa fa-twitter"></span>
                             </a>
                         @endif
                         @if(setting('google_plus'))
-                            <a href="{{ url(setting('google_plus')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('google_plus')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.google_plus')">
                                 <span class="fa fa-google-plus"></span>
                             </a>
                         @endif
                         @if(setting('linkedin'))
-                            <a href="{{ url(setting('linkedin')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('linkedin')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.linkedin')">
                                 <span class="fa fa-linkedin"></span>
                             </a>
                         @endif
                         @if(setting('github'))
-                            <a href="{{ url(setting('github')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('github')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.github')">
                                 <span class="fa fa-github"></span>
                             </a>
                         @endif
                         @if(setting('telegram'))
-                            <a href="{{ url(setting('telegram')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('telegram')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.telegram')">
                                 <span class="fa fa-telegram"></span>
                             </a>
                         @endif
 
                         @if(setting('youtube'))
-                            <a href="{{ url(setting('youtube')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('youtube')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.youtube')">
                                 <span class="fa fa-youtube"></span>
                             </a>
                         @endif
 
                         @if(setting('aparat'))
-                            <a href="{{ url(setting('aparat')) }}" class="social border_vibrant" target="_blank"
+                            <a href="{{ url(setting('aparat')) }}" class="social border_vibrant" target="_blank" rel="nofollow"
                                title="@lang('web.aparat')">
                                 <span class="fa fa-file-video-o"></span>
                             </a>
