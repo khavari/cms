@@ -54,8 +54,8 @@ mix.copy('resources/assets/admin/js/ckeditor', 'public/assets/admin/js/ckeditor'
  |--------------------------------------------------------------------------
  */
 
-mix.sass('resources/assets/web/sass/web-ltr.scss', 'public/assets/web/css')
-  .sass('resources/assets/web/sass/web-rtl.scss', 'public/assets/web/css')
+mix.sass('resources/assets/web/sass/web-ltr.scss', 'public/assets/web/css/web.ltr.css')
+  .sass('resources/assets/web/sass/web-rtl.scss', 'public/assets/web/css/web.rtl.css')
 
 mix.scripts([
   'resources/assets/web/js/lodash.js',

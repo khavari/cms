@@ -81,13 +81,13 @@ class SettingController extends Controller
         $skin = view('admin.settings.skin')->render();
         $admin = view('admin.settings.admin_skin')->render();
 
-        File::delete('assets/web/css/skin-' . $locale . '.css');
-        File::put('assets/web/css/skin-' . $locale . '.css', $skin);
+        File::delete('assets/web/css/skin.' . $locale . '.css');
+        File::put('assets/web/css/skin.' . $locale . '.css', $skin);
 
-        File::delete('assets/admin/css/skin-' . $locale . '.css');
-        File::put('assets/admin/css/skin-' . $locale . '.css', $admin);
+        File::delete('assets/admin/css/skin.' . $locale . '.css');
+        File::put('assets/admin/css/skin.' . $locale . '.css', $admin);
 
-        Setting::lang()->where('key', 'color.fresh')->first()->update(['value' => strtolower(str_random(20, 25))]);
+        Setting::lang()->where('key', 'color.fresh')->first()->update(['value' => time()]);
     }
 
 

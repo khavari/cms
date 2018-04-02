@@ -10,14 +10,14 @@ border-color: #a25bbf !important;
 }
 
 .bg_vibrant_hover {
-background-color: #000000 !important;
+background-color: #55b29d !important;
 color: #ffffff;
 }
 .text_vibrant_hover {
-color: #000000 !important;
+color: #55b29d !important;
 }
 .border_vibrant_hover {
-border-color: #000000 !important;
+border-color: #55b29d !important;
 }
 
 .text_bg_vibrant{
@@ -45,7 +45,7 @@ border-color: #ffffff !important;
 }
 
 .bg_vibrant-hover:hover {
-background-color: #000000 !important;
+background-color: #55b29d !important;
 color: #ffffff !important;
 }
 

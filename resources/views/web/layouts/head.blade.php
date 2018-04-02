@@ -18,8 +18,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="{{ setting('color.bg_vibrant') }}">
     <meta name="apple-mobile-web-app-status-bar-style" content="{{ setting('color.bg_vibrant') }}">
-    <link rel="stylesheet" href="{{asset('assets/web/css/web-'.locale('dir').'.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/web/css/skin-'.app()->getLocale().'.css')}}?id={{ setting('color.fresh') }}">
+    <link rel="stylesheet" href="{{asset('assets/web/css/web.'.locale('dir').'.css')}}?id={{ setting('color.fresh') }}">
+    <link rel="stylesheet" href="{{asset('assets/web/css/skin.'.app()->getLocale().'.css')}}?id={{ setting('color.fresh') }}">
     @yield('styles')
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
