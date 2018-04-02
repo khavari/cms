@@ -5,33 +5,30 @@
   box-shadow: 0px 0px 1px #dedede;
   .title {
     padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
     margin: 15px;
     margin-top: 0;
     font-size: 1.1rem;
   }
   a {
+    color: #555;
     text-decoration: none;
-    box-shadow: 0px 0px 1px #dedede;
     display: inline-block;
     width: 100%;
-    padding: 5px;
     transition: all .5s;
-    &:hover {
-      box-shadow: 0px 0px 1px 1px #dedede;
-    }
   }
-  .content {
-    .title-inner {
-      color: #333;
-      font-size: 1.1rem;
-      text-align: right;
-      font-weight: bold;
-    }
-    .body {
-      font-size: .9rem;
-      color: #333;
-      text-align: right;
+  .content{
+    padding: 5px;
+    font-size: .9rem;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px ;
+  }
+  .br{
+    border-bottom: 1px solid #ddd;
+    &:last-child{
+      border-bottom: none;
     }
   }
 }
