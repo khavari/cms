@@ -146,6 +146,7 @@ return [
     //category
     'manage_category'        => 'مدیریت گروه',
     'category'               => 'گروه',
+    'category_id'            => 'شناسه گروه',
     'categories'             => 'گروه ها',
 
     // action

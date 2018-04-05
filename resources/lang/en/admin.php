@@ -145,6 +145,7 @@ return [
 
     //category
     'manage_category'        => 'Manage Category',
+    'category_id'            => 'Category ID',
     'category'               => 'Category',
     'categories'             => 'Categories',
 

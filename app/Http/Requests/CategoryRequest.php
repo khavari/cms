@@ -36,26 +36,29 @@ class CategoryRequest extends FormRequest
                     'description'   => ['nullable', 'min:3', 'max:190'],
                     'keywords'      => ['nullable', 'min:3', 'max:190'],
                     'file'          => ['nullable', 'mimes:jpeg,jpg,png', 'max:1024'],
-                    'order'         => ['nullable', 'numeric'],
-                    'featured'      => ['nullable', 'numeric'],
-                    'active'        => ['nullable', 'numeric'],
+                    'order'         => ['nullable', 'numeric', 'min:0'],
+                    'featured'      => ['nullable', 'boolean'],
+                    'active'        => ['nullable', 'boolean'],
+
+
                 ];
             }
             // update
             case 'PATCH': {
                 return [
-                    'parent_id'     => ['nullable', 'numeric'],
-                    'vocabulary_id' => ['nullable', 'numeric', 'exists:vocabularies,id'],
-                    'slug'          => ['required', 'min:3', 'max:64'],
-                    'title'         => ['required', 'min:3', 'max:190'],
-                    'summary'       => ['nullable', 'min:3', 'max:32000'],
-                    'body'          => ['nullable', 'min:3', 'max:32000'],
-                    'description'   => ['nullable', 'min:3', 'max:190'],
-                    'keywords'      => ['nullable', 'min:3', 'max:190'],
-                    'file'          => ['nullable', 'mimes:jpeg,jpg,png', 'max:1024'],
-                    'order'         => ['nullable', 'numeric'],
-                    'featured'      => ['nullable', 'numeric'],
-                    'active'        => ['nullable', 'numeric'],
+                    'parent_id'         => ['nullable', 'numeric'],
+                    'vocabulary_id'     => ['nullable', 'numeric', 'exists:vocabularies,id'],
+                    'slug'              => ['required', 'min:3', 'max:64'],
+                    'title'             => ['required', 'min:3', 'max:190'],
+                    'summary'           => ['nullable', 'min:3', 'max:32000'],
+                    'body'              => ['nullable', 'min:3', 'max:32000'],
+                    'description'       => ['nullable', 'min:3', 'max:190'],
+                    'keywords'          => ['nullable', 'min:3', 'max:190'],
+                    'file'              => ['nullable', 'mimes:jpeg,jpg,png', 'max:1024'],
+                    'order'             => ['nullable', 'numeric', 'min:0'],
+                    'featured'          => ['nullable', 'boolean'],
+                    'active'            => ['nullable', 'boolean'],
+                    'options.dimension' => ['nullable', 'min:3', 'max:190'],
                 ];
             }
         }

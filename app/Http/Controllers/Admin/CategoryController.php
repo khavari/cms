@@ -46,6 +46,10 @@ class CategoryController extends Controller
     public function store(CategoryRequest $request)
     {
 
+        if ($request->options) {
+            $request->merge(['options' => json_encode($request->options)]);
+        }
+
         if ($request->parent_id == 0) {
             $request->merge(['parent_id' => null]);
         }
@@ -90,13 +94,17 @@ class CategoryController extends Controller
 
 
         $vocabularies = Vocabulary::all();
-
+        $category->options = (array) json_decode($category->options);
         return view('admin.categories.edit', compact('vocabularies', 'category'));
     }
 
 
     public function update(CategoryRequest $request, Category $category)
     {
+        if ($request->options) {
+            $request->merge(['options' => json_encode($request->options)]);
+        }
+
         if ($request->parent_id == 0) {
             $request->merge(['parent_id' => null]);
         }

@@ -92,7 +92,7 @@
                                 <div class="box-body no-padding">
                                     {{--------------- image ---------------}}
                                     <div class="col-md-12">
-                                        <div class="form-group {{ $errors->has('image') ? ' has-error' : '' }}">
+                                        <div class="form-group {{ $errors->has('file') ? ' has-error' : '' }}">
                                                 @if($content->image)
                                                 <a href="{{ asset($content->image) }}" target="_blank">
                                                     <img id="tag-img" src="{{ asset($content->image) }}"
