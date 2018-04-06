@@ -1,59 +1,93 @@
 //style rtl for component featured-products
-.featured-products{
-  .title{
+#featured-products {
+  direction: rtl;
+  .caption {
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 1.5rem;
     display: block;
   }
-.entity{
-  background: #fff;
-  direction: rtl;
-  margin-bottom: 15px;
-  display: block;
-  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
-  border-radius: 2px;
-  transition:all .2s;
-  &:hover{box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);}
-  a{
-    &:hover{text-decoration: none;}
-  }
-  .image {
-    overflow: hidden;
-  }
-  .image img{
-    transition: all 0.3s;
-  }
-  .image:hover img{
-    transform: scale(1.05);
-  }
-  .caption{
-    font-weight: bold;
-    text-align: center;
-    font-size: 16px;
-    color: #000000;
-    padding: 15px;
-    margin: 0px;
-    display: block;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-  }
-  .summary{
-    font-weight: 100;
-    line-height:25px;
-    padding: 0px 15px 15px 15px;
-    font-size: 14px;
-    color: #000;
-    text-align: right;
-  }
-} //end entity
 
+  .entity {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    .wp-img {
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid #d2d2d2;
+      overflow: hidden;
+      img{
+        transition: all 0.3s;
+      }
+    }
 
-}//end featured-products
+    .wp-title {
+      border-bottom: 1px solid #d2d2d2;
+
+      .title {
+        font-weight: 100;
+        text-align: right;
+        font-size: 0.8rem;
+        text-decoration: none;
+        display: block;
+        color: #5b5b5b;
+        margin-bottom: 0px;
+        padding: 10px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .price {
+      text-align: center;
+      min-width: 100px;
+      display: inline-block;
+      float: left;
+      padding: 5px;
+      .final-price {
+        display: block;
+        color: green;
+        font-size: 0.8rem;
+      }
+      .old-price {
+        display: block;
+        color: #9a9a9a;
+        text-decoration: line-through;
+        font-size: 0.7rem;
+      }
+    }
+
+    .discount {
+      text-align: center;
+      float: right;
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin: 11px;
+      text-decoration: none;
+      border: none;
+    }
+
+  }
+
+  .entity:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .entity:hover .wp-img img{
+    transform: scale(1.1);
+  }
+
+}
+
 
 
 

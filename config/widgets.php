@@ -109,14 +109,14 @@ return [
     [
         'name'    => 'featured-products',
         'path'    => 'web.widgets.featured-products',
-        'group'   => 'single',
+        'group'   => 'home',
         'active'  => 0,
         'approve' => 1,
     ],
     [
         'name'    => 'products',
         'path'    => 'web.widgets.products',
-        'group'   => 'single',
+        'group'   => 'category',
         'active'  => 0,
         'approve' => 1,
     ],

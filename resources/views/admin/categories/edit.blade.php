@@ -160,9 +160,9 @@
                                         <div class="form-group {{ $errors->has('dimension') ? ' has-error' : '' }}">
                                             <label for="dimension">@lang('admin.dimension')</label>
                                             @isset($category->options['dimension'])
-                                            <input type="text" name="options[dimension]" class="form-control" id="dimension" value="{{ $category->options['dimension'] }}" placeholder="?w=500&h=400&fit=crop">
+                                            <input type="text" name="options[dimension]" class="form-control ltr" id="dimension" value="{{ $category->options['dimension'] }}" placeholder="?w=500&h=400&fit=crop">
                                                 @else
-                                                    <input type="text" name="options[dimension]" class="form-control" id="dimension" placeholder="?w=500&h=400&fit=crop">
+                                                    <input type="text" name="options[dimension]" class="form-control ltr" id="dimension" placeholder="?w=500&h=400&fit=crop">
                                             @endisset
                                         </div>
                                     </div>
