@@ -53,7 +53,7 @@
                                         @include('admin.partials.delete',['action'=>route('admin.product_categories.destroy', ['id' => $category->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.product_categories.edit', ['id' => $category->id])])
                                         @include('admin.partials.show',['action'=>route('admin.product_categories.destroy', ['id' => $category->id])])
-                                        @include('admin.partials.copy',['url'=>url(app()->getLocale().'/category/'.$category->slug)])
+                                        @include('admin.partials.copy',['url'=>url(app()->getLocale().'/products/'.$category->slug)])
                                     </td>
                                 </tr>
                             @endforeach

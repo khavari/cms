@@ -1,48 +1,45 @@
 {{-- featured-products-rtl.scss -featured-products-ltr.scss --}}
-<?php
-
-$products = [
-    'https://file.digi-kala.com/Digikala/Image/Webstore/Product/P_326132/Dxracer-King-Series-OH-KS06-NB-Leather-Gaming-Chair-ed398f.jpg',
-    'https://file.digi-kala.com/Digikala/Image/Webstore/Product/P_322988/Dxracer-Racing-Series-OH-RV131-NW-Leather-Gaming-Chair-e489dc.jpg',
-    'https://file.digi-kala.com/digikala/Image/Webstore/Product/P_327327/Dxracer-Boss-Series-OH-BF120-NC-Leather-Office-Chair-69c5c3.jpg',
-    'https://file.digi-kala.com/digikala/Image/Webstore/Product/P_438539/Arkano-D550A-Leather-Chair-7a3cac.jpg',
-    'https://file.digi-kala.com/digikala/Image/Webstore/Product/P_326496/Dxracer-Origin-Series-OH-OC168-N-Leather-and-Mesh-Gaming-Chair-02dca6.jpg',
-    'https://file.digi-kala.com/digikala/Image/Webstore/Product/P_445839/Novin-System-2015-Leather-Chair-519a62.jpg',
-    'https://file.digi-kala.com/digikala/Image/Webstore/Product/P_327327/Dxracer-Boss-Series-OH-BF120-NC-Leather-Office-Chair-69c5c3.jpg',
-    'https://file.digi-kala.com/Digikala/Image/Webstore/Product/P_326132/Dxracer-King-Series-OH-KS06-NB-Leather-Gaming-Chair-ed398f.jpg',
-];
-?>
-<section id="products" class="products">
+<section id="featured-products" class="featured-products">
     <div class="container">
+        <br>
         <div class="row">
             <div class="col-12">
-                <h3 class="caption mt-5 mb-5">
-                    @lang('web.category')
-                </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
+                        </li>
+                        <li class="breadcrumb-item">{{ $category->title }}</li>
+                    </ol>
+                </nav>
             </div>
         </div>
+
         <div class="row">
             @foreach($products as $product)
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="entity mb-4">
-                        <a href="" class="wp-img">
-                            <img src="{{$product}}" alt="thumbnail" class="img-fluid">
+                        <a href="{{ $product->url() }}" title="{{ $product->title }}" class="wp-img">
+                            <img src="{{ asset('media/'.$product->image) }}?w=400&h=400&fit=crop" alt="{{ $product->title }}" class="img-fluid">
                         </a>
-
                         <div class="wp-title">
-                            <a href="" class="title" title="@lang('lorem.8')">@lang('lorem.8')</a>
+                            <a href="{{ $product->url() }}" class="title" title="{{ $product->title }}">{{ $product->title }}</a>
                         </div>
-
                         <div class="detail">
                             <div class="price">
-                                <span class="final-price">{{ number_format(500 * rand(50,700)) }} @lang('web.toman')</span>
-                                <span class="old-price">{{ number_format(500 * rand(50,700)) }}</span>
+                                <span class="final-price">{{ number_format($product->price()) }} @lang('web.toman')</span>
+                                <span class="old-price">{{ number_format($product->price()) }}</span>
                             </div>
                             <button href="" class="discount bg_vibrant text_bg_vibrant bg_vibrant-hover text_bg_vibrant_hover">40 % @lang('web.discount')</button>
                         </div>
                     </div>
                 </div>
             @endforeach
+
+                @if($products->hasPages())
+                        {{$products->appends($_GET)->links()}}
+                @endif
+
+
         </div>
     </div>
 </section>

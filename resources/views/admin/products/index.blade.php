@@ -57,7 +57,7 @@
                                             @lang('admin.images')  {{ $product->images->count() }}
                                         </a>
 
-                                        @include('admin.partials.copy',['url'=>url(app()->getLocale().'/content/'.$product->slug)])
+                                        @include('admin.partials.copy',['url'=>url(app()->getLocale().'/product/'.$product->slug)])
                                     </td>
                                 </tr>
                             @endforeach

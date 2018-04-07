@@ -48,7 +48,7 @@ class ProductCategory extends Model
 
     public function url()
     {
-        return app()->getLocale().'/pc/'.$this->slug;
+        return app()->getLocale().'/products/'.$this->slug;
     }
 
     protected static function boot()

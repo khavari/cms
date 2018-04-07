@@ -13,6 +13,7 @@ class Product extends Model
     protected $table = 'products';
     protected $dates = ['created_at', 'updated_at'];
 
+
     public function sluggable()
     {
         return [
@@ -32,7 +33,6 @@ class Product extends Model
         return $this->belongsTo(User::class);
     }
 
-
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable');
@@ -43,10 +43,14 @@ class Product extends Model
         return $this->morphMany(Comment::class, 'commentable');
     }
 
-
     public function url()
     {
         return url(app()->getLocale() . '/product/' . $this->slug);
+    }
+
+    public function price()
+    {
+        return 500 * rand(100 , 5000);
     }
 
     public function scopeLang($query)
@@ -54,6 +58,16 @@ class Product extends Model
         $lang = app()->getLocale();
 
         return $query->whereLang($lang);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', '1');
+    }
+
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', '1');
     }
 
     public function isActive()
@@ -73,17 +87,30 @@ class Product extends Model
         }
     }
 
-    public function scopeActive($query)
-    {
-        return $query->where('active', '1');
-    }
-
-
     protected static function boot()
     {
         parent::boot();
         static::creating(function (Product $product) {
             $product->lang = app()->getLocale();
+            cache()->forget('featured_products:' . app()->getLocale());
+        });
+
+        static::deleting(function () {
+            cache()->forget('featured_products:' . app()->getLocale());
+        });
+
+        static::updating(function () {
+            cache()->forget('featured_products:' . app()->getLocale());
         });
     }
+
+
+    // service
+    public function featured_products()
+    {
+        return cache()->rememberForever('featured_products:' . app()->getLocale(), function () {
+            return $this->lang()->active()->featured()->latest()->get();
+        });
+    }
+
 }
