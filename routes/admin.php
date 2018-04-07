@@ -59,8 +59,13 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth','acl'], 'pr
     $this->put('files/{file}/status', 'FileController@status')->name('admin.files.status');
     $this->get('all-files', 'FileController@all')->name('admin.files.all');
 
-
     $this->resource('widgets', 'WidgetController', ["as" => "admin"]);
+
+
+    // products
+    $this->resource('products', 'ProductController', ["as" => "admin"]);
+    $this->resource('product_categories', 'ProductCategoryController', ["as" => "admin"]);
+
 
 });
 

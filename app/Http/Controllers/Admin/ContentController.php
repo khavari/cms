@@ -54,8 +54,6 @@ class ContentController extends Controller
 
     public function store(Request $request)
     {
-        //return $request->all();
-
         if ($request->hasFile('file')) {
             $file = $request->file("file");
             $directory = 'uploads/categories/' . date('Y') . '/' . date('m') . '/';
@@ -109,7 +107,7 @@ class ContentController extends Controller
         if ($request->hasFile('file')) {
             $file = $request->file("file");
             Storage::disk('public')->delete($content->image);
-            $directory = 'uploads/categories/' . date('Y') . '/' . date('m') . '/';
+            $directory = 'uploads/contents/' . date('Y') . '/' . date('m') . '/';
             $file_name = time();
             $extension = strtolower($file->getClientOriginalExtension());
             $size = $file->getSize();

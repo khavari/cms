@@ -2,9 +2,10 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
-class ProductCategories extends Model
+class ProductCategory extends Model
 {
     use Sluggable;
     protected $guarded = ['id'];
@@ -20,10 +21,9 @@ class ProductCategories extends Model
         ];
     }
 
-
     public function products()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class , 'category_id');
     }
 
     public function scopeLang($query)
@@ -50,7 +50,6 @@ class ProductCategories extends Model
     {
         return app()->getLocale().'/pc/'.$this->slug;
     }
-
 
     protected static function boot()
     {

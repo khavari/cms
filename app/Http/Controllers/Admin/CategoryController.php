@@ -16,7 +16,6 @@ class CategoryController extends Controller
 
     public function index()
     {
-
         if (Request('search')) {
             $search = Request('search');
             $categories = Category::lang()->where('id', 'like', '%' . $search . '%')

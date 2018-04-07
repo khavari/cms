@@ -11,7 +11,7 @@ class DashboardMenu
 
     public function __construct()
     {
-       // $this->menus[] = $this->viewHomePage();
+        // $this->menus[] = $this->viewHomePage();
         $this->menus[] = $this->settings();
 
         $this->menus[] = $this->widgets();
@@ -19,6 +19,10 @@ class DashboardMenu
         $this->menus[] = $this->users();
 
         $this->menus[] = $this->contents();
+
+        if(env('PRODUCT')){
+            $this->menus[] = $this->products();
+        }
 
         $this->menus[] = $this->features();
 
@@ -204,6 +208,38 @@ class DashboardMenu
         ];
     }
 
+    public function products()
+    {
+        return [
+            'title' => __('admin.manage_', ['item' => __('admin.products')]),
+            'icon'  => 'fa-th-large',
+            'url'   => url('/'),
+
+            'children' => [
+                [
+                    'title' => __('admin.categories'),
+                    'icon'  => 'fa-tags',
+                    'url'   => route('admin.product_categories.index'),
+                ],
+                [
+                    'title' => __('admin.categories'),
+                    'icon'  => 'fa-sort-alpha-asc',
+                    'url'   => route('admin.product_categories.index'),
+                ],
+                [
+                    'title' => __('admin.products'),
+                    'icon'  => 'fa-diamond',
+                    'url'   => route('admin.products.index'),
+                ],
+                [
+                    'title' => __('admin.comments'),
+                    'icon'  => ' fa-commenting-o',
+                    'url'   => route('admin.comments.index'),
+                ],
+            ],
+        ];
+    }
+
     public function features()
     {
         return [
@@ -245,7 +281,7 @@ class DashboardMenu
                     'title' => __('admin.faq'),
                     'icon'  => 'fa-question',
                     'url'   => route('admin.links.index', ['feature' => Feature::getId('faq')]),
-                ]
+                ],
             ],
         ];
     }
