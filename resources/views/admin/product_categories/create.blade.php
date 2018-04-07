@@ -8,14 +8,14 @@
     <section class="content-header">
         @include('admin.partials.breadcrumb',[
             'crumbs' => [
-                ['title' => __('admin.manage_content')],
-                ['title' => __('admin.categories'), 'href' => route('admin.categories.index')],
+                ['title' => __('admin.manage_', ['item' => __('admin.products')])],
+                ['title' => __('admin.categories'), 'href' => route('admin.product_categories.index')],
                 ['title' => __('admin.create'), 'class' => 'active'],
             ],
         ])
     </section>
     <section class="content">
-        <form role="form" action="{{route('admin.categories.store')}}" method="post" enctype="multipart/form-data">
+        <form role="form" action="{{route('admin.product_categories.store')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="row">
                 <div class="col-xs-9">
@@ -109,17 +109,17 @@
                                 </div>
                                 <div class="box-body no-padding">
                                     {{--------------- vocabulary_id ---------------}}
-                                    <div class="col-md-12">
-                                        <div class="form-group {{ $errors->has('vocabulary_id') ? ' has-error' : '' }}">
-                                            <label for="vocabulary_id">@lang('admin.vocabulary')</label>
-                                            <select class="form-control" name="vocabulary_id" id="vocabulary_id" required>
-                                                <option value="" selected disabled>@lang('admin.select_me')</option>
-                                                @foreach($vocabularies as $vocabulary)
-                                                    <option value="{{ $vocabulary->id }}" {{ (old('vocabulary_id') == $vocabulary->id) ? 'selected':'' }}>{{ __('admin.'.$vocabulary->slug) }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
+                                    {{--<div class="col-md-12">--}}
+                                        {{--<div class="form-group {{ $errors->has('vocabulary_id') ? ' has-error' : '' }}">--}}
+                                            {{--<label for="vocabulary_id">@lang('admin.vocabulary')</label>--}}
+                                            {{--<select class="form-control" name="vocabulary_id" id="vocabulary_id" required>--}}
+                                                {{--<option value="" selected disabled>@lang('admin.select_me')</option>--}}
+                                                {{--@foreach($vocabularies as $vocabulary)--}}
+                                                    {{--<option value="{{ $vocabulary->id }}" {{ (old('vocabulary_id') == $vocabulary->id) ? 'selected':'' }}>{{ __('admin.'.$vocabulary->slug) }}</option>--}}
+                                                {{--@endforeach--}}
+                                            {{--</select>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     {{--------------- active ---------------}}
                                     <div class="col-md-12">
                                         <div class="form-group {{ $errors->has('active') ? ' has-error' : '' }}">

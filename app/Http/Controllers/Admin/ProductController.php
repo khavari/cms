@@ -35,9 +35,7 @@ class ProductController extends Controller
 
     public function create()
     {
-
         $categories = ProductCategory::lang()->get();
-
         return view('admin.products.create', compact('categories'));
     }
 

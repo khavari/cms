@@ -8,8 +8,8 @@
     <section class="content-header">
         @include('admin.partials.breadcrumb',[
             'crumbs' => [
-                ['title' => __('admin.manage_content')],
-                ['title' => __('admin.categories'), 'href' => route('admin.categories.index')],
+                ['title' => __('admin.manage_', ['item' => __('admin.products')])],
+                ['title' => __('admin.categories'), 'href' => route('admin.product_categories.index')],
                 ['title' => __('admin.show'), 'class' => 'active'],
             ],
         ])

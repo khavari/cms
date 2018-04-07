@@ -54,8 +54,8 @@ class ProductCategory extends Model
     protected static function boot()
     {
         parent::boot();
-        static::creating(function (ProductCategories $productCategories) {
-            $productCategories->lang = app()->getLocale();
+        static::creating(function (ProductCategory $productCategory) {
+            $productCategory->lang = app()->getLocale();
         });
     }
 }
