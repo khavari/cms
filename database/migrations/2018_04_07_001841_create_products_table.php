@@ -29,12 +29,19 @@ class CreateProductsTable extends Migration
             $table->text('body')->nullable();
             $table->string('description')->nullable();
             $table->string('keywords')->nullable();
+
+            $table->bigInteger('old_price')->unsigned()->default(0);
+            $table->bigInteger('price')->unsigned()->default(0);
+
             $table->string('image')->nullable()->comment('uploads/products/year/month/1518208452.jpg');
             $table->integer('views')->default(0)->unsigned();
             $table->integer("order")->default(1)->unsigned();
             $table->boolean('featured')->default(0)->unsigned();
             $table->boolean('active')->default(1)->unsigned();
+            $table->boolean('available')->default(1)->unsigned();
+            $table->string("options")->nullable();
             $table->char('lang', 4)->index();
+
 
             $table->timestamps();
             $table->unique(array('slug', 'lang'));

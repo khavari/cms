@@ -44,6 +44,23 @@
                                            class="form-control" id="slug" value="{{ old('slug') }}" required>
                                 </div>
                             </div>
+                            {{--------------- old_price ---------------}}
+                            <div class="col-md-6">
+                                <div class="form-group {{ $errors->has('old_price') ? ' has-error' : '' }}">
+                                    <label for="old_price">@lang('admin.old_price')</label>
+                                    <input type="number" name="old_price"
+                                           class="form-control ltr" id="old_price" value="{{ old('old_price') }}" required>
+                                </div>
+                            </div>
+                            {{--------------- price ---------------}}
+                            <div class="col-md-6">
+                                <div class="form-group {{ $errors->has('price') ? ' has-error' : '' }}">
+                                    <label for="price">@lang('admin.final_price')</label>
+                                    <input type="number" name="price"
+                                           class="form-control ltr" id="price"
+                                           value="{{ old('price') }}" required>
+                                </div>
+                            </div>
                             {{--------------- summary ---------------}}
                             <div class="col-md-12">
                                 <div class="form-group {{ $errors->has('summary') ? ' has-error' : '' }}">
@@ -147,18 +164,28 @@
                                             </select>
                                         </div>
                                     </div>
+                                    {{--------------- available ---------------}}
+                                    <div class="col-md-12">
+                                        <div class="form-group {{ $errors->has('available') ? ' has-error' : '' }}">
+                                            <label for="available">@lang('admin.available_in_store')</label>
+                                            <select class="form-control" name="available" id="available" required>
+                                                <option value="1" {{ (old('available') == 1) ? 'selected':'' }}>@lang('admin.yes')</option>
+                                                <option value="0">@lang('admin.no')</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-12">
-                            <div class="box box-primary">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">@lang('admin.options')</h3>
-                                </div>
-                                <div class="box-body no-padding"></div>
-                            </div>
-                        </div>
+                        {{--<div class="col-md-12">--}}
+                            {{--<div class="box box-primary">--}}
+                                {{--<div class="box-header with-border">--}}
+                                    {{--<h3 class="box-title">@lang('admin.options')</h3>--}}
+                                {{--</div>--}}
+                                {{--<div class="box-body no-padding"></div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </div>

@@ -38,7 +38,6 @@
                                 <th>@lang("admin.url")</th>
                                 <th>@lang("admin.order")</th>
                                 <th>@lang("admin.parent")</th>
-                                <th>@lang("admin.created_at")</th>
                                 <th>@lang("admin.action")</th>
                             </tr>
                             </thead>
@@ -50,10 +49,9 @@
                                     </td>
                                     <td>{{$link->id}}</td>
                                     <td>{{$link->title}}</td>
-                                    <td>{{$link->url}}</td>
+                                    <td class="ltr" title="{{ $link->url }}">{{ str_limit($link->url, 40) }}</td>
                                     <td>{{$link->order}}</td>
                                     <td>{{$link->parent_id}}</td>
-                                    <td>{{ $link->created_at }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.links.destroy', ['feature'=>$feature->id, 'id' => $link->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.links.edit', ['feature'=>$feature->id, 'id' => $link->id])])

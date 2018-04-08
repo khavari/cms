@@ -271,4 +271,11 @@ return [
     'comments' => 'Comments',
     'reply'    => 'Reply',
 
+    //product
+    'manage_'            => 'Manage :item',
+    'product'            => 'Product',
+    'products'           => 'Products',
+    'available'          => 'Available',
+    'available_in_store' => 'Available in store',
+
 ];

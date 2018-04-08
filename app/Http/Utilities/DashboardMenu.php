@@ -20,7 +20,7 @@ class DashboardMenu
 
         $this->menus[] = $this->contents();
 
-        if(env('PRODUCT')){
+        if(env('PRODUCT',false)){
             $this->menus[] = $this->products();
         }
 
@@ -216,11 +216,6 @@ class DashboardMenu
             'url'   => url('/'),
 
             'children' => [
-                [
-                    'title' => __('admin.categories'),
-                    'icon'  => 'fa-tags',
-                    'url'   => route('admin.product_categories.index'),
-                ],
                 [
                     'title' => __('admin.categories'),
                     'icon'  => 'fa-sort-alpha-asc',

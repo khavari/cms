@@ -260,20 +260,25 @@ return [
     'error'                  => 'خطا',
     'errors'                 => 'خطاها',
 
-    'page'     => 'صفحه',
-    'news'     => 'اخبار',
-    'article'  => 'مقاله',
-    'service'  => 'سرویس',
-    'project'  => 'پروژه',
+    'page'               => 'صفحه',
+    'news'               => 'اخبار',
+    'article'            => 'مقاله',
+    'service'            => 'سرویس',
+    'project'            => 'پروژه',
 
     //comments
-    'comment'  => 'دیدگاه',
-    'comments' => 'دیدگاه ها',
-    'reply'    => 'پاسخ',
+    'comment'            => 'دیدگاه',
+    'comments'           => 'دیدگاه ها',
+    'reply'              => 'پاسخ',
 
     //product
-    'manage_'  => 'مدیریت :item',
-    'product'  => 'محصول',
-    'products' => 'محصولات',
+    'manage_'            => 'مدیریت :item',
+    'product'            => 'محصول',
+    'products'           => 'محصولات',
+    'available'          => 'موجود',
+    'price'              => 'قیمت',
+    'old_price'          => 'قیمت قدیم',
+    'final_price'        => 'قیمت نهایی',
+    'available_in_store' => 'موجود در انبار',
 
 ];

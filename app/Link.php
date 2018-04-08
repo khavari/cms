@@ -64,12 +64,14 @@ class Link extends Model
 
     public function isExternal()
     {
+
         if ($this->url == null) {
-            $full_url = url('/');
-        } else {
-            $full_url = (string)url($this->url);
+            $full_url = (string) url('/');
+        } else{
+            $full_url = (string) url($this->url);
         }
-        if (! str_contains($full_url, env('APP_URL'))) {
+
+        if (! str_contains($full_url, request()->getHost())) {
             return true;
         } else {
             return false;
