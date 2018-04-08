@@ -109,4 +109,6 @@ return [
     'toman'                    => 'تومان',
     'dollar'                   => 'دولار',
     'discount'                 => 'تخفیف',
+    'unavailable'              => 'نا موجود',
+    'available'                => 'موجود',
 ];

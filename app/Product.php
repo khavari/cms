@@ -50,7 +50,21 @@ class Product extends Model
 
     public function price()
     {
-        return 500 * rand(100 , 5000);
+        return $this->price;
+    }
+
+    public function discount()
+    {
+        if($this->price === 0){
+            return 0;
+        }
+
+        if($this->price <= $this->old_price){
+            $percent =  100 - (($this->price * 100) / $this->old_price);
+            return $this->old_price - $this->price;
+        }
+
+        return 0;
     }
 
     public function scopeLang($query)
@@ -103,7 +117,6 @@ class Product extends Model
             cache()->forget('featured_products:' . app()->getLocale());
         });
     }
-
 
     // service
     public function featured_products()

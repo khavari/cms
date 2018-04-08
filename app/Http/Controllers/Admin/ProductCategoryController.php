@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\ProductCategoryRequest;
 use App\ProductCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -37,7 +38,7 @@ class ProductCategoryController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(ProductCategoryRequest $request)
     {
 
         if ($request->options) {
@@ -94,7 +95,7 @@ class ProductCategoryController extends Controller
     }
 
 
-    public function update(Request $request, ProductCategory $productCategory)
+    public function update(ProductCategoryRequest $request, ProductCategory $productCategory)
     {
         $category = $productCategory;
         if ($request->options) {

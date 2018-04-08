@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\ProductCategory;
 use Illuminate\Http\Request;
@@ -32,15 +33,13 @@ class ProductController extends Controller
         return view('admin.products.index', compact('products'));
     }
 
-
     public function create()
     {
         $categories = ProductCategory::lang()->get();
         return view('admin.products.create', compact('categories'));
     }
 
-
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         if ($request->hasFile('file')) {
             $file = $request->file("file");
@@ -61,12 +60,10 @@ class ProductController extends Controller
         return redirect(route('admin.products.index'));
     }
 
-
     public function show(Product $product)
     {
         return view('admin.products.show', compact('product'));
     }
-
 
     public function edit(Product $product)
     {
@@ -85,8 +82,7 @@ class ProductController extends Controller
 
     }
 
-
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest $request, Product $product)
     {
         if ($request->hasFile('file')) {
             $file = $request->file("file");
@@ -106,7 +102,6 @@ class ProductController extends Controller
 
         return back();
     }
-
 
     public function destroy(Product $product)
     {

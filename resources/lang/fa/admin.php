@@ -280,5 +280,6 @@ return [
     'old_price'          => 'قیمت قدیم',
     'final_price'        => 'قیمت نهایی',
     'available_in_store' => 'موجود در انبار',
+    'unavailable'        => 'نا موجود',
 
 ];
