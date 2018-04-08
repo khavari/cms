@@ -1,19 +1,17 @@
 {{-- featured-products-rtl.scss -featured-products-ltr.scss --}}
 <section id="featured-products" class="featured-products">
     <div class="container">
-        <br>
         <div class="row">
             <div class="col-12">
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="custom-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
-                        </li>
-                        <li class="breadcrumb-item">{{ $category->title }}</li>
+                        <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a></li>
+                        {{--<li class="breadcrumb-item"><a href="#">{{ $category->title }}</a></li>--}}
+                        <li class="breadcrumb-item active" aria-current="page">{{ $category->title }}</li>
                     </ol>
                 </nav>
             </div>
         </div>
-
         <div class="row">
             @foreach($products as $product)
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -45,12 +43,15 @@
                     </div>
                 </div>
             @endforeach
-
-                @if($products->hasPages())
-                        {{$products->appends($_GET)->links()}}
-                @endif
-
-
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav class="custom-paginate">
+                    @if($products->hasPages())
+                        {{$products->appends($_GET)->links('web.paginate')}}
+                    @endif
+                </nav>
+            </div>
         </div>
     </div>
 </section>

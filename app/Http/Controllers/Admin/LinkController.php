@@ -7,6 +7,8 @@ use App\Content;
 use App\Http\Requests\LinkRequest;
 use App\Link;
 use App\Feature;
+use App\Product;
+use App\ProductCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -507,6 +509,22 @@ class LinkController extends Controller
             ];
         });
 
+        $product_categories = collect(ProductCategory::lang()->get())->map(function ($category) {
+            return [
+                'title' => $category->title,
+                'slug'  => $category->slug,
+                'url'   => app()->getLocale() . '/products/' . $category->slug,
+            ];
+        });
+
+        $products = collect(Product::lang()->get())->map(function ($product) {
+            return [
+                'title' => $product->title,
+                'slug'  => $product->slug,
+                'url'   => app()->getLocale() . '/product/' . $product->slug,
+            ];
+        });
+
         $user = [
             [
                 'title' => app()->getLocale().'/',
@@ -536,7 +554,7 @@ class LinkController extends Controller
                 'slug'  => $content->slug,
                 'url'   => app()->getLocale() . '/content/' . $content->slug,
             ];
-        })->concat($categories)->concat($user);
+        })->concat($categories)->concat($product_categories)->concat($products)->concat($user);
 
         return $contents;
     }

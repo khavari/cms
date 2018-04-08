@@ -31,16 +31,13 @@ class ProductCategoryController extends Controller
         return view('admin.product_categories.index', compact('categories'));
     }
 
-
     public function create()
     {
         return view('admin.product_categories.create');
     }
 
-
     public function store(ProductCategoryRequest $request)
     {
-
         if ($request->options) {
             $request->merge(['options' => json_encode($request->options)]);
         }
@@ -67,13 +64,11 @@ class ProductCategoryController extends Controller
         return redirect(route('admin.product_categories.index'));
     }
 
-
     public function show(ProductCategory $productCategory)
     {
         $category = $productCategory;
         return view('admin.product_categories.show', compact('category'));
     }
-
 
     public function edit(ProductCategory $productCategory)
     {
@@ -93,7 +88,6 @@ class ProductCategoryController extends Controller
         return view('admin.product_categories.edit', compact('category'));
 
     }
-
 
     public function update(ProductCategoryRequest $request, ProductCategory $productCategory)
     {
@@ -125,7 +119,6 @@ class ProductCategoryController extends Controller
         return redirect(route('admin.product_categories.index'));
 
     }
-
 
     public function destroy(ProductCategory $productCategory)
     {

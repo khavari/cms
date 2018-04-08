@@ -1,16 +1,17 @@
-﻿<section id="article-single">
+<section id="article-single">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav aria-label="breadcrumb pr-0 pl-0">
+                <nav aria-label="breadcrumb" class="custom-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
+                        <li class="breadcrumb-item">
+                            <a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{ url($content->category->url()) }}">@lang('web.'.$content->vocabulary->slug)</a>
                         </li>
-                        <li class="breadcrumb-item"><a
-                                    href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
+                        <li class="breadcrumb-item">
+                            <a href="{{ url($content->category->url()) }}">{{ $content->category->title }}</a>
                         </li>
                     </ol>
                 </nav>

@@ -38,8 +38,6 @@ class ProductCategoryRequest extends FormRequest
                     'order'         => ['nullable', 'numeric', 'min:0'],
                     'featured'      => ['nullable', 'boolean'],
                     'active'        => ['nullable', 'boolean'],
-
-
                 ];
             }
             // update
