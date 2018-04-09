@@ -104,6 +104,9 @@ return [
 
 
     //money
+    'price'                    => 'قیمت',
+    'price_for_you'            => 'قیمت برای شما',
+    'final_price'              => 'قیمت نهایی',
     'money'                    => 'پول',
     'rial'                     => 'ریال',
     'toman'                    => 'تومان',
@@ -111,4 +114,10 @@ return [
     'discount'                 => 'تخفیف',
     'unavailable'              => 'نا موجود',
     'available'                => 'موجود',
+    'product_verview'          => 'معرفی اجمالی محصول',
+
+
+    //products
+    'category'                 => 'دسته بندی',
+    'product_categories'       => 'دسته بندی محصولات',
 ];

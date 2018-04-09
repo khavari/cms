@@ -1,0 +1,61 @@
+#featured-categories {
+  direction: rtl;
+  .caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  .entity {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    .wp-img {
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid #d2d2d2;
+      overflow: hidden;
+      img {
+        transition: all 0.3s;
+      }
+    }
+
+    .wp-title {
+      border-bottom: 1px solid #d2d2d2;
+
+      .title {
+        font-weight: 100;
+        text-align: center;
+        font-size: 0.8rem;
+        text-decoration: none;
+        display: block;
+        color: #5b5b5b;
+        margin-bottom: 0px;
+        padding: 10px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .entity:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .entity:hover .wp-img img {
+    transform: scale(1.1);
+  }
+
+}
+
+
+
+
+

@@ -107,4 +107,6 @@ return [
     'toman'                    => 'Toman',
     'dollar'                   => 'Dollar',
     'discount'                 => 'Discount',
+
+    'product_verview' => 'Product Overview',
 ];

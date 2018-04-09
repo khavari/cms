@@ -29,7 +29,7 @@ $(document).ready(function () {
 // owl-customers
 //------------------------------------------------------------
 $(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
+  $('.customer-carousel').owlCarousel({
       loop: true,
       autoplay: true,
       autoplayTimeout: 2000,
@@ -51,6 +51,37 @@ $(document).ready(function () {
   )
 })
 
+// used only on product.blade.php
+//------------------------------------------------------------
+$(document).ready(function () {
+  $('.product-gallery').owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 500,
+      autoplayHoverPause: true,
+      margin: 5,
+      nav: false,
+      responsive: {
+        0: {
+          items: 2
+        },
+        576: {
+          items: 3
+        },
+        768: {
+          items: 3
+        },
+        992: {
+          items: 4
+        },
+        1200: {
+          items: 5
+        }
+      }
+    }
+  )
+})
+
 // preloader widget
 //------------------------------------------------------------
 $(document).ready(function () {
@@ -64,8 +95,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   if ($('#popup').length) {
     setTimeout(function () {
-      $('#popup-modal').modal('show');
-    }, 3000);
+      $('#popup-modal').modal('show')
+    }, 3000)
   }
 })
 

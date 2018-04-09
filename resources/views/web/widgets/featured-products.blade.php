@@ -2,7 +2,7 @@
 @inject('model', 'App\Product')
 <?php $products = $model->featured_products(); ?>
 
-<section id="featured-products" class="featured-products">
+<section id="featured-products" class="featured-products pb-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -13,8 +13,8 @@
         </div>
         <div class="row">
             @foreach($products as $product)
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="entity mb-4">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0">
+                    <div class="entity">
                         <a href="{{ $product->url() }}" title="{{ $product->title }}" class="wp-img">
                             <img src="{{ asset('media/'.$product->image) }}?w=400&h=400&fit=crop"
                                  alt="{{ $product->title }}" class="img-fluid">

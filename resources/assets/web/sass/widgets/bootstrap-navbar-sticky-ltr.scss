@@ -274,7 +274,6 @@
 
 .navigation {
   text-align: center;
-  border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
   background-color: rgba(255, 255, 255, 0.95);
   float: none;
@@ -369,7 +368,6 @@
   .nav-item {
     .dropdown-menu {
       border: none;
-      border-top: 2px solid transparent;
       .dropdown-item {
         padding: 5px;
       }

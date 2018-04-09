@@ -33,17 +33,21 @@ class ProductCategory extends Model
         return $query->whereLang($lang);
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('active', '1');
+    }
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', '1');
+    }
+
     public function isActive()
     {
         if ($this->active === 1) {
             return true;
         }
         return false;
-    }
-
-    public function scopeActive($query)
-    {
-        return $query->where('active', '1');
     }
 
     public function url()

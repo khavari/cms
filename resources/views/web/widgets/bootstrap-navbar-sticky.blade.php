@@ -175,7 +175,7 @@
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ $link->title }}<span class="fa fa-angle-down"></span>
                                 </a>
-                                <div class="dropdown-menu p-0 submenu border_vibrant" >
+                                <div class="dropdown-menu p-0 submenu" >
                                     @foreach($link->children()->active()->orderBy('order')->get() as $item)
                                         @if($item->isExternal())
                                             <a class="dropdown-item" target="_blank" rel="nofollow" href="{{ url($item->url()) }}">{{ $item->title }}</a>

@@ -107,6 +107,13 @@ return [
         'approve' => 1,
     ],
     [
+        'name'    => 'featured-categories',
+        'path'    => 'web.widgets.featured-categories',
+        'group'   => 'home',
+        'active'  => 0,
+        'approve' => 1,
+    ],
+    [
         'name'    => 'featured-products',
         'path'    => 'web.widgets.featured-products',
         'group'   => 'home',
