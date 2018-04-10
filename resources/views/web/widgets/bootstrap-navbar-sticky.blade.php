@@ -69,12 +69,10 @@
                                 @if(auth()->check())
                                     <li><a href="{{ route('profile') }}">
                                             <i class="fa fa-user"></i>{{ auth()->user()->name }}</a></li>
-                                    <li><a href="#"
-                                           onclick="event.preventDefault();document.getElementById('logout-form').submit()"><i
-                            class="fa fa-sign-in"></i>Logout</a></li>
+                                    <li><a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit()">
+                                            <i class="fa fa-sign-in"></i>@lang('web.logout')</a></li>
 
-                                    <form id="logout-form"
-                                          action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         {{ csrf_field() }}
                                     </form>
                                 @else
@@ -151,7 +149,11 @@
                     </div>
                     <div class="col-12 col-sm-3">
                         <div class="logo">
-                            <a href="{{ url(app()->getLocale()) }}"><img src="{{ asset(setting('logo')) }}" alt="{{ setting('title') }}"></a>
+                            @if(setting('logo'))
+                                <a href="{{ url(app()->getLocale()) }}" title="{{ setting('title') }}">
+                                    <img src="{{ asset(setting('logo')) }}" alt="{{ setting('title') }}" class="img-fluid">
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>

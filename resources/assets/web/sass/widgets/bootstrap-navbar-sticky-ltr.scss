@@ -30,35 +30,35 @@
       padding-left: 40px;
     }
     .modal {
-      .modal-title{
+      .modal-title {
         font-size: 1.1rem;
       }
       .modal-header .close {
-        margin-right:0;
-        margin-left:0;
+        margin-right: 0;
+        margin-left: 0;
         margin-top: 0;
-        padding:0 .5rem;
-        &:focus,&:hover{
+        padding: 0 .5rem;
+        &:focus, &:hover {
           outline: none;
           opacity: .7;
         }
       }
-      .modal-body{
-        .search{
+      .modal-body {
+        .search {
           font-size: .9rem;
           border-radius: 0;
-          &:focus{
+          &:focus {
             box-shadow: none;
           }
         }
       }
-      .modal-footer{
-        .btn{
+      .modal-footer {
+        .btn {
           margin-left: 0;
           margin-right: auto;
           font-size: .9rem;
           border-radius: 0;
-          &:focus{
+          &:focus {
             box-shadow: none;
           }
         }
@@ -91,10 +91,10 @@
       .nav-link {
         line-height: 30px;
         border-bottom: 1px solid #ddd;
-        &:active{
+        &:active {
           color: #777;
           text-decoration: none;
-          background-color:#f8f9fa;
+          background-color: #f8f9fa;
         }
         i {
           float: right;
@@ -117,7 +117,7 @@
         overflow: hidden;
       }
       li {
-        height:100%;
+        height: 100%;
         width: 40px;
         line-height: 38px;
         transition: all .5s;
@@ -130,14 +130,14 @@
           border-right: 1px solid #eee;
         }
         a {
-          height:100%;
+          height: 100%;
           color: #777777;
           width: 40px;
-          transition:all .2s;
+          transition: all .2s;
           display: inherit;
           text-decoration: none;
           font-size: .9rem;
-          padding:0;
+          padding: 0;
           .txt-social {
             display: none;
             padding: 0 10px;
@@ -196,7 +196,7 @@
         line-height: 33px;
       }
       li:hover a {
-        padding:0;
+        padding: 0;
         color: #fff;
       }
     }
@@ -215,7 +215,7 @@
         border-right: 1px solid #eee;
         float: right;
         &:hover .fa, &:hover a {
-          color:#333;
+          color: #333;
         }
         a {
           font-size: .9rem;
@@ -266,7 +266,7 @@
       img {
         font-size: 12px;
         line-height: 30px;
-        width: 120px;
+        max-height: 90px;
       }
     }
   }
@@ -316,8 +316,8 @@
         background: #eee;
       }
       a {
-        color:#333 !important;
-        font-size:.9rem;
+        color: #333 !important;
+        font-size: .9rem;
         padding: 0;
         line-height: 25px;
         text-align: left;
