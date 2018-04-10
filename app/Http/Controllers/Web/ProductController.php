@@ -18,6 +18,11 @@ class ProductController extends Controller
         return view('web.products.product', compact('product'));
     }
 
+    public function redirect_to_product(Product $product)
+    {
+        return redirect()->route('product',['slug' => $product->slug]);
+    }
+
     public function products($slug)
     {
         $category = ProductCategory::lang()->active()->where('slug', $slug)->firstOrFail();

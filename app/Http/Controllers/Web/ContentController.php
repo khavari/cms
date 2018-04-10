@@ -43,6 +43,11 @@ class ContentController extends Controller
         return view('web.contents.content', compact('content'));
     }
 
+    public function redirect_to_content(Content $content)
+    {
+        return redirect()->route('content',['slug' => $content->slug]);
+    }
+
 
     public function search()
     {

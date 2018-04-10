@@ -39,8 +39,10 @@ Route::get('/', 'Web\HomeController@index')->name('home');
 Route::get('vocabulary/{slug}', 'Web\ContentController@vocabulary')->name('vocabulary');
 Route::get('category/{slug}', 'Web\ContentController@category')->name('category');
 Route::get('content/{slug}', 'Web\ContentController@content')->name('content');
+Route::get('c/{content}', 'Web\ContentController@redirect_to_content');
 
 Route::get('product/{slug}', 'Web\ProductController@product')->name('product');
+Route::get('p/{product}', 'Web\ProductController@redirect_to_product');
 Route::get('products/{slug}', 'Web\ProductController@products')->name('products');
 
 
