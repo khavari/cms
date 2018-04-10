@@ -75,6 +75,7 @@ return [
     'page_standard'            => 'Page',
     'service'                  => 'Service',
     'answer_comment'           => 'Answer to comment',
+    'login_for_comment'        => 'login for comment',
     'featured_articles'        => 'Featured Articles',
     'featured_products'        => 'Featured Products',
     'featured_gallery'         => 'Featured Gallery',
