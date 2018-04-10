@@ -1,12 +1,12 @@
 {{-- featured-products-rtl.scss -featured-products-ltr.scss --}}
-<section id="featured-products" class="featured-products">
+<section id="products" class="featured-products">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav aria-label="breadcrumb" class="custom-breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">@lang('web.home')</a></li>
-                        {{--<li class="breadcrumb-item"><a href="#">{{ $category->title }}</a></li>--}}
+                         {{--<li class="breadcrumb-item"><a href="#">{{ $category->title }}</a></li>--}}
                         <li class="breadcrumb-item active" aria-current="page">{{ $category->title }}</li>
                     </ol>
                 </nav>
@@ -14,10 +14,10 @@
         </div>
         <div class="row">
             @foreach($products as $product)
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="entity mb-4">
+                <div class="{{ setting('product_grid') }}">
+                    <div class="entity">
                         <a href="{{ $product->url() }}" title="{{ $product->title }}" class="wp-img">
-                            <img src="{{ asset('media/'.$product->image) }}?w=400&h=400&fit=crop"
+                            <img src="{{ asset($product->thumbnail()) }}"
                                  alt="{{ $product->title }}" class="img-fluid">
                         </a>
                         <div class="wp-title">
@@ -27,7 +27,7 @@
                         <div class="detail">
                             @if($product->available)
                                 <div class="price">
-                                    <span class="final-price">{{ number_format($product->price()) }} @lang('web.toman')</span>
+                                    <span class="final-price">{{ number_format($product->price()) }} {{ setting('currency') }}</span>
                                     <span class="old-price">{{ number_format($product->old_price) }}</span>
                                 </div>
                             @endif

@@ -101,4 +101,12 @@ return [
     'font.medium'              => ['type' => 'text', 'group' => 'fonts', 'value' => 'default'],
     'font.normal'              => ['type' => 'text', 'group' => 'fonts', 'value' => 'default'],
     'font.size'                => ['type' => 'number', 'group' => 'fonts', 'value' => '16'],
+
+    //product
+    'enable_cart'      => ['type' => 'number', 'group' => 'product', 'value' => '0'],
+    'product_grid'      => ['type' => 'text', 'group' => 'product', 'value' => 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0'],
+    'category_grid'      => ['type' => 'text', 'group' => 'product', 'value' => 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0'],
+    'currency'      => ['type' => 'text', 'group' => 'product', 'value' => 'تومان'],
+    'products_per_page'      => ['type' => 'number', 'group' => 'product', 'value' => '16'],
+
 ];

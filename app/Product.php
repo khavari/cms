@@ -55,12 +55,13 @@ class Product extends Model
 
     public function discount()
     {
-        if($this->price === 0){
+        if ($this->price === 0) {
             return 0;
         }
 
-        if($this->price <= $this->old_price){
-            $percent =  100 - (($this->price * 100) / $this->old_price);
+        if ($this->price <= $this->old_price) {
+            $percent = 100 - (($this->price * 100) / $this->old_price);
+
             return $this->old_price - $this->price;
         }
 
@@ -89,6 +90,7 @@ class Product extends Model
         if ($this->active === 1) {
             return true;
         }
+
         return false;
     }
 
@@ -99,6 +101,11 @@ class Product extends Model
         } else {
             return false;
         }
+    }
+
+    public function thumbnail()
+    {
+        return $this->image;
     }
 
     protected static function boot()

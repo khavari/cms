@@ -55,9 +55,9 @@ $(document).ready(function () {
 //------------------------------------------------------------
 $(document).ready(function () {
   $('.product-gallery').owlCarousel({
-      loop: true,
+      loop: false,
       autoplay: true,
-      autoplayTimeout: 500,
+      autoplayTimeout: 1500,
       autoplayHoverPause: true,
       margin: 5,
       nav: false,

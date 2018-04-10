@@ -93,6 +93,13 @@ class DashboardMenu
                     'icon'  => 'fa-paint-brush',
                     'url'   => route('admin.settings.edit', ['id' => 'fonts']),
                 ],
+
+                [
+                    'title' => __('admin.products'),
+                    'icon'  => 'fa-th-large',
+                    'url'   => route('admin.settings.edit', ['id' => 'product']),
+                ],
+
                 [
                     'title' => __('admin.admin_panel'),
                     'icon'  => 'fa-key',

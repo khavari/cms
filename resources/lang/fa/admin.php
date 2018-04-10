@@ -281,5 +281,10 @@ return [
     'final_price'        => 'قیمت نهایی',
     'available_in_store' => 'موجود در انبار',
     'unavailable'        => 'نا موجود',
+    'enable_cart'        => 'فعال‌سازی سبد خرید',
+    'product_grid'       => 'تعداد ستون‌ها محصولات',
+    'category_grid'      => 'تعداد ستون‌های گروه محصولات',
+    'currency'           => 'واحد پول',
+    'products_per_page'  => 'تعداد محصول در صفحه',
 
 ];

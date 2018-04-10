@@ -121,4 +121,5 @@ return [
     //products
     'category'                 => 'دسته بندی',
     'product_categories'       => 'دسته بندی محصولات',
+    'add_to_cart'              => 'افزودن به سبد خرید',
 ];

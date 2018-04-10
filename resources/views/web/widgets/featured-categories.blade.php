@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             @foreach($categories as $category)
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0">
+                <div class="{{ setting('category_grid') }}">
                     <div class="entity">
                         <a href="{{ $category->url() }}" title="{{ $category->title }}" class="wp-img">
                             <img src="{{ asset('media/'.$category->image) }}?w=400&h=400&fit=crop"

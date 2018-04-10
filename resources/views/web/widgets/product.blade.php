@@ -1,5 +1,6 @@
-<section id="product-section">
+<section id="product-widget">
     <div class="container">
+
         <div class="row">
             <div class="col-12">
                 <nav aria-label="breadcrumb" class="custom-breadcrumb">
@@ -18,26 +19,40 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="product-info">
+                <div class="info">
 
 
                     <div class="row">
                         <div class="col-12 col-md-7">
-
                            <div class="details">
                                <div class="header">
                                    <h3 class="title">{{ $product->title }}</h3>
                                    <h3 class="slug">{{ $product->slug }}</h3>
                                    <p class="category">@lang('web.category') : <a href="">{{ $product->category->title }}</a></p>
                                </div>
+                               <div class="money">
+                                   @if($product->discount())
+                                   <p class="old_price">
+                                       <span class="price">@lang('web.price') : </span>
+                                       <span class="amount">{{ number_format($product->old_price) }}</span>
+                                       <span class="currency">{{ setting('currency') }}</span>
+                                       <span class="discount">{{ number_format($product->discount()) }} {{ setting('currency') }} @lang('web.discount')</span>
+                                   </p>
+                                   @endif
 
+                                   <p class="final_price">
+                                       <span class="unit">@lang('web.price_for_you') : </span>
+                                       <span class="amount">{{ number_format($product->price()) }}</span>
+                                       <span class="currency">{{ setting('currency') }}</span>
+                                   </p>
 
-                               <div class="price">
-                                   <p class="category">@lang('web.price') : <span><b style="text-decoration: line-through;">{{ number_format($product->old_price) }}</b> @lang('web.toman')</span></p>
-                                   <p class="category">@lang('web.price_for_you') : <span><b>{{ number_format($product->price()) }}</b> @lang('web.toman')</span></p>
                                </div>
-
-
+                               <div class="summary">
+                                   <p>{{ $product->summary }}</p>
+                               </div>
+                               <div class="submit">
+                                       <button type="submit" class="add_to_cart ">@lang('web.add_to_cart')</button>
+                               </div>
                            </div>
                         </div>
 
