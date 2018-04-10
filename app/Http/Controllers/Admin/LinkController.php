@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Storage;
 
 class LinkController extends Controller
 {
-
     protected $icons;
 
     public function __construct()
@@ -393,7 +392,20 @@ class LinkController extends Controller
 
     public function index(Feature $feature)
     {
-        $links = $feature->links()->lang()->orderBy('order')->get();
+        if (Request('search')) {
+            $search = Request('search');
+            $links = $feature->links()->lang()
+                ->where('id', 'like', '%' . $search . '%')
+                ->orWhere('parent_id', 'like', '%' . $search . '%')
+                ->orWhere('title', 'like', '%' . $search . '%')
+                ->orWhere('label', 'like', '%' . $search . '%')
+                ->orWhere('summary', 'like', '%' . $search . '%')
+                ->get();
+        }
+        else {
+            $links = $feature->links()->lang()->orderBy('order')->get();
+        }
+
         $slug = $feature->slug;
         $icons = $this->icons;
         $urls = $this->address();
@@ -496,7 +508,6 @@ class LinkController extends Controller
 
         return back();
     }
-
 
     public function address()
     {
