@@ -34,6 +34,7 @@ class CreateCategoriesTable extends Migration
             $table->boolean('featured')->default(0)->unsigned();
             $table->boolean('active')->default(1)->unsigned();
             $table->timestamps();
+            $table->unique(array('slug', 'lang'));
         });
     }
 
