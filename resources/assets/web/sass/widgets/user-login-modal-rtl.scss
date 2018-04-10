@@ -1,0 +1,42 @@
+.user-login-modal {
+  text-align: right;
+  direction: rtl;
+  .modal-header{
+    .close{
+      margin-right: 0;
+      margin-left:auto;
+    }
+  }
+  .modal-body{
+    .form-group{
+      input{
+        border-radius: 2px;
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+    .custom-control-label {
+      margin-right: 25px;
+    }
+  }
+  .custom-control-label::after ,.custom-control-label::before{
+    left: auto;
+    right: 0;
+  }
+  .modal-footer{
+    .form-btn{
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    .login-btn{
+      background: #fff;
+      color: #333;
+      margin-right: 5px;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -75,6 +75,7 @@ return [
     'page_standard'            => 'صفحه استاندارد',
     'service'                  => 'خدمات',
     'answer_comment'           => 'پاسخ به دیدگاه',
+    'login_for_comment'        => 'برای نوشتن کامنت لاگین شوید',
     'contact_info'             => 'اطلاعات تماس',
     'featured_articles'        => 'مقالات ویژه',
     'featured_products'        => 'محصولات ویژه',

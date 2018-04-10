@@ -1,0 +1,34 @@
+.user-login-modal {
+.modal-header{
+  .close{
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+  .modal-body{
+    .form-group{
+      input{
+        border-radius: 2px;
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .modal-footer{
+    .form-btn{
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    .login-btn{
+      background: #fff;
+      color: #333;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+
+
+}

@@ -1,5 +1,5 @@
-{{-- user-authenticate-rtl.scss user-authenticate-ltr.scss --}}
-<div class="modal fade" id="user-login-modal">
+{{-- user-login-modal-ltr.scss user-login-modal-ltr.scss --}}
+<div class="modal fade user-login-modal" id="user-login-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <form action="{{ route('login') }}" method="post">
@@ -10,7 +10,6 @@
                     <h4 class="modal-title">@lang('web.login')</h4>
                 </div>
                 <div class="modal-body">
-
                     {{--------------- email ---------------}}
                     <div class="form-group">
                         <label for="email">@lang('web.email')</label>
@@ -40,7 +39,7 @@
                 <div class="modal-footer">
                     <button class="btn form-btn btn-primary" type="submit">@lang('web.login')</button>
                     @if(env('GOOGLE_CLIENT_ID'))
-                        <a href="{{ route('socialite',['driver'=>'google']) }}" class="btn  login-btn border_vibrant "
+                        <a href="{{ route('socialite',['driver'=>'google']) }}" class="btn btn-default login-btn "
                            type="submit"> <i class="fa fa-google-plus"></i> @lang('web.sign_in_with_google-plus')</a>
                     @endif
 
