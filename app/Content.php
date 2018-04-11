@@ -86,6 +86,22 @@ class Content extends Model
         return $query->where('published_at', '<=', $now);
     }
 
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', '1');
+    }
+
+    public function thumbnail()
+    {
+        $options = (array) json_decode($this->category->options);
+        if(isset($options['dimension'])){
+            return 'media/'.$this->image.$options['dimension'];
+        }else{
+            return $this->image;
+        }
+
+    }
+
     protected static function boot()
     {
         parent::boot();

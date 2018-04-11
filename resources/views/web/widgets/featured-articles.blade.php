@@ -14,11 +14,11 @@
             <div class="articles">
                 <div class="row">
                     @foreach($contents as $content)
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3">
                             <div class="articles-box">
                                 <a href="{{ $content->url() }}">
                                     <div class="image">
-                                        <img src="{{ asset('media/'.$content->image) }}?w=500&h=350&fit=crop"
+                                        <img src="{{ asset($content->thumbnail()) }}"
                                              class="img-fluid" alt="{{ $content->title }}">
                                     </div>
                                 </a>
@@ -31,7 +31,7 @@
                                 <div class="article-icons">
                     <span class="created_at">
                        <i class="fa fa-clock-o"></i>
-                        {{ $content->created_at }}
+                        {{ date_ago($content->created_at) }}
                     </span>
                                     <span class="comments-qty d-none">
                         <i class="fa fa-comment-o"></i>

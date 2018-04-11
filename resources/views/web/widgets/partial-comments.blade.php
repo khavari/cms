@@ -47,11 +47,7 @@
                         <div class="col-12 col-sm-6 mb-3 commenter">
                             <span class="author">{{ $comment->user->name }}</span>
                             <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            @if(locale('dir') === 'ltr')
-                                <span class="date">{{ $comment->created_at->diffForHumans() }}</span>
-                            @else
-                                <span class="date">{{ jdate($comment->created_at)->ago() }}</span>
-                            @endif
+                                <span class="date">{{ date_ago($comment->created_at) }}</span>
                         </div>
                         <div class="col-12 col-sm-6 mb-3 btn-area">
 
@@ -109,11 +105,7 @@
                                 <div class="col-12 commenter">
                                     <span class="author">{{ $comment->user->name }}</span>
                                     <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                                    @if(locale('dir') === 'ltr')
-                                        <span class="date">{{ $comment->created_at->diffForHumans() }}</span>
-                                    @else
-                                        <span class="date">{{ jdate($comment->created_at)->ago() }}</span>
-                                    @endif
+                                    <span class="date">{{ date_ago($comment->created_at) }}</span>
                                 </div>
                             </div>
                         </div>

@@ -282,8 +282,8 @@ return [
     'available_in_store' => 'موجود در انبار',
     'unavailable'        => 'نا موجود',
     'enable_cart'        => 'فعال‌سازی سبد خرید',
-    'product_grid'       => 'تعداد ستون‌ها محصولات',
-    'category_grid'      => 'تعداد ستون‌های گروه محصولات',
+    'product_grid'       => 'تعداد ستون‌ها در محصولات',
+    'category_grid'      => 'تعداد ستون‌ها در گروه محصولات',
     'currency'           => 'واحد پول',
     'products_per_page'  => 'تعداد محصول در صفحه',
 

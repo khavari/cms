@@ -75,3 +75,15 @@ if (! function_exists('isUpdated')) {
         return false;
     }
 }
+
+
+if (! function_exists('date_ago')) {
+    function date_ago($timestamp)
+    {
+        if (locale('dir') === 'rtl') {
+            return jdate($timestamp)->ago();
+        } else {
+            return $timestamp->diffForHumans();
+        }
+    }
+}

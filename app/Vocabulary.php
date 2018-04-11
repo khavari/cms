@@ -28,7 +28,7 @@ class Vocabulary extends Model
     public function featuredContents($slug)
     {
         $vocabulary_id = Vocabulary::where('slug',$slug)->first()->getKey();
-        return Content::where('vocabulary_id', $vocabulary_id)->active()->lang()->published()->get();
+        return Content::where('vocabulary_id', $vocabulary_id)->active()->lang()->featured()->published()->get();
     }
 
 
