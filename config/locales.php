@@ -27,7 +27,7 @@ return [
         'dir'      => 'ltr',
         'flag'     => '/assets/admin/img/flags/en.png',
         'timezone' => 'Asia/Tehran',
-        'approve'  => 0,
+        'approve'  => 1,
     ],
     [
         'key'      => 'ar',

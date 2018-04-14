@@ -1,5 +1,11 @@
  #contents-page {
       direction: rtl;
+   .custom-breadcrumb{
+     .breadcrumb{
+       box-shadow:0px 0px 1px #dedede;
+       border-radius: 1px;
+     }
+   }
       .header {
         display: inline-block;
         border-bottom: 2px solid transparent;
