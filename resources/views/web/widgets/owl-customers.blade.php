@@ -15,9 +15,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="owl-carousel owl-theme ltr">
+                <div class="customer-carousel owl-carousel owl-theme ltr">
                     @foreach($links as $index => $link)
-                        <div class="item animated fadeIn border_vibrant">
+                        <div class="item">
                             <a href="{{ $link->url }}">
                                 <img src="{{ asset($link->image()) }}{{ $link->feature->dimension }}" alt="{{ $link->title }}" class="img-fluid animated fadeIn">
                                 <h6 class="owl-text">{{ $link->title }}</h6>

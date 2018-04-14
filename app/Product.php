@@ -102,10 +102,16 @@ class Product extends Model
             return false;
         }
     }
-
+    
     public function thumbnail()
     {
-        return $this->image;
+        $options = (array) json_decode($this->category->options);
+        if(isset($options['dimension'])){
+            return 'media/'.$this->image.$options['dimension'];
+        }else{
+            return $this->image;
+        }
+
     }
 
     protected static function boot()

@@ -41,7 +41,7 @@
                                    @endif
 
                                    <p class="final_price">
-                                       <span class="unit">@lang('web.price_for_you') : </span>
+                                       <span class="unit">@lang('web.final_price') : </span>
                                        <span class="amount">{{ number_format($product->price()) }}</span>
                                        <span class="currency">{{ setting('currency') }}</span>
                                    </p>

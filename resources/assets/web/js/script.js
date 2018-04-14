@@ -51,6 +51,8 @@ $(document).ready(function () {
   )
 })
 
+
+
 // used only on product.blade.php
 //------------------------------------------------------------
 $(document).ready(function () {

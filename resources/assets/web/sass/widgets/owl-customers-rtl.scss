@@ -27,7 +27,6 @@
     bottom: 0;
     margin: auto;
     background: #fff;
-    border: 2px solid transparent;
   }
   .owl-prev{
     left:-16px;
@@ -54,7 +53,6 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    border: 2px solid transparent;
     &:hover{
       margin-top: -4px;
     }
