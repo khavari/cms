@@ -7,7 +7,7 @@
     <div class="row br align-items-center">
 
             <div class="col-12 col-sm-4  col-lg-3  ">
-               <div class="content">@lang('lorem.5')</div>
+               <div class="content">@lang('lorem.1')</div>
             </div>
 
         <div class="col-12 col-sm-4 col-lg-3">
