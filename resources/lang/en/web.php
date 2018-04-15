@@ -89,25 +89,24 @@ return [
     'sign_in_with_linkedin'    => 'Sign In With Linkedin',
     'sign_in_with_google-plus' => 'Sign In With Google plus',
     'developed_by'             => 'Designed and developed by <a href="http://www.asrenet.net?referer=' . request()->getHost() . '" target="_blank" class=" text_bg_vibrant_hover">asrenet</a>',
+
     // errors
-    'back_to_home'             => 'Back to home page',
-    '404_message'              => 'PAGE NOT FOUND',
-    '404_title'                => 'Dear user, Unfortunately, your requested page or file is not available.',
-    '404_body'                 => 'The wrong page address may have been entered. But if you get this error by linking to other pages of the site, please let us know its address through our contact page. Thanks and best regards.',
-    '500_message'              => 'Internal Server Error',
-    '500_title'                => 'Unfortunately, the server error occurred',
-    '500_body'                 => 'There may have been a problem with the server hosting the site And we are also consciously trying to fix this issue. Please visit the site a few moments later.Thanks and best regards',
+    'back_to_home' => 'Back to home page',
+    '404_title'            => 'Page or file requested is not exists.',
+    '404_description'      => 'This page does not exist on this site or this page may have been deleted from the site, but if you have reached this error by linking to other sites, please inform us about that site through the contact information inside the site.' . '<br>Thanks',
+    '500_title'            => 'Internal Server Error',
+    '500_description'      => 'There may have been a problem with the server hosting the site And we are also consciously trying to fix this issue. Please visit the site a few moments later.Thanks and best regards',
 
     // widget
-    'widget_is_empty'          => 'This Widget is Empty',
-    'empty_widget_message'     => 'Please fill out or disable the widget.',
+    'widget_is_empty'      => 'This Widget is Empty',
+    'empty_widget_message' => 'Please fill out or disable the widget.',
 
     //money
-    'money'                    => 'Money',
-    'rial'                     => 'Rial',
-    'toman'                    => 'Toman',
-    'dollar'                   => 'Dollar',
-    'discount'                 => 'Discount',
+    'money'                => 'Money',
+    'rial'                 => 'Rial',
+    'toman'                => 'Toman',
+    'dollar'               => 'Dollar',
+    'discount'             => 'Discount',
 
     'product_verview' => 'Product Overview',
 ];

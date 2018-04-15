@@ -36,8 +36,8 @@
             </div>
         </div>
         @includeIf('web.widgets.partial-gallery',['images' => $content->images()->active()->get()])
-        {{--@includeIf('web.widgets.partial-videos')--}}
-        {{--@includeIf('web.widgets.partial-downloads')--}}
-        {{--@includeIf('web.widgets.partial-comments')--}}
+        @includeIf('web.widgets.partial-videos')
+        @includeIf('web.widgets.partial-downloads')
+        @includeIf('web.widgets.partial-comments')
     </div>
 </section>

@@ -102,7 +102,7 @@ class Product extends Model
             return false;
         }
     }
-    
+
     public function thumbnail()
     {
         $options = (array) json_decode($this->category->options);

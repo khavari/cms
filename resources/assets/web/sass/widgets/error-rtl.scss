@@ -1,43 +1,95 @@
-.error-500 {
+.error-page{
   position: relative;
   min-height: 100vh;
+  padding-bottom: 50px;
+  direction: rtl;
+  text-align: right;
   .back {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     border-radius: 2px;
     &:hover {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
       color: inherit;
     }
-
   }
   .image {
+    transform: rotateY(180deg);
     .svg {
       max-width:330px;
       height: auto;
+      transform: inherit;
     }
   }
-  .content {
+  .detail {
     position: relative;
     min-height: 90px;
     .title {
-      position: relative;
       font-weight: bold;
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      &:hover .fa {
-        padding-right: 15px;
-      }
-      .fa {
-        padding-right: 5px;
-        transition: all 0.3s;
-      }
+      font-size: 1.5rem;
     }
-    .summary{
+    .description{
       text-align: justify;
-      padding-right: 15px;
     }
   }
+
+.menu {
+  text-align: center;
+  .link {
+    display: inline-block;
+    color: inherit;
+    font-size: 0.8rem;
+    -webkit-transition: all .5s;
+    text-decoration: none;
+    margin: 0px 0px 7px 5px;
+    border: 1px solid inherit;
+    padding: 5px 10px;
+    border-radius: 23px;
+  }
+}
+
+
+
+
+  .footer-area{
+    position: absolute;
+    bottom: 0;
+
+    .footer{
+      text-align:right;
+      padding: 5px;
+
+      .author {
+        font-size: 0.8rem;
+        opacity: .9;
+        transition: all .5s;
+        &:hover {
+          color: inherit;
+          opacity: 1;
+        }
+        a{
+          text-decoration: none !important;
+          transition:all .5s;
+          opacity: 1;
+          &:hover{
+            opacity: .6;
+            color: inherit;
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+
+
+
+
+
+
+
   .sww {
     will-change: transform;
     -webkit-transform-origin: center bottom;
@@ -94,32 +146,7 @@
       transform: rotate(0deg);
     }
   }
-  .footer-area{
-    position: absolute;
-    bottom: 0;
-  }
-  .footer{
-    text-align:left;
-    padding: 5px;
-  }
-  .link {
-    font-size: 13px;
-    opacity: .9;
-    transition: all .5s;
-    &:hover {
-      color: inherit;
-      opacity: 1;
-    }
-    a{
-      text-decoration: none !important;
-      transition:all .5s;
-      opacity: 1;
-      &:hover{
-        opacity: .6;
-        color: inherit;
-      }
-    }
-  }
+
   .goTopFade {
     -webkit-animation: goTopFade 2s infinite;
     animation: goTopFade 2s infinite;
