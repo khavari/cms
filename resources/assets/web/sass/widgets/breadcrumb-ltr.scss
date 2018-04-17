@@ -22,3 +22,28 @@
     padding: 0px;
   }
 }
+
+
+#share-modal {
+
+  direction: ltr;
+  .networks {
+    margin-bottom: 10px;
+    text-align: left;
+    display: flex;
+    .social {
+      border: 1px solid #dde1e6;
+      color: #77889f;
+      width: 40px;
+      justify-content: center;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      margin-right: 10px;
+      height: 40px;
+      font-size: 19px;
+      text-decoration: none;
+    }
+  }
+
+}

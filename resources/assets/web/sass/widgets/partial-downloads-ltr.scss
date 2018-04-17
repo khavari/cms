@@ -1,34 +1,31 @@
 .partial-downloads {
-  text-align: center;
-  background: #ffffff;
-  padding: 15px;
-  box-shadow: 0px 0px 1px #dedede;
-  .title {
-    padding-bottom: 10px;
-    margin: 15px;
-    margin-top: 0;
-    font-size: 1.1rem;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+  direction: ltr;
+  color: #484848;
+  .caption {
+    color: #484848;
+    font-size: 1rem;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #dfdcdc;
   }
-  a {
-    color: #555;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    transition: all .5s;
+  .table-responsive {
+    padding: 15px 15px 0px 15px;
   }
-  .content{
-    padding: 5px;
-    font-size: .9rem;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px ;
-  }
-  .br{
-    border-bottom: 1px solid #ddd;
-&:last-child{
-  border-bottom: none;
-}
+  .table {
+    font-size: 0.9rem;
+    font-weight: 100;
+    .ltr {
+      direction: ltr;
+    }
+    .download {
+      text-decoration: none;
+      font-size: inherit;
+      color: #484848;
+    }
   }
 }

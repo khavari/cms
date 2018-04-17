@@ -45,9 +45,14 @@ class Content extends Model
     }
 
 
-    public function url()
+    public function url($id = null)
     {
-        return url(app()->getLocale() . '/content/' . $this->slug);
+        if(is_null($id)){
+            return url(app()->getLocale() . '/content/' . $this->slug);
+        }else{
+            return url(app()->getLocale() . '/c/' . $this->id);
+        }
+
     }
 
     public function scopeLang($query)

@@ -34,11 +34,11 @@ url('../fonts/{{ locale('dir') }}/{{setting('font.normal')}}.ttf') format('truet
 
 
 body{
-font-family:'{{setting('font.normal')}}';
+font-family: {{setting('font.normal')}},Verdana,Helvetica,Arial;
 }
 
 h1,h2,h3{
-font-family:'{{setting('font.normal')}}';
+font-family: {{setting('font.normal')}},Verdana,Helvetica,Arial;
 }
 
 html[lang="{{ app()->getLocale() }}"]{

@@ -102,3 +102,17 @@ $(document).ready(function () {
   }
 })
 
+
+// copy
+//------------------------------------------------------------
+$('.copy-url').click(function () {
+
+  $(this).addClass('bg-success animated fadeIn')
+  var url = $(this).attr('data-url')
+  console.log(url);
+  var $temp = $('<input>')
+  $('body').append($temp)
+  $temp.val(url).select()
+  document.execCommand('copy')
+  $temp.remove()
+})

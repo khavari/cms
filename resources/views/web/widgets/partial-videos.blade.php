@@ -1,16 +1,16 @@
-<div class="partial-videos mb-3">
-    <div class="row">
-        <h2 class="title">@lang('web.video')</h2>
-    </div>
-    <div class="row">
-        <video id="my-video" class="video-js" controls preload="auto" width="1200" height="600"
-               poster="https://libraries.acm.org/binaries/content/gallery/acm/ctas/publications/nodes-764.jpg/nodes-764.jpg/acm%3Adesktopcta" data-setup="{}">
-            <source src="https://as5.cdn.asset.aparat.com/aparat-video/7dd01a9e098fbc4aca204ac02481815a10158279-144p__95473.mp4" type='video/mp4'>
-            <source src="MY_VIDEO.webm" type='video/webm'>
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>
+<div class="row">
+    <div class="col-12 col-md-12">
+        <div class="partial-videos mb-3">
+            <h6 class="caption"><i class="fa fa-file-video-o"></i>&nbsp;&nbsp;@lang('web.video')</h6>
+            <div class="pt-3 pl-3 pr-3">
+                <div class="row">
+                    <div class="col-12 col-md-12 mb-3">
+                        <video poster="https://roocket.ir/public/image/2018/4/9/redis-1.png" class="video-player" preload="none" playsinline controls>
+                            <source src="https://roocket.ir/download/episode/1016/online?mac=$2y$10$6g01b8PWjGzlRd01efiw/ONTzUUU2TR5THvl9B2wZOm9qGl5u1rsq&amp;timestamp=1523930109" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

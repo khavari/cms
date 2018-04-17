@@ -1,27 +1,27 @@
 .bg_vibrant {
-background-color: #ff0080 !important;
-color: #ffccff;
+background-color: #af8121 !important;
+color: #e9e9d3;
 }
 .text_vibrant {
-color: #ff0080 !important;
+color: #af8121 !important;
 }
 .border_vibrant {
-border-color: #ff0080 !important;
+border-color: #af8121 !important;
 }
 
 .bg_vibrant_hover {
-background-color: #df0070 !important;
+background-color: #966f1d !important;
 color: #ffffff;
 }
 .text_vibrant_hover {
-color: #df0070 !important;
+color: #966f1d !important;
 }
 .border_vibrant_hover {
-border-color: #df0070 !important;
+border-color: #966f1d !important;
 }
 
 .text_bg_vibrant{
-color: #ffccff;
+color: #e9e9d3;
 }
 
 .text_bg_vibrant_hover{
@@ -45,12 +45,12 @@ border-color: #ffffff !important;
 }
 
 .bg_vibrant-hover:hover {
-background-color: #df0070 !important;
+background-color: #966f1d !important;
 color: #ffffff !important;
 }
 
 .bg_vibrant_hover-hover:hover {
-background-color: #ff0080 !important;
+background-color: #af8121 !important;
 color: #c0c0c0 !important;
 }
 
@@ -179,7 +179,7 @@ color: #c0c0c0 !important;
 
 
 .bg_body {
-background-color: #fcfcfc !important;
+background-color: #f2f2f2 !important;
 color: #000000;
 }
 
