@@ -27,7 +27,7 @@ class DashboardController extends Controller
         $widgets_count = Widget::lang()->active()->get()->count();
         $contacts_count = Contact::whereNull('archived_at')->count();
 
-        $contents = Content::latest()->lang()->limit(10)->get();
+        $contents = Content::lang()->orderBy('updated_at','desc')->limit(10)->get();
 
         return view('admin.dashboards.dashboard',
             compact(

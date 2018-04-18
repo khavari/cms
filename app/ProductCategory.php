@@ -12,6 +12,13 @@ class ProductCategory extends Model
 
     protected $table = 'product_categories';
 
+    public function __construct()
+    {
+        if( ! env('PRODUCT',false)){
+            abort(404);
+        }
+    }
+
     public function sluggable()
     {
         return [

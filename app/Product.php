@@ -13,6 +13,12 @@ class Product extends Model
     protected $table = 'products';
     protected $dates = ['created_at', 'updated_at'];
 
+    public function __construct()
+    {
+        if( ! env('PRODUCT',false)){
+            abort(404);
+        }
+    }
 
     public function sluggable()
     {
