@@ -81,6 +81,7 @@
                                 <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                     <label for="description">@lang('admin.description')</label>
                                     <textarea name="description" class="form-control"
+                                              maxlength="250"
                                               id="description">{{ old('description') }}</textarea>
                                 </div>
                             </div>
@@ -90,6 +91,7 @@
                                     <label for="keywords">@lang('admin.keywords')</label>
                                     <input type="text" name="keywords" class="form-control" id="keywords"
                                            placeholder="---, ---, ---"
+                                           maxlength="250"
                                            value="{{ old('keywords') }}">
                                 </div>
                             </div>

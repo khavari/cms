@@ -21,5 +21,15 @@
     $temp.val(url).select()
     document.execCommand('copy')
     $temp.remove()
-  })
+  });
+
+
+
+  $('textarea[maxlength] , input[maxlength]').keyup(function(){
+    var text = $(this).val();
+    var limit = $(this).attr('maxlength');
+    if(text.length > limit){
+      $(this).val(text.substr(0, limit));
+    }
+  });
 </script>

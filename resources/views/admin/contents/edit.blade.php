@@ -32,6 +32,7 @@
                                 <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
                                     <label for="title">@lang('admin.title')</label>
                                     <input type="text" name="title" class="form-control" id="title"
+                                           maxlength="190"
                                            value="{{ $content->title }}" required>
                                 </div>
                             </div>
@@ -63,7 +64,7 @@
                                 <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                     <label for="description">@lang('admin.description')</label>
                                     <textarea name="description" class="form-control"
-                                              id="description">{{ $content->description }}</textarea>
+                                              id="description" maxlength="250">{{ $content->description }}</textarea>
                                 </div>
                             </div>
                             {{--------------- keywords ---------------}}
@@ -72,6 +73,7 @@
                                     <label for="keywords">@lang('admin.keywords')</label>
                                     <input type="text" name="keywords" class="form-control" id="keywords"
                                            placeholder="---, ---, ---"
+                                           maxlength="250"
                                            value="{{ $content->keywords }}">
                                 </div>
                             </div>
