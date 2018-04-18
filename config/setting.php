@@ -30,13 +30,9 @@ return [
 
 
     // admin
-    'admin.title'              => ['type' => 'text', 'group' => 'admin', 'value' => 'Admin Panel'],
-    'admin.copyright'          => [
-        'type'  => 'text',
-        'group' => 'admin',
-        'value' => 'Copyright © 2018 All rights reserved',
-    ],
-    'admin.author'             => ['type' => 'text', 'group' => 'admin', 'value' => 'Asrenet'],
+    'admin.title'              => ['type' => 'text', 'group' => 'admin', 'value' => 'پنل مدیریت'],
+    'admin.copyright'          => ['type' => 'text', 'group' => 'admin', 'value' => 'گروه طراحی و برنامه نویسی عصرنت'],
+    'admin.author'             => ['type' => 'text', 'group' => 'admin', 'value' => 'asrenet'],
     'admin.logo'               => ['type' => 'text', 'group' => 'admin', 'value' => '/assets/admin/img/logo.png'],
     'admin.link'               => ['type' => 'url', 'group' => 'admin', 'value' => 'http://www.asrenet.net'],
     'admin.favicon'            => ['type' => 'text', 'group' => 'admin', 'value' => '/assets/admin/img/favicon.png'],
@@ -103,10 +99,18 @@ return [
     'font.size'                => ['type' => 'number', 'group' => 'fonts', 'value' => '16'],
 
     //product
-    'enable_cart'      => ['type' => 'number', 'group' => 'product', 'value' => '0'],
-    'product_grid'      => ['type' => 'text', 'group' => 'product', 'value' => 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0'],
-    'category_grid'      => ['type' => 'text', 'group' => 'product', 'value' => 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0'],
-    'currency'      => ['type' => 'text', 'group' => 'product', 'value' => 'تومان'],
-    'products_per_page'      => ['type' => 'number', 'group' => 'product', 'value' => '16'],
+    'enable_cart'              => ['type' => 'number', 'group' => 'product', 'value' => '0'],
+    'product_grid'             => [
+        'type'  => 'text',
+        'group' => 'product',
+        'value' => 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0',
+    ],
+    'category_grid'            => [
+        'type'  => 'text',
+        'group' => 'product',
+        'value' => 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-1 mb-0',
+    ],
+    'currency'                 => ['type' => 'text', 'group' => 'product', 'value' => 'تومان'],
+    'products_per_page'        => ['type' => 'number', 'group' => 'product', 'value' => '16'],
 
 ];
