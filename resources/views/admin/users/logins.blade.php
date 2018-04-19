@@ -49,7 +49,7 @@
                                     <td class="text-ltr">{{$login->user->id}}</td>
                                     <td class="text-ltr">{{$login->user->username}}</td>
                                     <td class="text-ltr">{{$login->ip}}</td>
-                                    <td class="text-ltr">{{$login->updated_at}}</td>
+                                    <td>{{ date_ago($login->updated_at) }}</td>
                                 </tr>
                             @endforeach
                             </tbody>

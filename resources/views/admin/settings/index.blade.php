@@ -42,7 +42,7 @@
                                     <td>{{ $setting->key }}</td>
                                     <td>{{ $setting->type }}</td>
                                     <td>{{ $setting->group }}</td>
-                                    <td>{{ $setting->created_at }}</td>
+                                    <td>{{ date_ago($setting->created_at) }}</td>
                                     <td>
                                         <a href="{{ route('admin.settings.edit' , ['id'=> $setting->getKey()]) }}"
                                            class="btn btn-xs btn-primary btn-flat">@lang('admin.edit')</a>

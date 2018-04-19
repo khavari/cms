@@ -53,7 +53,7 @@
                                     <td>{{$link->url}}</td>
                                     <td>{{$link->order}}</td>
                                     <td>{{$link->parent_id}}</td>
-                                    <td>{{ $link->created_at }}</td>
+                                    <td>{{ date_ago($link->created_at) }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.links.destroy', ['feature'=>$feature->id, 'id' => $link->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.links.edit', ['feature'=>$feature->id, 'id' => $link->id])])

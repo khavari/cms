@@ -48,7 +48,7 @@
                                     </td>
                                     <td><a href="{{ route('admin.users.show', ['id' => $comment->user->id]) }}" target="_blank">{{$comment->user->email}}</a></td>
                                     <td>{{ str_limit($comment->message,50) }}</td>
-                                    <td>{{$comment->created_at}}</td>
+                                    <td>{{ date_ago($comment->created_at) }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.comments.destroy', ['id' => $comment->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.comments.edit', ['id' => $comment->id])])

@@ -44,7 +44,7 @@
                                     <td>{{$contact->id}}</td>
                                     <td>{{ str_limit($contact->name,25) }}</td>
                                     <td>{{ str_limit($contact->email,25) }}</td>
-                                    <td>{{$contact->created_at}}</td>
+                                    <td>{{ date_ago($contact->created_at) }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.contacts.destroy', ['id' => $contact->id])])
                                         <a href="{{ route('admin.contacts.edit', ['id' => $contact->id]) }}"

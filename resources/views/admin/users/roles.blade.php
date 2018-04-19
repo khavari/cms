@@ -46,7 +46,7 @@
                                     <td>{{$role->slug}}</td>
                                     <td>{{$role->name}}</td>
                                     <td>{{$role->users()->count()}}</td>
-                                    <td>{{$role->created_at}}</td>
+                                    <td>{{date_ago($role->created_at)}}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.roles.destroy', ['id' => $role->id])])
                                         <a href="#" class="btn btn-xs btn-flat btn-primary" data-toggle="modal"

@@ -48,7 +48,7 @@
                                     <td>{{ str_limit($product->title,32) }}</td>
                                     <td class="hidden-xs">{{ str_limit($product->slug,60) }}</td>
                                     <td>{{ str_limit($product->category->title,30) }}</td>
-                                    <td class="text-ltr hidden-xs">{{ $product->created_at }}</td>
+                                    <td class="hidden-xs">{{ date_ago($product->created_at) }}</td>
                                     <td>
                                         @include('admin.partials.delete',['action'=>route('admin.products.destroy', ['id' => $product->id])])
                                         @include('admin.partials.edit',['action'=>route('admin.products.edit', ['id' => $product->id])])
