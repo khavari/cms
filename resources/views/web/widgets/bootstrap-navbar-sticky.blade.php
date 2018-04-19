@@ -128,7 +128,7 @@
                                                     </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary">@lang('web.search')</button>
+                                                <button type="submit" class="btn btn-primary">@lang('web.search')</button>
                                             </div>
                                             </form>
                                         </div>
