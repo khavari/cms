@@ -12,6 +12,13 @@ class ProductCategoryController extends Controller
 {
     private $per_page = 20;
 
+    public function __construct()
+    {
+        if( ! env('PRODUCT',false)){
+            abort(404);
+        }
+    }
+
     public function index()
     {
         if (Request('search')) {
