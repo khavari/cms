@@ -20,7 +20,7 @@
 
 #### Installation
 ```
-git clone git@gitlab.com:asrenet/cms.git
+git clone git@github.com:khavari/cms.git
 composer install
 php artisan key:generate
 npm install
